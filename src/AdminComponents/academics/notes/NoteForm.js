@@ -44,7 +44,7 @@ function NoteForm(props) {
           <div className="col-md-6">
             <label className="form-label">Select Class</label>
             <select
-              value={classID}
+              value={classID || ""}
               onChange={(e) => setclass(e.target.value)}
               name="class"
               className="form-select"
@@ -66,7 +66,7 @@ function NoteForm(props) {
           <div className="col-md-6">
             <label className="form-label">Select Subject</label>
             <select
-              value={subject}
+              value={subject || ""}
               onChange={(e) => setsubject(e.target.value)}
               name="class"
               className="form-select"

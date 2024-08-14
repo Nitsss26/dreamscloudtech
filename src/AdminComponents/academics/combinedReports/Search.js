@@ -29,7 +29,7 @@ function Search({
           <select
             name="academic-calendar"
             className="form-select"
-            value={classID}
+            value={classID || ""}
             onChange={(e) => setclass(e.target.value)}
           >
             <option defaultValue hidden>
@@ -55,7 +55,7 @@ function Search({
           <select
             name="academic-calendar"
             className="form-select"
-            value={year}
+            value={year || ""}
             onChange={(e) => setyear(e.target.value)}
           >
             <option defaultValue hidden>
@@ -81,7 +81,7 @@ function Search({
           <select
             name="academic-calendar"
             className="form-select"
-            value={term}
+            value={term || ""}
             onChange={(e) => setterm(e.target.value)}
           >
             <option defaultValue hidden>

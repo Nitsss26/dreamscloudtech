@@ -40,7 +40,7 @@ function EnhancedTableHead(props) {
             <TableCell
               key={headCell.id}
               align="left"
-              padding="10px"
+              padding="checkbox"
               style={{ backgroundColor: "#eef2f7" }}
               sortDirection={orderBy === headCell.id ? order : false}
             >

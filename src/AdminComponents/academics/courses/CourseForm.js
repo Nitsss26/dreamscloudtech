@@ -109,7 +109,7 @@ function CourseForm(props) {
         <label className="form-label">Departments</label>
         <select
           name="type"
-          value={type}
+          value={type || ""}
           onChange={(e) => settype(e.target.value)}
           id="inputState"
           className="form-select"
@@ -140,7 +140,7 @@ function CourseForm(props) {
                 <div className="col-sm-5 mb-3">
                   <select
                     name="type"
-                    value={e.class}
+                    value={e.class || ""}
                     onChange={(v) => handleSetClassClass(v.target.value, e._id)}
                     id="inputState"
                     className="form-select"
@@ -164,7 +164,7 @@ function CourseForm(props) {
                 <div className="col-sm-5">
                   <select
                     name="type"
-                    value={e.teacher}
+                    value={e.teacher || ""}
                     onChange={(v) =>
                       handleSetClassTeacher(v.target.value, e._id)
                     }
@@ -205,7 +205,7 @@ function CourseForm(props) {
         <label className="form-label">Head Teacher</label>
         <select
           name="type"
-          value={teacher}
+          value={teacher || ""}
           onChange={(e) => setteacher(e.target.value)}
           id="inputState"
           className="form-select"

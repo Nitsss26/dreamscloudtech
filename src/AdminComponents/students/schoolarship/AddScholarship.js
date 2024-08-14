@@ -110,7 +110,7 @@ function AddScholarship(props) {
                 value="option1"
                 onChange={handleSelectAll}
               />
-              <label className="form-check-label" for="exampleRadios1">
+              <label className="form-check-label" htmlFor="exampleRadios1">
                 Select All
               </label>
             </div>
@@ -125,7 +125,7 @@ function AddScholarship(props) {
                 onChange={() => settypes({ ...types, tuition: !types.tuition })}
                 checked={types.tuition}
               />
-              <label className="form-check-label" for="exampleRadios1">
+              <label className="form-check-label" htmlFor="exampleRadios1">
                 Tuition Fee
               </label>
             </div>
@@ -141,7 +141,7 @@ function AddScholarship(props) {
                 }
                 checked={types.facility}
               />
-              <label className="form-check-label" for="exampleRadios2">
+              <label className="form-check-label" htmlFor="exampleRadios2">
                 Facility User Fee
               </label>
             </div>
@@ -157,7 +157,7 @@ function AddScholarship(props) {
                 }
                 checked={types.maintenance}
               />
-              <label className="form-check-label" for="exampleRadios2">
+              <label className="form-check-label" htmlFor="exampleRadios2">
                 Facility maintenance fee
               </label>
             </div>
@@ -173,7 +173,7 @@ function AddScholarship(props) {
                 }
                 checked={types.examination}
               />
-              <label className="form-check-label" for="exampleRadios2">
+              <label className="form-check-label" htmlFor="exampleRadios2">
                 Examination fee
               </label>
             </div>
@@ -189,7 +189,7 @@ function AddScholarship(props) {
                 }
                 checked={types.transportation}
               />
-              <label className="form-check-label" for="exampleRadios2">
+              <label className="form-check-label" htmlFor="exampleRadios2">
                 Transportation fee
               </label>
             </div>
