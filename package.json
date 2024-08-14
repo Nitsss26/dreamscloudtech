@@ -48,6 +48,7 @@
     "react-swipeable-views": "^0.13.9",
     "react-toastify": "^7.0.3",
     "redux": "^4.0.5",
+    "school-dashoboard": "file:",
     "stream-browserify": "^3.0.0",
     "throttle-debounce": "^3.0.1"
   },

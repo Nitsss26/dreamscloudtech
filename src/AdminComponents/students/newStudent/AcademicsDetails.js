@@ -91,7 +91,7 @@ function AcademicsDetails(props) {
           <label className="form-label">Class</label>
           <select
             ref={register({ required: true })}
-            value={classID}
+            value={classID || ""}
             onChange={(e) => setclass(e.target.value)}
             name="class"
             className="form-select"
@@ -119,7 +119,7 @@ function AcademicsDetails(props) {
         <div className="col-xs-12 col-sm-6 col-md-3 mb-3">
           <label className="form-label">Section / House</label>
           <select
-            value={section}
+            value={section || ""}
             onChange={(e) => setsection(e.target.value)}
             name="house"
             className="form-select"
@@ -142,7 +142,7 @@ function AcademicsDetails(props) {
         <div className="col-xs-12 col-sm-6 col-md-3 mb-3">
           <label className="form-label">Divisions</label>
           <select
-            value={division}
+            value={division || ""}
             onChange={(e) => setdivision(e.target.value)}
             name="house"
             className="form-select"
@@ -167,7 +167,7 @@ function AcademicsDetails(props) {
           <select
             ref={register({ required: true })}
             name="status"
-            value={status}
+            value={status || ""}
             onChange={(e) => setstatus(e.target.value)}
             className="form-select"
             aria-label="Default select example"
@@ -192,7 +192,7 @@ function AcademicsDetails(props) {
           <div className="col-xs-12 col-sm-6 col-md-4">
             <label className="form-label">Dormitory</label>
             <select
-              value={dormitory}
+              value={dormitory || ""}
               onChange={(e) => setdormitory(e.target.value)}
               name="dormitary"
               className="form-select"
@@ -218,7 +218,7 @@ function AcademicsDetails(props) {
         <div className="col-xs-12 col-sm-6  col-md-4">
           <label className="form-label">Scholarship</label>
           <select
-            value={schoolarship}
+            value={schoolarship || ""}
             onChange={(e) => setschoolarship(e.target.value)}
             name="scholarship"
             className="form-select"
@@ -243,7 +243,7 @@ function AcademicsDetails(props) {
           <label className="form-label">Fees Category</label>
           <select
             name="feesCategory"
-            value={feesCategory}
+            value={feesCategory || ""}
             onChange={(e) => setfeesCategory(e.target.value)}
             className="form-select"
             aria-label="Default select example"
@@ -269,7 +269,7 @@ function AcademicsDetails(props) {
           <label className="form-label">Campus</label>
           <select
             name="feesCategory"
-            value={campus}
+            value={campus || ""}
             onChange={(e) => setcampus(e.target.value)}
             className="form-select"
             aria-label="Default select example"

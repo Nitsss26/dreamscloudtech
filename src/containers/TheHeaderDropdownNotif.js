@@ -47,8 +47,8 @@ const TheHeaderDropdownNotif = () => {
                 </CDropdownItem>
                 {items.length > 0 &&
                     items
-                        .map((e) => (
-                            <>
+                        .map((e, index) => (
+                            <div key={index}>
                                 <CDropdownItem
                                     onClick={() => handleOpenNotification(e._id)}
                                     key={e._id}
@@ -65,7 +65,7 @@ const TheHeaderDropdownNotif = () => {
                                     <br />
                                     <hr />
                                 </CDropdownItem>{" "}
-                            </>
+                            </div>
                         ))
                         .slice(0, 5)}
                 <CDropdownItem href="/notifications">
