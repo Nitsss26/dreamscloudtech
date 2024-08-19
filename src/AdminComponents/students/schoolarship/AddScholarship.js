@@ -142,7 +142,7 @@ function AddScholarship(props) {
                 checked={types.facility}
               />
               <label className="form-check-label" htmlFor="exampleRadios2">
-                Facility User Fee
+                Transport Fee
               </label>
             </div>
             <div className="form-check">
@@ -158,7 +158,7 @@ function AddScholarship(props) {
                 checked={types.maintenance}
               />
               <label className="form-check-label" htmlFor="exampleRadios2">
-                Facility maintenance fee
+                Maintenance fee
               </label>
             </div>
             <div className="form-check">

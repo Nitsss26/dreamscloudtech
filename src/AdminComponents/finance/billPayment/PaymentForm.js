@@ -193,7 +193,7 @@ function PaymentForm({
                         }
                         checked={applyTo?.facility}
                       />
-                      <label className="form-check-label">Facility Fee</label>
+                      <label className="form-check-label">Transport Fee</label>
                     </div>
                   </>
                 </div>

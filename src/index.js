@@ -6,7 +6,6 @@ import "./polyfill";
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import * as serviceWorker from "../public/serviceWorker";
 import { icons } from "./assets/icons";
 import { Provider } from "react-redux";
 import { initFunc } from "./store/apiCall";
@@ -28,4 +27,14 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
 //serviceWorker.unregister();
-serviceWorker.register();
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/serviceWorker.js')
+      .then(registration => {
+        console.log('SW registered: ', registration);
+      })
+      .catch(registrationError => {
+        console.log('SW registration failed: ', registrationError);
+      });
+  });
+}

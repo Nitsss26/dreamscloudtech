@@ -70,10 +70,15 @@ function FeeForm({
                 <option defaultValue hidden>
                   Choose...
                 </option>
-                <option value="border">Border</option>
+                {/* <option value="border">Border</option>
                 <option value="freshBorder">Fresh Boarder</option>
                 <option value="day">Day</option>
-                <option value="freshDay">Fresh Day</option>
+                <option value="freshDay">Fresh Day</option> */}
+                <option value="day">Transport</option>
+                <option value="border">WithoutTransport</option>
+                {/* <option value="freshBorder">Fresh Boarder</option> */}
+
+                {/* <option value="freshDay">Fresh Day</option> */}
               </select>
               {errors.type && (
                 <span className=" form-error text-danger mb-2">
@@ -100,7 +105,7 @@ function FeeForm({
               </div>
             </div>
           </div>
-          <div className="row mb-2">
+          {/* <div className="row mb-2">
             <label className="col-2 form-label">Facility User Fee</label>
             <div className="col-10">
               <div className="input-group">
@@ -115,7 +120,7 @@ function FeeForm({
                 />
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="row mb-2">
             <label className="col-2 form-label">Maintenance Fee</label>
             <div className="col-10">
@@ -144,6 +149,22 @@ function FeeForm({
                   ref={register({ min: 0 })}
                   className="form-control"
                   name="exam"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="row mb-2">
+            <label className="col-2 form-label">Transport Fee</label>
+            <div className="col-10">
+              <div className="input-group">
+                <div className="input-group-text">{currentCurrency()}</div>
+                <input
+                  value={facility}
+                  onChange={(e) => setfacility(e.target.value)}
+                  type="number"
+                  ref={register({ min: 0 })}
+                  className="form-control"
+                  name="facility"
                 />
               </div>
             </div>

@@ -28,7 +28,7 @@ function Fees({ fees, balance, totalPaid, totalBill }) {
                   <td>{fees?.tution}</td>
                 </tr>
                 <tr>
-                  <th scope="row">Facility Fee</th>
+                  <th scope="row">Transport Fee</th>
                   <td>{fees?.facility}</td>
                 </tr>
                 <tr>

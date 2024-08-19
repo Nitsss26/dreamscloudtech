@@ -74,7 +74,7 @@ function ViewStudent({
             </td>
           </tr>
           <tr>
-            <td>Facility Fee</td>
+            <td>Transport Fee</td>
             <td>
               <NumberFormat
                 value={feetype?.facility}

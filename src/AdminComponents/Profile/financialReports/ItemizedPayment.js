@@ -48,8 +48,8 @@ function NonBillPayment() {
     ]);
     const headers = [
       { key: "tuition", label: "Tuition Fee" },
-      { key: "facility", label: "Facility User Fee" },
-      { key: "maintenance", label: "Facility Maintenance Fee" },
+      { key: "facility", label: "Transport Fee" },
+      { key: "maintenance", label: "Maintenance Fee" },
       { key: "exam", label: "Examination Fee" },
       { key: "transportion", label: "Transportation Fee" },
       { key: "arrears", label: "Arrears" },
@@ -188,11 +188,11 @@ function NonBillPayment() {
               <td>${0}</td>
             </tr>
             <tr>
-              <td>Facility User Fee</td>
+              <td>Transport Fee</td>
               <td>${0}</td>
             </tr>
             <tr>
-              <td>Facility Maintenance Fee</td>
+              <td> Maintenance Fee</td>
               <td>${0}</td>
             </tr>
             <tr>

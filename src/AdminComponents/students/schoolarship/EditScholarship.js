@@ -158,7 +158,7 @@ function EditPrefects({ open, setopen,
                   onChange={() => settypes({ ...types, facility: !types?.facility })}
                   checked={types?.facility} />
                 <label className="form-check-label" htmlFor="exampleRadios2">
-                  Facility User Fee
+                  Transport Fee
                 </label>
               </div>
               <div className="form-check">
@@ -171,7 +171,7 @@ function EditPrefects({ open, setopen,
                   onChange={() => settypes({ ...types, maintenance: !types.maintenance })}
                   checked={types.maintenance} />
                 <label className="form-check-label" htmlFor="exampleRadios2">
-                  Facility maintenance fee
+                  Maintenance fee
                 </label>
               </div>
               <div className="form-check">

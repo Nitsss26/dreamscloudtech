@@ -9,12 +9,22 @@ import EditFees from "./EditFees";
 import { useDispatch, useSelector } from "react-redux";
 import { selectFees, setfeesType } from "../../../store/slices/schoolSlice";
 
+// const tableHeader = [
+//   { id: "code", name: "Fees Type" },
+//   { id: "day", name: " Day" },
+//   { id: "freshDay", name: "Fresh Day" },
+//   { id: "border", name: "Border" },
+//   { id: "freshBorder", name: "Fresh Border" },
+// ];
+
 const tableHeader = [
-  { id: "code", name: "Fees Type" },
-  { id: "day", name: " Day" },
-  { id: "freshDay", name: "Fresh Day" },
-  { id: "border", name: "Border" },
-  { id: "freshBorder", name: "Fresh Border" },
+  { id: "code", name: "ClassID" },
+
+  { id: "day", name: "Without Transport" },
+  { id: "border", name: "Transport" },
+  // { id: "freshDay", name: "Fresh Day" },
+  // { id: "border", name: "Without Transport" },
+  // { id: "freshBorder", name: "Fresh Border" },
 ];
 
 function SetFees() {

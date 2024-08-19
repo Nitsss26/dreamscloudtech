@@ -25,15 +25,18 @@ function SetNewFees() {
         obj = {
           day: results,
         };
-      } else if (type === "freshDay") {
-        obj = {
-          freshDay: results,
-        };
-      } else if (type === "freshBorder") {
-        obj = {
-          freshBorder: results,
-        };
-      } else if (type === "border") {
+      }
+      // else if (type === "freshDay") {
+      //   obj = {
+      //     freshDay: results,
+      //   };
+      // } 
+      // else if (type === "freshBorder") {
+      //   obj = {
+      //     freshBorder: results,
+      //   };
+      // } 
+      else if (type === "border") {
         obj = {
           border: results,
         };
