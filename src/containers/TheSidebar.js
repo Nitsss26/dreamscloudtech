@@ -24,21 +24,25 @@ const TheSidebar = ({ navs }) => {
             className="sidebar__main"
             show={show}
             onShowChange={(val) => dispatch(set(val))}
-            style={{ width: '254px' }}
+            style={{ width: '255px', backgroundColor: "#fffff5" }}  // Entire Sidebar background
         >
-            <CSidebarBrand className="d-md-down-none nav__brand" to="/">
+            <CSidebarBrand
+                className="d-md-down-none nav__brand"
+                to="/"
+                style={{ backgroundColor: "#fffff5", }} // Uniform padding instead of margin
+            >
                 <img
                     className="c-sidebar-brand-full"
                     src={logo}
                     alt="logo-negative"
-                    height={70}
-                    width={230}
-                    style={{ marginLeft: "10px", marginTop: "5px", marginBottom: "20px" }}
+                    height={100}
+                    width={280}
+                    style={{ backgroundColor: "#fffff5" }}  // Ensuring image background matches
                 />
             </CSidebarBrand>
-            <CSidebarNav>
+            <CSidebarNav style={{ backgroundColor: "#fffff5", paddingLeft: "5px" }}>
                 <CCreateElement
-                    classname="bg-white"
+                    classname=""
                     items={navs}
                     components={{
                         CSidebarNavDivider,
@@ -46,7 +50,6 @@ const TheSidebar = ({ navs }) => {
                         CSidebarNavItem,
                         CSidebarNavTitle,
                     }}
-                    style={{ marginLeft: '5px' }}
                 />
             </CSidebarNav>
             {/* <CSidebarMinimizer className="c-d-md-down-none bg-white" /> */}

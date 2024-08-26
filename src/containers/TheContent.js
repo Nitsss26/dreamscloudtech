@@ -16,7 +16,13 @@ const loading = (
 
 const TheContent = ({ routes, path }) => {
     return (
-        <main className="c-main">
+        <main className="c-main" style={{
+            backgroundColor: "#edece4  ",
+            // backgroundColor: "#eef2f7",
+            // backgroundColor: "#ebedef",
+            border: "none",         // Removes the border
+            boxShadow: "none"       // Removes the shadow
+        }}>
             <CContainer fluid>
                 <Suspense fallback={loading}>
                     <Switch>
@@ -43,3 +49,5 @@ const TheContent = ({ routes, path }) => {
 }
 
 export default React.memo(TheContent)
+
+

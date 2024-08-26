@@ -43,13 +43,62 @@ function stableSort(array, comparator) {
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
+    backgroundColor: "#fffff5",
   },
   paper: {
     width: "100%",
     marginBottom: theme.spacing(2),
+    backgroundColor: "#fffff5",
   },
   table: {
     minWidth: 750,
+  },
+  tableContainer: {
+    maxHeight: "620px",
+  },
+  tableCell: {
+    whiteSpace: "nowrap",
+    overflow: "visible",
+    fontFamily: "'Baskerville', serif",
+    padding: "16px",
+    fontSize: "14px",
+    fontWeight: "bold",
+    color: "#444",
+    textAlign: "center",
+  },
+  tableHeadCell: {
+    backgroundColor: "#01a6ca",
+    color: "#fff",
+    fontFamily: "'Times New Roman', serif",
+    fontWeight: "bold",
+    textAlign: "center",
+    position: "sticky",
+    top: 0,
+    zIndex: 1000,
+    padding: "16px",
+  },
+  tableRow: {
+    "&:nth-of-type(even)": {
+      backgroundColor: "#fffff7",
+    },
+    "&:nth-of-type(odd)": {
+      backgroundColor: "#f0f8ff",
+    },
+  },
+  noDataCell: {
+    textAlign: "center",
+    color: "#fa6767",
+    fontFamily: "'Baskerville', serif",
+  },
+  stickyHeader: {
+    position: "sticky",
+    top: 0,
+    backgroundColor: "#01a6ca", // Header background color
+    color: "#fff",
+    zIndex: 1000,
+    fontFamily: "'Times New Roman', serif",
+    fontWeight: "bold",
+    textAlign: "center",
   },
   visuallyHidden: {
     border: 0,
@@ -129,12 +178,11 @@ export default function EnhancedTable({
 
   const emptyRows =
     rowsPerPage - Math.min(rowsPerPage, students?.length - page * rowsPerPage);
-  console.log(students);
 
   return (
     <div className={classes.root}>
       <Paper className={classes.paper}>
-        <TableContainer>
+        <TableContainer className={classes.tableContainer}>
           <Table
             className={classes.table}
             aria-labelledby="tableTitle"
@@ -142,6 +190,7 @@ export default function EnhancedTable({
             aria-label="enhanced table"
           >
             <TableHeader
+              className={classes.stickyHeader}
               classes={classes}
               headCells={headCells}
               numSelected={selected.length}
@@ -167,6 +216,7 @@ export default function EnhancedTable({
                         tabIndex={-1}
                         key={row.userID}
                         selected={isItemSelected}
+                        className={classes.tableRow}
                       >
                         <TableCell padding="checkbox">
                           <Checkbox
@@ -175,34 +225,28 @@ export default function EnhancedTable({
                             inputProps={{ "aria-labelledby": labelId }}
                           />
                         </TableCell>
-                        <TableCell align="left" id={labelId}>
-                          {row?.userID || "-"}
-                        </TableCell>
-                        <TableCell align="left">
+                        <TableCell align="center" className={classes.tableCell}>
                           <Avatar
                             src={`${getImgSrc(row?.profileUrl)}`}
                             alt={getIntial(row?.name)}
-                          ></Avatar>
+                          />
                         </TableCell>
-                        <TableCell align="left">{row?.name}</TableCell>
-                        {/* <TableCell align="left">
-                          {" "}
-                          {row?.middleName || "-"}
-                        </TableCell> */}
-                        <TableCell align="left">
+                        <TableCell align="center" id={labelId} className={classes.tableCell}>
+                          {row?.userID || "-"}
+                        </TableCell>
+                        <TableCell align="center" className={classes.tableCell}>
+                          {row?.classID || "-"}
+                        </TableCell>
+                        <TableCell align="center" className={classes.tableCell}>{row?.name}</TableCell>
+                        <TableCell align="center" className={classes.tableCell}>
                           {row?.surname || "-"}
                         </TableCell>
-                        <TableCell align="left">
+                        <TableCell align="center" className={classes.tableCell}>
                           {row?.status || row?.position}
                         </TableCell>
-                        {row?.role === "student" && (
-                          <TableCell align="left">
-                            {row?.classID || "-"}
-                          </TableCell>
-                        )}
-                        <TableCell align="left">{row?.gender || "-"}</TableCell>
+                        <TableCell align="center" className={classes.tableCell}>{row?.gender || "-"}</TableCell>
                         {!noActions && (
-                          <TableCell align="left">
+                          <TableCell align="center" className={classes.tableCell}>
                             <ViewActions
                               id={row?.userID}
                               route={route}
@@ -218,7 +262,7 @@ export default function EnhancedTable({
                   })}
                 {emptyRows > 0 && (
                   <TableRow style={{ height: 53 * emptyRows }}>
-                    <TableCell colSpan={6} />
+                    <TableCell colSpan={headCells.length + 2} />
                   </TableRow>
                 )}
               </TableBody>
@@ -226,7 +270,7 @@ export default function EnhancedTable({
               <TableBody>
                 <TableRow>
                   <TableCell
-                    className="text-danger text-center"
+                    className={classes.noDataCell}
                     colSpan={headCells.length + 2}
                   >
                     {noData || "NO DATA"}
@@ -234,24 +278,23 @@ export default function EnhancedTable({
                 </TableRow>
                 {emptyRows > 0 && (
                   <TableRow style={{ height: 53 * emptyRows }}>
-                    <TableCell colSpan={6} />
+                    <TableCell colSpan={headCells.length + 2} />
                   </TableRow>
                 )}
               </TableBody>
             )}
           </Table>
         </TableContainer>
-        {students?.length > 5 && (
-          <TablePagination
-            rowsPerPageOptions={[5, 10, 25]}
-            component="div"
-            count={students.length}
-            rowsPerPage={rowsPerPage}
-            page={page}
-            onChangePage={handleChangePage}
-            onChangeRowsPerPage={handleChangeRowsPerPage}
-          />
-        )}
+        <TablePagination
+          rowsPerPageOptions={[5, 10, 25]}
+          component="div"
+          count={students?.length || 0}
+          rowsPerPage={rowsPerPage}
+          page={page}
+          onPageChange={handleChangePage}
+          onRowsPerPageChange={handleChangeRowsPerPage}
+          style={{ color: "#333" }}
+        />
       </Paper>
     </div>
   );

@@ -54,7 +54,7 @@ const DialogActions = withStyles((theme) => ({
 
 
 export default function EditBank(
-    {loading, open,onSubmit, setOpen, bank, setbank , accountNumber, setaccountNumber}) {
+  { loading, open, onSubmit, setOpen, bank, setbank, accountNumber, setaccountNumber }) {
 
   const { register, handleSubmit, errors } = useForm();
 
@@ -64,65 +64,65 @@ export default function EditBank(
   };
 
   return (
-      <Dialog 
-        onClose={handleClose} 
-        maxWidth="sm"
-        fullWidth={true}
-        aria-labelledby="customized-dialog-title" 
-        open={open}>
-        <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-           Edit Bank Details
-        </DialogTitle>
-        <form action="">
-            <DialogContent >
-                 <div className=" mb-4">
-                    <label  
-                    className="col-sm-3 col-form-label">
-                        Bank
-                   </label>
-                    <div className="col-sm-9">
-                        <input 
-                        type="text" 
-                        value={bank}
-                        ref={register({ required: true})} 
-                        onChange={e => setbank(e.target.value)}
-                        className="form-control" 
-                        name="date"/>
-                        {errors.date && <div className="text-danger">This field is required</div>}
-                    </div>
-                 </div>
-                 <div className=" mb-4">
-                    <label  
-                    className="col-sm-3 col-form-label">
-                        Account Number
-                   </label>
-                    <div className="col-sm-9">
-                        <input 
-                        type="text" 
-                        value={accountNumber}
-                        ref={register({ required: true})} 
-                        onChange={e => setaccountNumber(e.target.value)}
-                        className="form-control" 
-                        name="date"/>
-                        {errors.date && <div className="text-danger">This field is required</div>}
-                    </div>
-                 </div>
-                
-            </DialogContent>
-            <DialogActions>
-                <Button autoFocus 
-                    color="primary"
-                    disabled={loading}
-                    onClick={handleSubmit(onSubmit)}
-                    >
-                    {loading &&  <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>}
-                    Save Changes
-                </Button>
-                <Button autoFocus onClick={handleClose} color="secondary">
-                    Close
-                </Button>
-            </DialogActions>
-        </form>
-      </Dialog>
+    <Dialog
+      onClose={handleClose}
+      maxWidth="sm"
+      fullWidth={true}
+      aria-labelledby="customized-dialog-title"
+      open={open}>
+      <DialogTitle id="customized-dialog-title" onClose={handleClose}>
+        Edit Bank Details
+      </DialogTitle>
+      <form action="">
+        <DialogContent >
+          <div className=" mb-4">
+            <label
+              className="col-sm-3 col-form-label">
+              Bank
+            </label>
+            <div className="col-sm-9">
+              <input style={{ backgroundColor: " #fffff9" }}
+                type="text"
+                value={bank}
+                ref={register({ required: true })}
+                onChange={e => setbank(e.target.value)}
+                className="form-control"
+                name="date" />
+              {errors.date && <div className="text-danger">This field is required</div>}
+            </div>
+          </div>
+          <div className=" mb-4">
+            <label
+              className="col-sm-3 col-form-label">
+              Account Number
+            </label>
+            <div className="col-sm-9">
+              <input style={{ backgroundColor: " #fffff9" }}
+                type="text"
+                value={accountNumber}
+                ref={register({ required: true })}
+                onChange={e => setaccountNumber(e.target.value)}
+                className="form-control"
+                name="date" />
+              {errors.date && <div className="text-danger">This field is required</div>}
+            </div>
+          </div>
+
+        </DialogContent>
+        <DialogActions>
+          <Button autoFocus
+            color="primary"
+            disabled={loading}
+            onClick={handleSubmit(onSubmit)}
+          >
+            {loading && <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>}
+            Save Changes
+          </Button>
+          <Button autoFocus onClick={handleClose} color="secondary">
+            Close
+          </Button>
+        </DialogActions>
+      </form>
+    </Dialog>
   );
 }

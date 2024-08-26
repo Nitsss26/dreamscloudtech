@@ -7,7 +7,7 @@ import moment from "moment";
 import { selectUser } from "../../../store/slices/userSlice";
 import InsertDriveFileIcon from "@material-ui/icons/InsertDriveFile";
 import PrintIcon from "@material-ui/icons/Print";
-import ExcelButton from "../../../components/tables/ExcelExport";
+// import ExcelButton from "../../../components/tables/ExcelExport";
 
 const tableHeader = [
   { id: "date", name: "Date" },
@@ -48,9 +48,9 @@ function ViewPayment() {
         let fee = fees.find((z) => z?.code === u?.fees);
         return fee
           ? Object.values(fee[u.status]).reduce(
-              (t, v) => Number(t) + Number(v),
-              0
-            )
+            (t, v) => Number(t) + Number(v),
+            0
+          )
           : 0;
       };
       let paidFee = async (id) => {
@@ -76,7 +76,7 @@ function ViewPayment() {
               date: i.createdAt,
               name: i.name + " " + i.surname,
               fees: bal(i),
-              type: i.status,
+              type: i.status === "border" ? "Transport" : "Without Transport",
               amount: 0,
               balance: bal(i) - 0,
             };
@@ -193,7 +193,7 @@ function ViewPayment() {
                 Print <PrintIcon />
               </button>
 
-              <ExcelButton
+              {/* <ExcelButton
                 data={expenditures}
                 columns={tableHeader}
                 btn={
@@ -201,7 +201,7 @@ function ViewPayment() {
                     <InsertDriveFileIcon /> Save
                   </>
                 }
-              />
+              /> */}
             </div>
           )}
         </>

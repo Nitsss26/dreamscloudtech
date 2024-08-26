@@ -45,7 +45,7 @@ function SendToForm({
           Sender:
         </label>
         <div className="col-sm-10">
-          <input className="form-control" value={sender} type="text" readOnly />
+          <input style={{ backgroundColor: " #fffff9" }} className="form-control" value={sender} type="text" readOnly />
         </div>
       </div>
       <div className="mb-2 row">

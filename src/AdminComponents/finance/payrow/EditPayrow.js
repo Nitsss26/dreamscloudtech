@@ -51,19 +51,19 @@ const DialogActions = withStyles((theme) => ({
 }))(MuiDialogActions);
 
 export default function CustomizedDialogs({
-    open, setOpen, 
-    name, salary,
-    allowance, bonus, 
-    setname,
-    setsalary,
-    isAdd,
-    loading,
-    onSubmit,
-    setallowance,
-    setbonus
-  }) {
+  open, setOpen,
+  name, salary,
+  allowance, bonus,
+  setname,
+  setsalary,
+  isAdd,
+  loading,
+  onSubmit,
+  setallowance,
+  setbonus
+}) {
 
-    const { register, handleSubmit, errors } = useForm()
+  const { register, handleSubmit, errors } = useForm()
 
 
   const handleClose = () => {
@@ -71,98 +71,98 @@ export default function CustomizedDialogs({
   };
 
   return (
-      <Dialog 
-      onClose={handleClose} 
+    <Dialog
+      onClose={handleClose}
       fullWidth={true}
       maxWidth="sm"
-      aria-labelledby="customized-dialog-title" 
+      aria-labelledby="customized-dialog-title"
       open={open}>
-        <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-            {isAdd ? " Add New Staff Position" : "Edit Staff Position"}
-           
-        </DialogTitle>
-        <form action="">
+      <DialogTitle id="customized-dialog-title" onClose={handleClose}>
+        {isAdd ? " Add New Staff Position" : "Edit Staff Position"}
+
+      </DialogTitle>
+      <form action="">
         <DialogContent >
-              <div className="mb-3">
-                <label htmlFor="">Position's Name</label>
-                {isAdd ? 
-                <>
-                   <input 
-                    ref={register({ required: true })}
-                    type="text" 
-                    name="name"
-                    value={name}
-                    onChange={e => setname(e.target.value)}
-                    className="form-control"  
-                    />
-                    {errors.name && <div className="text-danger mb-3">This field  is required.</div>}
-                </> : 
-                   <input 
-                   ref={register({ required: true })}
-                   type="text" 
-                   name="name"
-                   value={name}
-                   readOnly
-                   className="form-control"  
-                   />
-                }
-               
-               </div>
-               <div className="mb-3">
-                <label htmlFor="">Salary</label>
-                <input 
-                    ref={register({ required: true })}
-                    type="number" 
-                    name="salary"
-                    value={salary}
-                    onChange={e => setsalary(e.target.value)}
-                    className="form-control"  
-                    />
-                    {errors.salary && <div className="text-danger mb-3">This field  is required.</div>}
-               </div>
-               <div className="mb-3">
-                <label htmlFor="">Allowance</label>
-                <input 
-                    ref={register({ required: true })}
-                    type="number" 
-                    name="allowance"
-                    value={allowance}
-                    onChange={e => setallowance(e.target.value)}
-                    className="form-control"  
-                    />
-                    {errors.allowance && <div className="text-danger mb-3">This field  is required.</div>}
-               </div>
-               <div className="mb-3">
-                <label htmlFor="">Bonus</label>
-                <input 
-                    ref={register({ required: true })}
-                    type="number" 
-                    name="bonus"
-                    value={bonus}
-                    onChange={e => setbonus(e.target.value)}
-                    className="form-control"  
-                    />
-                    {errors.bonus && <div className="text-danger mb-3">This field  is required.</div>}
-               </div>
-            </DialogContent>
-            <DialogActions>
-                <Button 
-                disabled={loading} 
-                onClick={handleSubmit(onSubmit)} 
-                color="primary">
-                    {loading && 
-                        <div 
-                        className="spinner-border spinner-border-sm" 
-                        role="status">
-                        </div>
-                    }
-                    {isAdd ? "Add" : "Save Changes"}
-                </Button>
-                <Button onClick={handleClose} color="secondary">
-                    Cancel
-                </Button>
-           </DialogActions>
-           </form>
-      </Dialog>
+          <div className="mb-3">
+            <label htmlFor="">Position's Name</label>
+            {isAdd ?
+              <>
+                <input style={{ backgroundColor: " #fffff9" }}
+                  ref={register({ required: true })}
+                  type="text"
+                  name="name"
+                  value={name}
+                  onChange={e => setname(e.target.value)}
+                  className="form-control"
+                />
+                {errors.name && <div className="text-danger mb-3">This field  is required.</div>}
+              </> :
+              <input style={{ backgroundColor: " #fffff9" }}
+                ref={register({ required: true })}
+                type="text"
+                name="name"
+                value={name}
+                readOnly
+                className="form-control"
+              />
+            }
+
+          </div>
+          <div className="mb-3">
+            <label htmlFor="">Salary</label>
+            <input style={{ backgroundColor: " #fffff9" }}
+              ref={register({ required: true })}
+              type="number"
+              name="salary"
+              value={salary}
+              onChange={e => setsalary(e.target.value)}
+              className="form-control"
+            />
+            {errors.salary && <div className="text-danger mb-3">This field  is required.</div>}
+          </div>
+          <div className="mb-3">
+            <label htmlFor="">Allowance</label>
+            <input style={{ backgroundColor: " #fffff9" }}
+              ref={register({ required: true })}
+              type="number"
+              name="allowance"
+              value={allowance}
+              onChange={e => setallowance(e.target.value)}
+              className="form-control"
+            />
+            {errors.allowance && <div className="text-danger mb-3">This field  is required.</div>}
+          </div>
+          <div className="mb-3">
+            <label htmlFor="">Bonus</label>
+            <input style={{ backgroundColor: " #fffff9" }}
+              ref={register({ required: true })}
+              type="number"
+              name="bonus"
+              value={bonus}
+              onChange={e => setbonus(e.target.value)}
+              className="form-control"
+            />
+            {errors.bonus && <div className="text-danger mb-3">This field  is required.</div>}
+          </div>
+        </DialogContent>
+        <DialogActions>
+          <Button
+            disabled={loading}
+            onClick={handleSubmit(onSubmit)}
+            color="primary">
+            {loading &&
+              <div
+                className="spinner-border spinner-border-sm"
+                role="status">
+              </div>
+            }
+            {isAdd ? "Add" : "Save Changes"}
+          </Button>
+          <Button onClick={handleClose} color="secondary">
+            Cancel
+          </Button>
+        </DialogActions>
+      </form>
+    </Dialog>
   );
 }

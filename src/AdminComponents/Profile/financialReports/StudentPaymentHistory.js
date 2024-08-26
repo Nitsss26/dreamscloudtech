@@ -6,18 +6,19 @@ import { useSelector } from "react-redux";
 import { selectClasses } from "../../../store/slices/schoolSlice";
 import InsertDriveFileIcon from "@material-ui/icons/InsertDriveFile";
 import PrintIcon from "@material-ui/icons/Print";
-import ExcelButton from "../../../components/tables/ExcelExport";
+// import ExcelButton from "../../../components/tables/ExcelExport";
 import { selectUser } from "../../../store/slices/userSlice";
 import { Avatar } from "@material-ui/core";
 
 const tableHeader = [
   { id: "date", name: "Date" },
   { id: "year", name: "Academic Year" },
-  { id: "term", name: "Name" },
+  { id: "term", name: "Term" },
   { id: "description", name: "Description" },
   { id: "receipt", name: "Receipt" },
   { id: "amount", name: "Amount" },
-  { id: "paidTo", name: "Balance" },
+  // { id: "paidTo", name: "Balance" },
+  { id: "paidTo", name: "paidTo" },
 ];
 
 function ViewPayment() {
@@ -175,7 +176,7 @@ function ViewPayment() {
             {/* <button onClick={handleSave} className="btn blue__btn ml-3">
               Save <InsertDriveFileIcon />
             </button> */}
-            <ExcelButton
+            {/* <ExcelButton
               data={expenditures}
               columns={tableHeader}
               btn={
@@ -183,7 +184,7 @@ function ViewPayment() {
                   <InsertDriveFileIcon /> Save
                 </>
               }
-            />
+            /> */}
           </div>
         </>
       )}

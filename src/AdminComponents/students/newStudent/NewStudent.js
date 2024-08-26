@@ -172,10 +172,10 @@ function NewStudent() {
   };
 
   return (
-    <div>
+    <div >
       <h2>Add New Students</h2>
-      <div>
-        <form className="content__container">
+      <div style={{ backgroundColor: "#fffff5" }}>
+        <form className="content__container" style={{ backgroundColor: "#fffff5" }}>
           <div className="profile-picture-container" style={{
             display: 'flex',
             justifyContent: 'center',

@@ -4,7 +4,7 @@ import axios from "../../../store/axios";
 import { getTrimString } from "../../../utils";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../../store/slices/userSlice";
-import ExcelExport from "../../../components/tables/ExcelExport";
+// import ExcelExport from "../../../components/tables/ExcelExport";
 import InsertDriveFileIcon from "@material-ui/icons/InsertDriveFile";
 import PrintIcon from "@material-ui/icons/Print";
 import moment from "moment";
@@ -142,7 +142,7 @@ function ViewPayment() {
             <button className="btn blue__btn mr-3 " onClick={handlePrint}>
               Print <PrintIcon />
             </button>
-            <ExcelExport
+            {/* <ExcelExport
               data={expenditures}
               columns={tableHeader}
               btn={
@@ -150,7 +150,7 @@ function ViewPayment() {
                   <InsertDriveFileIcon /> Save
                 </>
               }
-            />
+            /> */}
           </div>
         )}
       </div>

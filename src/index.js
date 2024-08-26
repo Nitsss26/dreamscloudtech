@@ -12,8 +12,12 @@ import { initFunc } from "./store/apiCall";
 import store from "./store/index";
 import "./scss/style.scss";
 import "./index.css"
+
 initFunc();
+
 React.icons = icons;
+
+
 
 ReactDOM.render(
 

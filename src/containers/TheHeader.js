@@ -72,7 +72,10 @@ const TheHeader = ({ routes }) => {
     };
 
     return (
-        <CHeader withSubheader>
+        <CHeader withSubheader style={{
+            backgroundColor: "#fffff5",
+
+        }}>
             <CToggler
                 inHeader
                 className="ml-md-3 d-lg-none"
@@ -87,7 +90,7 @@ const TheHeader = ({ routes }) => {
         <CIcon name="logo" height="48" alt="Logo" />
       </CHeaderBrand> */}
 
-            <CHeaderNav className="d-md-down-none mr-auto search__container">
+            <CHeaderNav className="d-md-down-none mr-auto search__container" >
                 <form onSubmit={handlesearch} className="nav__search">
                     <div className="input-container">
                         <SearchIcon className="icon" />
@@ -142,7 +145,11 @@ const TheHeader = ({ routes }) => {
                 </ul>
             </CHeaderNav> */}
 
-            <CHeaderNav className="px-0 nav__icons">
+            <CHeaderNav className="px-0 nav__icons" style={{
+                backgroundColor: "#fffff5",
+                border: "none",         // Removes the border
+                boxShadow: "none"       // Removes the shadow
+            }}>
 
                 <TheHeaderDropdownNotif id={user?.id} />
                 <TheHeaderDropdownMssg id={user?.id} />
@@ -157,16 +164,20 @@ const TheHeader = ({ routes }) => {
             </CSubheader> */}
             <CSubheader
                 style={{
-                    backgroundColor: "#ebedef",
-                    border: "none",         // Removes the border
-                    boxShadow: "none"       // Removes the shadow
+                    backgroundColor: "#fffff5",
+                    // border: "none",         // Removes the border
+                    // boxShadow: "none"       // Removes the shadow
                 }}
                 className="px-3 justify-content-start"
             >
                 <CBreadcrumbRouter
                     style={{
+
                         border: "none",      // Removes any border within CBreadcrumbRouter
-                        boxShadow: "none"    // Removes any shadow within CBreadcrumbRouter
+                        boxShadow: "none"
+
+
+                        // Removes any shadow within CBreadcrumbRouter
                     }}
                     className="border-0 c-subheader-nav m-0 px-0 px-md-3"
                     routes={routes}
@@ -179,3 +190,4 @@ const TheHeader = ({ routes }) => {
 };
 
 export default TheHeader;
+

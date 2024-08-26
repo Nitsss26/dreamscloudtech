@@ -91,7 +91,7 @@ function Search(props) {
   return (
     <form
       className="content__container"
-      style={{ display: "flex", alignItems: "center", flexWrap: "nowrap", width: "100%", marginTop: "-4px" }}
+      style={{ display: "flex", alignItems: "center", flexWrap: "nowrap", width: "100%", marginTop: "-4px", backgroundColor: "#fffff5" }}
     >
       <h3 style={{ marginRight: "30px", whiteSpace: "nowrap" }}>{title || ""}</h3>
       <div
@@ -107,7 +107,7 @@ function Search(props) {
           inputFields.map((input) => (
             <div
               key={input?.name}
-              style={{ marginLeft: "2px", marginRight: "20px", flex: "0 0 auto", minWidth: "170px" }}
+              style={{ marginLeft: "2px", marginRight: "20px", flex: "0 0 auto", minWidth: "130px" }}
             >
               <label htmlFor={input?.name} style={{ display: "block" }}>
                 {input.label}

@@ -82,7 +82,7 @@ function Sidebar() {
       </div>
       {/* <div className="sidebar__search p-2">
         <form action="">
-          <input type="text" placeholder="Search..." />
+          <input  style={{ backgroundColor: " #fffff9" }}type="text" placeholder="Search..." />
           <SearchIcon />
         </form>
       </div> */}

@@ -42,6 +42,7 @@ function Personalnfo(props) {
           <div className="col-xs-12 col-sm-6 col-md-3">
             <label className="form-label">Title</label>
             <select
+              style={{ backgroundColor: " #fffff9" }}
               className="form-control"
               ref={register({ required: true })}
               value={title}
@@ -49,7 +50,7 @@ function Personalnfo(props) {
               onChange={(e) => setTitle(e.target.value)}
               aria-label="Default select example"
             >
-              <option defaultValue hidden>
+              <option defaultValue hidden >
                 Select
               </option>
               <option value="mr">Mr</option>
@@ -71,6 +72,7 @@ function Personalnfo(props) {
         <div className="col-xs-12 col-sm-6 col-md-3">
           <label className="form-label">First Name</label>
           <input
+            style={{ backgroundColor: " #fffff9" }}
             name="name"
             type="text"
             value={name}
@@ -88,6 +90,7 @@ function Personalnfo(props) {
         <div className="col-xs-12 col-sm-6 col-md-3">
           <label className="form-label">Second Name</label>
           <input
+            style={{ backgroundColor: " #fffff9" }}
             ref={register}
             type="text"
             name="secondname"
@@ -99,6 +102,7 @@ function Personalnfo(props) {
         <div className="col-xs-12 col-sm-6 col-md-3">
           <label className="form-label">Last Name</label>
           <input
+            style={{ backgroundColor: " #fffff9" }}
             ref={register({ required: true })}
             value={lastname}
             onChange={(e) => setlastname(e.target.value)}
@@ -117,6 +121,7 @@ function Personalnfo(props) {
         <div className="col-xs-12 col-sm-6 col-md-4">
           <label className="form-label"> Gender *</label>
           <select
+            style={{ backgroundColor: " #fffff9" }}
             className="form-control"
             ref={register({ required: true })}
             value={gender}
@@ -140,6 +145,7 @@ function Personalnfo(props) {
         <div className="col-xs-12 col-sm-6 col-md-4">
           <label className="form-label">Date of Birth</label>
           <input
+            style={{ backgroundColor: " #fffff9" }}
             value={dateofBirth}
             name="dateofBirth"
             ref={register({ required: true })}
@@ -153,6 +159,7 @@ function Personalnfo(props) {
         <div className="col-xs-12 col-sm-6 col-md-4">
           <label className="form-label">Email</label>
           <input
+            style={{ backgroundColor: " #fffff9" }}
             value={email}
             ref={register({ required: true, pattern: getEmailPattern() })}
             onChange={(e) => setemail(e.target.value)}
@@ -171,6 +178,7 @@ function Personalnfo(props) {
         <div className="col-xs-12 col-sm-6 col-md-4">
           <label className="form-label">Nationality</label>
           <input
+            style={{ backgroundColor: " #fffff9" }}
             value={nationality}
             ref={register}
             onChange={(e) => setnationality(e.target.value)}
@@ -182,6 +190,7 @@ function Personalnfo(props) {
         <div className="col-xs-12 col-sm-6 col-md-4">
           <label className="form-label">Religion</label>
           <input
+            style={{ backgroundColor: " #fffff9" }}
             type="text"
             ref={register}
             name="religion"
@@ -193,6 +202,7 @@ function Personalnfo(props) {
         <div className="col-xs-12 col-sm-6 col-md-4">
           <label className="form-label">Place of Birth</label>
           <input
+            style={{ backgroundColor: " #fffff9" }}
             type="text"
             ref={register}
             name="placeofBirth"
@@ -206,6 +216,7 @@ function Personalnfo(props) {
         <div className="col-xs-12 col-sm-6 col-md-4">
           <label className="form-label">Health Condition</label>
           <select
+            style={{ backgroundColor: " #fffff9" }}
             value={healthCon}
             ref={register}
             onChange={(e) => setHealthCon(e.target.value)}
@@ -225,6 +236,7 @@ function Personalnfo(props) {
         <div className="col-xs-12 col-sm-6 col-md-4">
           <label className="form-label">Disease</label>
           <input
+            style={{ backgroundColor: " #fffff9" }}
             type="text"
             name="heathy"
             ref={register}
@@ -237,6 +249,7 @@ function Personalnfo(props) {
         <div className="col-xs-12 col-sm-6 col-md-4">
           <label className="form-label">Any Allegies</label>
           <input
+            style={{ backgroundColor: " #fffff9" }}
             ref={register}
             type="text"
             name="allegies"

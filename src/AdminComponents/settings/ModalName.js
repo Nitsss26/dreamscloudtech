@@ -49,7 +49,7 @@ const DialogActions = withStyles((theme) => ({
   },
 }))(MuiDialogActions);
 
-export default function CustomizedDialogs({open, setOpen, setname, name, handleEdit , loading}) {
+export default function CustomizedDialogs({ open, setOpen, setname, name, handleEdit, loading }) {
 
   const handleClose = () => {
     setOpen(false);
@@ -59,32 +59,32 @@ export default function CustomizedDialogs({open, setOpen, setname, name, handleE
     <div>
       <Dialog fullWidth={true} maxWidth="sm" onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-           Edit School Name
+          Edit School Name
         </DialogTitle>
         <DialogContent >
-               <div className="row mb-3">
-                    <div className="col-sm-9">
-                       <input 
-                        onChange={e => setname(e.target.value)} 
-                        value={name} 
-                        type="text" 
-                        className="form-control" 
-                        name="name"/>
-                    </div>
-                </div>
+          <div className="row mb-3">
+            <div className="col-sm-9">
+              <input style={{ backgroundColor: " #fffff9" }}
+                onChange={e => setname(e.target.value)}
+                value={name}
+                type="text"
+                className="form-control"
+                name="name" />
+            </div>
+          </div>
         </DialogContent>
         <DialogActions>
-          <Button 
-            disabled={loading} 
-            autoFocus 
-            onClick={handleEdit} 
+          <Button
+            disabled={loading}
+            autoFocus
+            onClick={handleEdit}
             color="primary">
-                 {loading &&   <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>}
+            {loading && <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>}
             Save changes
           </Button>
-          <Button 
-            autoFocus 
-            onClick={handleClose} 
+          <Button
+            autoFocus
+            onClick={handleClose}
             color="secondary">
             Cancel
           </Button>

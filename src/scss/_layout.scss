@@ -9,7 +9,7 @@
 }
 
 .sidebar__main {
-  background-color: #ffffff !important;
+  background-color: #fffff5 !important;
 
   a {
     color: rgb(91, 91, 91) !important; // Ensure links are visible
@@ -86,20 +86,22 @@ input:focus {
       left: 15px;
       top: 50%;
       transform: translateY(-50%);
-      color: #0fb3dc; /* Icon color */
+      // color: #0fb3dc; /* Icon color */
+      color: #2ad76c; /* Icon color */
       width: 20px;
       height: 20px;
     }
 
     input {
-      border: 1px solid #0fb3dc; /* Border around the input */
+      border: 1px solid #2ad76c; /* Border around the input */
       border-right: none; /* No border on the right side */
       font-size: 1em;
       padding: 0 10px 0 40px; /* Padding left to make space for the icon */
       height: 100%;
       width: 115%;
       border-radius: 5px 0 0 5px; /* Rounded corners on the left */
-      background-color: #f7f9fc; /* Baby pink background color */
+      // background-color: #f7f9fc; /* Baby pink background color */
+      background-color: #fffff9;
       color: #000; /* Text color inside the input */
     }
 
@@ -109,9 +111,9 @@ input:focus {
   }
 
   .search-button {
-    background-color: #0fb3dc; /* Button background color */
+    background-color: #2ad76c; /* Button background color */
     color: white; /* Button text color */
-    border: 1px solid #0fb3dc; /* Border around the button */
+    border: 1px solid #2ad76c; /* Border around the button */
     border-left: none; /* No border on the left side */
     padding: 0 15px; /* Padding inside the button */
     margin-left: 28px;

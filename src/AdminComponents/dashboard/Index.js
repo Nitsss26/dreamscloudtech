@@ -38,7 +38,7 @@ function Index() {
 
   return (
     <>
-      {loading && <Loading />}
+      {/* {loading && <Loading />} */}
       <>
         {/* cards */}
         <Cards counts={count} />
@@ -50,7 +50,7 @@ function Index() {
           <div className="col-xs-12 col-sm-12 col-md-5  mb-5">
             <RecentActivities />
           </div>
-
+          {/* 
           <div className="d-flex">
             <div className="w-50">
               <div className="mb-5">
@@ -63,7 +63,7 @@ function Index() {
             <div className="col-xs-12 col-sm-12 col-md-6  mb-5">
               <NoticeBoard isDashboard={true} user={user.role} />
             </div>
-          </div>
+          </div> */}
 
           {show && (
             <>

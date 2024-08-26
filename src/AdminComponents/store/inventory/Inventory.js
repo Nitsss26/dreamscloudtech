@@ -146,7 +146,7 @@ function Inventory() {
           <AddIcon /> Add Item
         </button>
         <form action="">
-          <input className="form-control" type="text" placeholder="Search..." />
+          <input style={{ backgroundColor: " #fffff9" }} className="form-control" type="text" placeholder="Search..." />
         </form>
       </div>
       <Table

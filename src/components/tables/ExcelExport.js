@@ -7,17 +7,17 @@
 // const ExcelColumn = ReactExport.ExcelFile.ExcelColumn;
 
 // function ExcelExport({ data, btn, name, columns }) {
-//   return (
-//     <ExcelFile
-//       element={<button className="btn blue__btn">{btn || "Download"}</button>}
-//     >
-//       <ExcelSheet data={data} name={name || "data"}>
-//         {columns.map((col) => (
-//           <ExcelColumn key={col.id} label={col.name} value={col.id} />
-//         ))}
-//       </ExcelSheet>
-//     </ExcelFile>
-//   );
+//     return (
+//         <ExcelFile
+//             element={<button className="btn blue__btn">{btn || "Download"}</button>}
+//         >
+//             <ExcelSheet data={data} name={name || "data"}>
+//                 {columns.map((col) => (
+//                     <ExcelColumn key={col.id} label={col.name} value={col.id} />
+//                 ))}
+//             </ExcelSheet>
+//         </ExcelFile>
+//     );
 // }
 
 // export default ExcelExport;

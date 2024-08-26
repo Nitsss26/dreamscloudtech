@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import axios from "../../../store/axios";
 import { errorAlert } from "../../../utils";
-import Excel from "../../../components/tables/ExcelExport";
+// import Excel from "../../../components/tables/ExcelExport";
 import {
   selectYearGroup,
   selectacademicYear,
@@ -271,7 +271,7 @@ function AcademicTranscripts() {
                 <button onClick={handlePrint} className="btn blue__btn mr-2">
                   Print
                 </button>
-                <Excel data={data} columns={columns} btn="save" />
+                {/* <Excel data={data} columns={columns} btn="save" /> */}
               </div>
             </>
           )}

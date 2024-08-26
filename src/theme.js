@@ -1,10 +1,11 @@
-// src/theme.js
-import { createTheme } from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
 
-const theme = createTheme({
+const theme = createMuiTheme({
     palette: {
+        type: 'dark',
         background: {
-            default: '#b31564', // Replace with your desired color
+            default: '#000000',
+            paper: '#121212',
         },
     },
 });

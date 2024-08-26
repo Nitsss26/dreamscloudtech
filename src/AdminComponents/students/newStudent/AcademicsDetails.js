@@ -75,6 +75,7 @@ function AcademicsDetails(props) {
               <div className="col-xs-12 col-sm-6 ">
                 <label className="form-label">Student ID</label>
                 <input
+                  style={{ backgroundColor: " #fffff9" }}
                   name="userID"
                   value={userID}
                   onChange={(e) => setuserID(e.target.value)}
@@ -90,6 +91,7 @@ function AcademicsDetails(props) {
         <div className="col-xs-12 col-sm-6 col-md-3 mb-3">
           <label className="form-label">Class</label>
           <select
+            style={{ backgroundColor: " #fffff9" }}
             ref={register({ required: true })}
             value={classID || ""}
             onChange={(e) => setclass(e.target.value)}
@@ -119,6 +121,7 @@ function AcademicsDetails(props) {
         <div className="col-xs-12 col-sm-6 col-md-3 mb-3">
           <label className="form-label">Section / House</label>
           <select
+            style={{ backgroundColor: " #fffff9" }}
             value={section || ""}
             onChange={(e) => setsection(e.target.value)}
             name="house"
@@ -142,6 +145,7 @@ function AcademicsDetails(props) {
         <div className="col-xs-12 col-sm-6 col-md-3 mb-3">
           <label className="form-label">Divisions</label>
           <select
+            style={{ backgroundColor: " #fffff9" }}
             value={division || ""}
             onChange={(e) => setdivision(e.target.value)}
             name="house"
@@ -165,6 +169,7 @@ function AcademicsDetails(props) {
         <div className="col-xs-12 col-sm-6 col-md-3 mb-3">
           <label className="form-label">Status</label>
           <select
+            style={{ backgroundColor: " #fffff9" }}
             ref={register({ required: true })}
             name="status"
             value={status || ""}
@@ -192,6 +197,7 @@ function AcademicsDetails(props) {
           <div className="col-xs-12 col-sm-6 col-md-4">
             <label className="form-label">Dormitory</label>
             <select
+              style={{ backgroundColor: " #fffff9" }}
               value={dormitory || ""}
               onChange={(e) => setdormitory(e.target.value)}
               name="dormitary"
@@ -218,6 +224,7 @@ function AcademicsDetails(props) {
         <div className="col-xs-12 col-sm-6  col-md-4">
           <label className="form-label">Scholarship</label>
           <select
+            style={{ backgroundColor: " #fffff9" }}
             value={schoolarship || ""}
             onChange={(e) => setschoolarship(e.target.value)}
             name="scholarship"
@@ -242,6 +249,7 @@ function AcademicsDetails(props) {
         <div className="col-xs-12 col-sm-6  col-md-4">
           <label className="form-label">Fees Category</label>
           <select
+            style={{ backgroundColor: " #fffff9" }}
             name="feesCategory"
             value={feesCategory || ""}
             onChange={(e) => setfeesCategory(e.target.value)}
@@ -268,6 +276,7 @@ function AcademicsDetails(props) {
         <div className="col-xs-12 col-sm-6  col-md-4">
           <label className="form-label">Campus</label>
           <select
+            style={{ backgroundColor: " #fffff9" }}
             name="feesCategory"
             value={campus || ""}
             onChange={(e) => setcampus(e.target.value)}
@@ -293,6 +302,7 @@ function AcademicsDetails(props) {
         <div className="col-xs-12 col-sm-6 col-md-6">
           <label className="form-label">Last School Attended</label>
           <input
+            style={{ backgroundColor: " #fffff9" }}
             name="lastschool"
             value={lastSchool}
             onChange={(e) => setlastSchool(e.target.value)}
@@ -304,6 +314,7 @@ function AcademicsDetails(props) {
         <div className="col-xs-12 col-sm-6 col-md-6">
           <label className="form-label">Reason for Leaving Last School</label>
           <input
+            style={{ backgroundColor: " #fffff9" }}
             name="reason"
             value={reasonforTransfer}
             onChange={(e) => setreasonforTransfer(e.target.value)}

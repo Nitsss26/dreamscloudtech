@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Search from "./Search";
 import Table from "./Table";
 import axios from "../../../store/axios";
-import Excel from "../../../components/tables/ExcelExport";
+// import Excel from "../../../components/tables/ExcelExport";
 import { errorAlert, currentCurrency } from "../../../utils";
 
 const tableHeader = [
@@ -47,9 +47,9 @@ function DebtorsList() {
       if (fee) {
         return fee
           ? Object.values(fee[u?.status] || {}).reduce(
-              (t, v) => Number(t) + Number(v),
-              0
-            )
+            (t, v) => Number(t) + Number(v),
+            0
+          )
           : 0;
       }
       return 0;
@@ -117,7 +117,7 @@ function DebtorsList() {
             <button onClick={handlePrint} className="btn blue__btn mr-2">
               Print
             </button>
-            <Excel data={data} columns={tableHeader} btn="Save" />
+            {/* <Excel data={data} columns={tableHeader} btn="Save" /> */}
           </div>
         </>
       )}

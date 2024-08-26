@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 export const successAlert = (text) => {
   return toast.success(text, {
     position: "top-right",
-    autoClose: false,
+    autoClose: true,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,

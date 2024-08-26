@@ -1,3 +1,89 @@
 // body {
 //   background-color: rgb(186, 15, 15); // Replace with your desired color
 // }
+
+/* Set global font-family for all text */
+body {
+  font-family: "Baskerville", serif; /* Sophisticated and timeless for body text */
+  font-weight: 400; /* Normal weight for body text */
+}
+
+/* Define font-family and weight for headers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Times New Roman", serif; /* Classic and authoritative for headings */
+  font-weight: 600; /* Bold for headings */
+}
+
+/* Define font-family and weight for paragraphs and spans */
+p,
+span,
+a,
+button {
+  font-family: "Baskerville", serif; /* Use body font-family for paragraphs and spans */
+  font-weight: 600; /* Normal weight for paragraphs and spans */
+}
+
+/* Define font-weight specifically for bold text */
+strong,
+b {
+  font-weight: 500; /* Bold weight for strong text */
+}
+
+// html,
+// body,
+// #root {
+//   margin: 0;
+//   padding: 0;
+//   height: 100%;
+//   background-color: #000000 !important;
+//   color: #ffffff !important;
+//   background-image: url("./Contact-get-tuch.png");
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   height: 100vh;
+//   margin: 0;
+// }
+
+// p,
+// body {
+//   font-family: "YourFontFamily", sans-serif;
+//   font-weight: 500; // or the most appropriate weight you find suitable
+// }
+
+// h1,
+// h2,
+// h3 {
+//   font-weight: 500; // example for headers
+// }
+
+// p,
+// span {
+//   font-weight: 500; // example for paragraphs and spans
+// }
+
+// body {
+//   font-family: "Baskerville", serif; /* Sophisticated and timeless for body text */
+// }
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// p,
+// a,
+// button {
+//   font-family: "Times New Roman", serif; /* Classic and authoritative for headings and other elements */
+// }
+
+.custom-icon {
+  font-size: 100px;
+  color: #9c27b0;
+}

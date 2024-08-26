@@ -10,7 +10,11 @@ function RecentActivity() {
   }, []);
 
   return (
-    <div className="content__container activities__container">
+    <div className="content__container activities__container" style={{
+      backgroundColor: "#fffff5",
+      border: "none",         // Removes the border
+      boxShadow: "none"       // Removes the shadow
+    }}>
       <h3>Recent Activities</h3>
       <div>
         {activities.length > 0 ? (

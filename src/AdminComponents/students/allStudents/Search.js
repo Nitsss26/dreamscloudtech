@@ -121,18 +121,19 @@ function Search(props) {
     const headers = [
       { key: "userID", label: "UserID" },
       { key: "name", label: "Name" },
-      { key: "middleName", label: "Middle Name" },
+      // { key: "middleName", label: "Middle Name" },
       { key: "surname", label: "SurName" },
-      { key: "gender", label: "Gender" },
-      { key: "status", label: "Fee Status" },
       { key: "classID", label: "Class" },
+      { key: "gender", label: "Gender" },
+      { key: "status", label: "Bus Route" },
+
     ];
 
     pdf({ data: students, headers, filename: "Allstudents" });
   };
 
   return (
-    <form className="mb-0 content__container">
+    <form className="mb-0 content__container" style={{ backgroundColor: "#fffff5" }}>
       <h3 className="mb-3">{title || ""}</h3>
       <div className="d-flex justify-content-between mb-3">
         <div className="d-flex align-items-center">
@@ -141,9 +142,51 @@ function Search(props) {
             to="/students/new"
             style={{ backgroundColor: '#fa6767', border: 'none' }} // Red background
           >
-            <AddIcon /> Add Student
+            + Add Student
           </Link>
         </div>
+
+        <div className="row g-3 mb-3 ">
+          {inputFields &&
+            inputFields.map((input) => (
+              <div key={input?.name} className="col-xs-12 col-sm-3 mb-2">
+                <label htmlFor={input?.name} className="form-label">
+                  {input.label}
+                </label>
+                {input.type === "select" ? (
+                  <select
+                    value={input?.value}
+                    name={input?.name}
+                    onChange={(e) => input?.onChange(e.target.value)}
+                    className="form-select form-select-sm py-2"
+                  >
+                    <option hidden defaultValue>
+                      Select
+                    </option>
+                    {input?.options.length > 0 ? (
+                      input?.options.map((option) => (
+                        <option key={option.id} value={option.id}>
+                          {option.name}
+                        </option>
+                      ))
+                    ) : (
+                      <option disabled>No data</option>
+                    )}
+                  </select>
+                ) : (
+                  <input
+                    type={input.type}
+                    value={input.value}
+                    name={input?.name}
+                    className="form-control py-3"
+                    placeholder={`Search by ${input.name}`}
+                    onChange={(e) => input?.onChange(e.target.value)}
+                  />
+                )}
+              </div>
+            ))}
+        </div>
+
         {!noActions && (
           <div className="d-flex align-items-center gap-2">
             <button
@@ -167,51 +210,13 @@ function Search(props) {
               className="btn"
               style={{ backgroundColor: '#42d29d', color: '#fff' }} // Green background
             >
-              ↓ Download PDF
+              ↓ Download
             </button>
           </div>
         )}
+
       </div>
-      <div className="row g-3">
-        {inputFields &&
-          inputFields.map((input) => (
-            <div key={input?.name} className="col-xs-12 col-sm-3 mb-2">
-              <label htmlFor={input?.name} className="form-label">
-                {input.label}
-              </label>
-              {input.type === "select" ? (
-                <select
-                  value={input?.value}
-                  name={input?.name}
-                  onChange={(e) => input?.onChange(e.target.value)}
-                  className="form-select form-select-sm py-2"
-                >
-                  <option hidden defaultValue>
-                    Select
-                  </option>
-                  {input?.options.length > 0 ? (
-                    input?.options.map((option) => (
-                      <option key={option.id} value={option.id}>
-                        {option.name}
-                      </option>
-                    ))
-                  ) : (
-                    <option disabled>No data</option>
-                  )}
-                </select>
-              ) : (
-                <input
-                  type={input.type}
-                  value={input.value}
-                  name={input?.name}
-                  className="form-control py-3"
-                  placeholder={`Search by ${input.name}`}
-                  onChange={(e) => input?.onChange(e.target.value)}
-                />
-              )}
-            </div>
-          ))}
-      </div>
+
     </form>
   );
 }

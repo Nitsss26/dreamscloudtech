@@ -3,7 +3,7 @@ import axios from "../../../store/axios";
 
 import { useSelector } from "react-redux";
 import { selectCampuses } from "../../../store/slices/schoolSlice";
-import Excel from "../../../components/tables/ExcelExport";
+// import Excel from "../../../components/tables/ExcelExport";
 
 function EnrollmentStatics() {
   const [school, setschool] = useState({});
@@ -107,7 +107,7 @@ function EnrollmentStatics() {
         <button onClick={handlePrint} className="btn blue__btn mr-2">
           Print
         </button>
-        <Excel data={data} columns={columns} />
+        {/* <Excel data={data} columns={columns} /> */}
       </div>
     </>
   );

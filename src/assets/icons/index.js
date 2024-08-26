@@ -27,6 +27,7 @@ import {
   cibCcMastercard,
   cibCcVisa,
   cibStripe,
+
   cibPaypal,
   cibGooglePay,
   cibCcAmex
@@ -56,13 +57,16 @@ import {
   cilBold,
   cilEducation,
   cilInstitution,
+  cilClock,
+
   cilBookmark,
   cilCalculator,
   cilCalendar,
   cilCloudDownload,
+  cilTruck,
   cilChartPie,
   cilCheck,
-
+  cilCash,
   cilBarChart,
   cilChevronBottom,
   cilChevronLeft,
@@ -126,6 +130,7 @@ import {
   cilSpeedometer,
   cilSpreadsheet,
   cilCalendarCheck,
+  cilDescription,
   cilStar,
   cilSun,
   cilTags,
@@ -137,8 +142,10 @@ import {
   cilContact,
   cilUserFollow,
   cilUserUnfollow,
+  cilBusAlt,
   cilX,
   cilMoney,
+  cibWhatsapp,
   cilBook,
   cilXCircle,
   cilWarning
@@ -151,16 +158,21 @@ export const icons = Object.assign({}, {
 }, {
   cilAlignCenter,
   cilAlignLeft,
-
+  cilBusAlt,
+  cibWhatsapp,
   cilInstitution,
   cilWallet,
   cilBook,
   cilMoney,
   cilEducation,
   cilCalendarCheck,
-
+  cilCash,
   cilContact,
+  cilDescription,
   cilFastfood,
+  cilTruck,
+  cilClock,
+
   cilChatBubble,
   cilAlignRight,
   cilApplicationsSettings,
@@ -168,6 +180,7 @@ export const icons = Object.assign({}, {
   cilArrowRight,
   cilArrowTop,
   cilAsterisk,
+
   cilBan,
   cilBasket,
   cilBell,

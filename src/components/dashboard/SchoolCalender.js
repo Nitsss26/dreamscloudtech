@@ -20,7 +20,11 @@ function SchoolCalender() {
   }, []);
 
   return (
-    <div className="content__container activities__container">
+    <div className="content__container activities__container" style={{
+      backgroundColor: "#fffff5",
+      border: "none",         // Removes the border
+      boxShadow: "none"       // Removes the shadow
+    }}>
       <div className="d-flex align-items-center justify-content-between mb-3">
         <h3 className="mb-4">School Event Calender</h3>
         <div>

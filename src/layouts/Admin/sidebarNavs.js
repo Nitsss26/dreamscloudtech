@@ -5,7 +5,7 @@ const _nav = [
     // {
     //     _tag: "CSidebarNavItem",
     //     name: "Sidebar Navigation Admin",
-    //     style: { backgroundColor: "white", marginRight: '20px', marginLeft: '25px' },
+    //     style: { backgroundColor: "#fffff5", marginRight: '20px', marginLeft: '25px' },
     // },
     {
         _tag: "CSidebarNavItem",
@@ -19,7 +19,7 @@ const _nav = [
                 style={{ color: "#f57f17" }}
             />
         ),
-        style: { backgroundColor: "white", marginRight: '20px', marginLeft: '20px' },
+        style: { backgroundColor: "#fffff5", marginRight: '20px', marginLeft: '20px' },
     },
     {
         _tag: "CSidebarNavDropdown",
@@ -33,7 +33,7 @@ const _nav = [
                 style={{ color: "#7e57c2" }} // Bright Violet
             />
         ),
-        style: { backgroundColor: "white", marginRight: '20px', marginLeft: '20px' },
+        style: { backgroundColor: "#fffff5", marginRight: '20px', marginLeft: '20px' },
         _children: [
             {
                 _tag: "CSidebarNavItem",
@@ -189,7 +189,7 @@ const _nav = [
                 style={{ color: "#ff4081" }} // Pink
             />
         ),
-        style: { backgroundColor: "white", marginRight: '20px', marginLeft: '20px' },
+        style: { backgroundColor: "#fffff5", marginRight: '20px', marginLeft: '20px' },
         _children: [
             // {
             //     _tag: "CSidebarNavItem",
@@ -201,7 +201,7 @@ const _nav = [
             //             customClasses="c-sidebar-nav-icon sidebarIcon"
             //         />
             //     ),
-            //     style: { backgroundColor: "white", marginLeft: '20px' },
+            //     style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             // },
             {
                 _tag: "CSidebarNavItem",
@@ -219,7 +219,7 @@ const _nav = [
                     // style={{ color: "#4caf50" }}
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -234,7 +234,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -248,7 +248,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -262,7 +262,7 @@ const _nav = [
                         style={{ color: "#9c27b0" }}
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             // {
             //     _tag: "CSidebarNavItem",
@@ -274,7 +274,7 @@ const _nav = [
             //             customClasses="c-sidebar-nav-icon sidebarIcon"
             //         />
             //     ),
-            //     style: { backgroundColor: "white", marginLeft: '20px' },
+            //     style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             // },
             {
                 _tag: "CSidebarNavItem",
@@ -288,7 +288,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -301,7 +301,7 @@ const _nav = [
                         style={{ color: "#4caf50" }}
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
         ],
     },
@@ -316,7 +316,7 @@ const _nav = [
                 style={{ color: "#4caf50" }} // 1st color
             />
         ),
-        style: { backgroundColor: "white", marginRight: '20px', marginLeft: '20px' },
+        style: { backgroundColor: "#fffff5", marginRight: '20px', marginLeft: '20px' },
         _children: [
             {
                 _tag: "CSidebarNavItem",
@@ -330,7 +330,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -344,7 +344,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
 
             {
@@ -359,7 +359,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -373,7 +373,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -387,7 +387,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -401,7 +401,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -415,7 +415,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -428,7 +428,7 @@ const _nav = [
                         style={{ color: "#ffc107" }}
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -442,7 +442,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -456,7 +456,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -470,7 +470,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -483,7 +483,7 @@ const _nav = [
                         style={{ color: "#9c27b0" }}
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
         ],
     },
@@ -497,7 +497,7 @@ const _nav = [
                 style={{ color: "#00bcd4" }}
             />
         ),
-        style: { backgroundColor: "white", marginRight: '20px', marginLeft: '20px' },
+        style: { backgroundColor: "#fffff5", marginRight: '20px', marginLeft: '20px' },
         _children: [
             {
                 _tag: "CSidebarNavItem",
@@ -516,7 +516,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -530,7 +530,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -544,7 +544,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -558,7 +558,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
         ],
     },
@@ -569,7 +569,7 @@ const _nav = [
         icon: (
             <CIcon name="cil-bank" customClasses="c-sidebar-nav-icon" style={{ color: "#9c27b0" }} />
         ),
-        style: { backgroundColor: "white", marginRight: '20px', marginLeft: '20px' },
+        style: { backgroundColor: "#fffff5", marginRight: '20px', marginLeft: '20px' },
         _children: [
             {
                 _tag: "CSidebarNavItem",
@@ -583,7 +583,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -597,7 +597,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -611,7 +611,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -625,21 +625,21 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
 
-            // {
-            //     _tag: "CSidebarNavItem",
-            //     name: " Debtors List",
-            //     to: "/finance/debtors",
-            //     icon: (
-            //         <CIcon
-            //             name="cil-speedometer"
-            //             customClasses="c-sidebar-nav-icon sidebarIcon"
-            //         />
-            //     ),
-            //     style: { backgroundColor: "white", marginLeft: '20px' },
-            // },
+            {
+                _tag: "CSidebarNavItem",
+                name: " Debtors List",
+                to: "/finance/debtors",
+                icon: (
+                    <CIcon
+                        name="cil-speedometer"
+                        customClasses="c-sidebar-nav-icon sidebarIcon"
+                    />
+                ),
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
+            },
 
             {
                 _tag: "CSidebarNavItem",
@@ -653,20 +653,20 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
-            // {
-            //     _tag: "CSidebarNavItem",
-            //     name: "Bill Reminder",
-            //     to: "/finance/billreminder",
-            //     icon: (
-            //         <CIcon
-            //             name="cil-speedometer"
-            //             customClasses="c-sidebar-nav-icon sidebarIcon"
-            //         />
-            //     ),
-            //     style: { backgroundColor: "white", marginLeft: '20px' },
-            // },
+            {
+                _tag: "CSidebarNavItem",
+                name: "Bill Reminder",
+                to: "/finance/billreminder",
+                icon: (
+                    <CIcon
+                        name="cil-speedometer"
+                        customClasses="c-sidebar-nav-icon sidebarIcon"
+                    />
+                ),
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
+            },
 
             {
                 _tag: "CSidebarNavItem",
@@ -680,7 +680,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -693,7 +693,7 @@ const _nav = [
                         style={{ color: "#ff4081" }}
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
         ],
     },
@@ -705,7 +705,7 @@ const _nav = [
         icon: (
             <CIcon name="cilCart" customClasses="c-sidebar-nav-icon " style={{ color: "#ff5722" }} />
         ),
-        style: { backgroundColor: "white", marginRight: '20px', marginLeft: '20px' },
+        style: { backgroundColor: "#fffff5", marginRight: '20px', marginLeft: '20px' },
         _children: [
             {
                 _tag: "CSidebarNavItem",
@@ -719,7 +719,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -732,7 +732,7 @@ const _nav = [
                         style={{ color: "#4caf50" }}
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
         ],
     },
@@ -743,7 +743,7 @@ const _nav = [
         icon: (
             <CIcon name="cil-fastfood" customClasses="c-sidebar-nav-icon  " style={{ color: "#fbc02d" }} />
         ),
-        style: { backgroundColor: "white", marginRight: '20px', marginLeft: '20px' },
+        style: { backgroundColor: "#fffff5", marginRight: '20px', marginLeft: '20px' },
         _children: [
             {
                 _tag: "CSidebarNavItem",
@@ -757,7 +757,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -771,7 +771,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -785,7 +785,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -799,7 +799,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -812,7 +812,7 @@ const _nav = [
                         style={{ color: "#8bc34a" }}
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
         ],
     },
@@ -962,7 +962,7 @@ const _nav = [
                 style: { backgroundColor: "#f7f9fc", marginLeft: '20px' },
             },
         ],
-        style: { backgroundColor: "white", marginRight: '20px', marginLeft: '20px' },
+        style: { backgroundColor: "#fffff5", marginRight: '20px', marginLeft: '20px' },
         _children: [
             {
                 _tag: "CSidebarNavItem",
@@ -976,7 +976,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -990,7 +990,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -1003,7 +1003,7 @@ const _nav = [
                         style={{ color: "#2196f3" }}
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -1016,7 +1016,7 @@ const _nav = [
                         style={{ color: "#9c27b0" }}
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -1029,7 +1029,7 @@ const _nav = [
                         style={{ color: "#00bcd4" }}
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
             {
                 _tag: "CSidebarNavItem",
@@ -1043,7 +1043,7 @@ const _nav = [
 
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
 
             {
@@ -1057,7 +1057,7 @@ const _nav = [
                         style={{ color: "#8bc34a" }}
                     />
                 ),
-                style: { backgroundColor: "white", marginLeft: '20px' },
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
         ],
     },
@@ -1069,7 +1069,7 @@ const _nav = [
         icon: (
             <CIcon name="cil-bell" customClasses="c-sidebar-nav-icon " style={{ color: "#4caf50" }} />
         ),
-        style: { backgroundColor: "white", marginRight: '20px', marginLeft: '20px' },
+        style: { backgroundColor: "#fffff5", marginRight: '20px', marginLeft: '20px' },
     },
     {
         _tag: "CSidebarNavItem",
@@ -1082,7 +1082,7 @@ const _nav = [
                 style={{ color: "#e91e63" }}
             />
         ),
-        style: { backgroundColor: "white", marginRight: '20px', marginLeft: '20px' },
+        style: { backgroundColor: "#fffff5", marginRight: '20px', marginLeft: '20px' },
     },
     {
         _tag: "CSidebarNavItem",
@@ -1095,7 +1095,7 @@ const _nav = [
                 style={{ color: "#00bcd4" }}
             />
         ),
-        style: { backgroundColor: "white", marginRight: '20px', marginLeft: '20px' },
+        style: { backgroundColor: "#fffff5", marginRight: '20px', marginLeft: '20px' },
     },
 ];
 

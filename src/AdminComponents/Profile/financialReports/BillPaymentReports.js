@@ -9,7 +9,7 @@ import PrintIcon from "@material-ui/icons/Print";
 import { selectYearGroup } from "../../../store/slices/schoolSlice";
 //import { pdf } from "../../../components/tables/pdf";
 import moment from "moment";
-import ExcelExport from "../../../components/tables/ExcelExport";
+// import ExcelExport from "../../../components/tables/ExcelExport";
 
 let thismonth = moment().month();
 let thisyear = moment().year();
@@ -41,7 +41,8 @@ function ViewPayment() {
       let data = res.data.map((e) => {
         return {
           ...e,
-          description: getTrimString(e.description, 50),
+          // description: getTrimString(e.description, 50),
+          description: e.description ? getTrimString(e.description, 50) : "", // Check if description exists
         };
       });
       setexpenditures(data);
@@ -167,7 +168,7 @@ function ViewPayment() {
             Print <PrintIcon />
           </button>
 
-          <ExcelExport
+          {/* <ExcelExport
             data={expenditures}
             columns={tableHeader}
             btn={
@@ -175,7 +176,7 @@ function ViewPayment() {
                 <InsertDriveFileIcon /> Save
               </>
             }
-          />
+          /> */}
         </div>
       )}
     </div>

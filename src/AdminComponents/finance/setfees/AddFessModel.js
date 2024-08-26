@@ -44,7 +44,7 @@ const DialogContent = withStyles((theme) => ({
 
 
 
-export default function CustomizedDialogs({name, setname, open, setOpen, loading, onSubmit}) {
+export default function CustomizedDialogs({ name, setname, open, setOpen, loading, onSubmit }) {
   const { register, handleSubmit, errors } = useForm();
 
   const handleClose = () => {
@@ -52,37 +52,37 @@ export default function CustomizedDialogs({name, setname, open, setOpen, loading
   };
 
   return (
-      <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
-        <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-            Add New Fees Type
-        </DialogTitle>
-        <DialogContent dividers>
-            <form action="">
-                    <div className="row mb-2">
-                        <label className="col-12 form-label">Fees Name</label>
-                        <div className="col-12">
-                            <input  
-                             ref={register({ required: true })} 
-                            value={name} 
-                            onChange={e => setname(e.target.value)}
-                            type="type" 
-                            className="form-control" 
-                            name="fees" />
-                        </div>
-                        {errors.fees && <span className=" form-error text-danger mb-2">This field is required</span>}
-                    </div>
-                    <div className=" md-3">
-                        <button 
-                        disabled={loading}
-                        onClick={handleSubmit(onSubmit)} 
-                        className="btn blue__btn">
-                            {loading && <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>}
-                            Submit
-                        </button>
-                   </div>
-            </form>
-        </DialogContent>
-      </Dialog>
+    <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
+      <DialogTitle id="customized-dialog-title" onClose={handleClose}>
+        Add New Fees Type
+      </DialogTitle>
+      <DialogContent dividers>
+        <form action="">
+          <div className="row mb-2">
+            <label className="col-12 form-label">Fees Name</label>
+            <div className="col-12">
+              <input style={{ backgroundColor: " #fffff9" }}
+                ref={register({ required: true })}
+                value={name}
+                onChange={e => setname(e.target.value)}
+                type="type"
+                className="form-control"
+                name="fees" />
+            </div>
+            {errors.fees && <span className=" form-error text-danger mb-2">This field is required</span>}
+          </div>
+          <div className=" md-3">
+            <button
+              disabled={loading}
+              onClick={handleSubmit(onSubmit)}
+              className="btn blue__btn">
+              {loading && <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>}
+              Submit
+            </button>
+          </div>
+        </form>
+      </DialogContent>
+    </Dialog>
 
   );
 }
