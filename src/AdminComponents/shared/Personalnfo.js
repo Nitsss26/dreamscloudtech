@@ -34,12 +34,14 @@ function Personalnfo(props) {
     register,
   } = props;
 
+  const colClass = isTeacher ? "col-md-4" : "col-md-6";
+
   return (
     <div>
       <h3>Personal Information</h3>
       <div className="row mb-3">
         {isTeacher && (
-          <div className="col-xs-12 col-sm-6 col-md-3">
+          <div className="col-xs-12 col-sm-6 col-md-4">
             <label className="form-label">Title</label>
             <select
               style={{ backgroundColor: " #fffff9" }}
@@ -69,7 +71,7 @@ function Personalnfo(props) {
             )}
           </div>
         )}
-        <div className="col-xs-12 col-sm-6 col-md-3">
+        <div className={`col-xs-12 col-sm-6 ${colClass}`}>
           <label className="form-label">First Name</label>
           <input
             style={{ backgroundColor: " #fffff9" }}
@@ -87,7 +89,7 @@ function Personalnfo(props) {
             </span>
           )}
         </div>
-        <div className="col-xs-12 col-sm-6 col-md-3">
+        {/* <div className="col-xs-12 col-sm-6 col-md-3">
           <label className="form-label">Second Name</label>
           <input
             style={{ backgroundColor: " #fffff9" }}
@@ -98,8 +100,8 @@ function Personalnfo(props) {
             onChange={(e) => setsecondName(e.target.value)}
             className="form-control"
           />
-        </div>
-        <div className="col-xs-12 col-sm-6 col-md-3">
+        </div> */}
+        <div className={`col-xs-12 col-sm-6 ${colClass}`}>
           <label className="form-label">Last Name</label>
           <input
             style={{ backgroundColor: " #fffff9" }}
@@ -119,7 +121,66 @@ function Personalnfo(props) {
       </div>
       <div className="row mb-3">
         <div className="col-xs-12 col-sm-6 col-md-4">
-          <label className="form-label"> Gender *</label>
+          <label className="form-label">Category</label>
+          <input
+            style={{ backgroundColor: " #fffff9" }}
+            value={nationality}
+            ref={register}
+            onChange={(e) => setnationality(e.target.value)}
+            name="nationality"
+            type="text"
+            className="form-control"
+          />
+        </div>
+        <div className="col-xs-12 col-sm-6 col-md-4">
+          <label className="form-label">Caste</label>
+          <input
+            style={{ backgroundColor: " #fffff9" }}
+            type="text"
+            ref={register}
+            name="religion"
+            value={religion}
+            onChange={(e) => setreligion(e.target.value)}
+            className="form-control"
+          />
+        </div>
+        <div className="col-xs-12 col-sm-6 col-md-4">
+          <label className="form-label">Email</label>
+          <input
+            style={{ backgroundColor: " #fffff9" }}
+            value={email}
+            ref={register({ required: true, pattern: getEmailPattern() })}
+            onChange={(e) => setemail(e.target.value)}
+            type="email"
+            name="email"
+            className="form-control"
+          />
+          {errors.email && (
+            <span className=" form-error text-danger mb-2">
+              Valid email is required
+            </span>
+          )}
+        </div>
+
+
+      </div>
+      <div className="row mb-3">
+        <div className="col-xs-12 col-sm-6 col-md-4">
+          <label className="form-label">Date of Birth</label>
+          <input
+            style={{ backgroundColor: " #fffff9" }}
+            value={dateofBirth}
+            name="dateofBirth"
+            ref={register({ required: true })}
+            onChange={(e) => {
+              setdateofBirth(e.target.value);
+            }}
+            type="date"
+            className="form-control"
+          />
+        </div>
+        <div className="col-xs-12 col-sm-6 col-md-4">
+          <label className="form-label"> Gender </label>
           <select
             style={{ backgroundColor: " #fffff9" }}
             className="form-control"
@@ -142,64 +203,23 @@ function Personalnfo(props) {
             </span>
           )}
         </div>
+
         <div className="col-xs-12 col-sm-6 col-md-4">
-          <label className="form-label">Date of Birth</label>
+          <label className="form-label">Date of Admission</label>
           <input
             style={{ backgroundColor: " #fffff9" }}
-            value={dateofBirth}
-            name="dateofBirth"
-            ref={register({ required: true })}
+            value={disease}
+            ref={register}
+            name="placeofBirth"
             onChange={(e) => {
-              setdateofBirth(e.target.value);
+              setDisease(e.target.value);
             }}
             type="date"
             className="form-control"
           />
         </div>
-        <div className="col-xs-12 col-sm-6 col-md-4">
-          <label className="form-label">Email</label>
-          <input
-            style={{ backgroundColor: " #fffff9" }}
-            value={email}
-            ref={register({ required: true, pattern: getEmailPattern() })}
-            onChange={(e) => setemail(e.target.value)}
-            type="email"
-            name="email"
-            className="form-control"
-          />
-          {errors.email && (
-            <span className=" form-error text-danger mb-2">
-              Valid email is required
-            </span>
-          )}
-        </div>
-      </div>
-      <div className="row mb-3">
-        <div className="col-xs-12 col-sm-6 col-md-4">
-          <label className="form-label">Nationality</label>
-          <input
-            style={{ backgroundColor: " #fffff9" }}
-            value={nationality}
-            ref={register}
-            onChange={(e) => setnationality(e.target.value)}
-            name="nationality"
-            type="text"
-            className="form-control"
-          />
-        </div>
-        <div className="col-xs-12 col-sm-6 col-md-4">
-          <label className="form-label">Religion</label>
-          <input
-            style={{ backgroundColor: " #fffff9" }}
-            type="text"
-            ref={register}
-            name="religion"
-            value={religion}
-            onChange={(e) => setreligion(e.target.value)}
-            className="form-control"
-          />
-        </div>
-        <div className="col-xs-12 col-sm-6 col-md-4">
+
+        {/* <div className="col-xs-12 col-sm-6 col-md-4">
           <label className="form-label">Place of Birth</label>
           <input
             style={{ backgroundColor: " #fffff9" }}
@@ -210,9 +230,9 @@ function Personalnfo(props) {
             onChange={(e) => setplaceofBirth(e.target.value)}
             className="form-control"
           />
-        </div>
+        </div> */}
       </div>
-      <div className="row  mb-3">
+      {/* <div className="row  mb-3">
         <div className="col-xs-12 col-sm-6 col-md-4">
           <label className="form-label">Health Condition</label>
           <select
@@ -258,7 +278,7 @@ function Personalnfo(props) {
             className="form-control"
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

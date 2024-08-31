@@ -214,8 +214,8 @@ function EditStudent() {
   return (
     <div>
       <h2>Edit Students</h2>
-      <div>
-        <form action="" className="content__container">
+      <div style={{ backgroundColor: "#fffff5" }}>
+        <form action="" className="content__container" style={{ backgroundColor: "#fffff5" }}>
           <div className="profile-picture-container" style={{
             display: 'flex',
             justifyContent: 'center',

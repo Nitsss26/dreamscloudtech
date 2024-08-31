@@ -104,3 +104,5 @@ export default function FullWidthTabs({ user }) {
     </div>
   );
 }
+
+

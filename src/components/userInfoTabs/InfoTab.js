@@ -4,65 +4,62 @@ import moment from "moment";
 
 function InfoTab({ user, isStaff }) {
   return (
-    <div>
+    <div className="row justify-content-center align-items-center">
       {isStaff && (
-        <div className="row mb-3">
-          <div className="col-4">Title: </div>
-          <div className="col-6">{getCapitalize(user?.title || "N/A")} </div>
+        <div className="row mb-3 justify-content-center align-items-center">
+          <div className="col-4 text-left">Title:</div>
+          <div className="col-6 text-left">{getCapitalize(user?.title || "N/A")}</div>
         </div>
       )}
-
-      <div className="row  mb-3">
-        <div className="col-4">Surname: </div>
-        <div className="col-6">{getCapitalize(user?.surname || "N/A")} </div>
+      <div className="col-4">
+        <div className="row mb-3 justify-content-center align-items-center">
+          <div className="col-4 text-left">Name:</div>
+          <div className="col-6 text-left">{user?.name || "N/A"}</div>
+        </div>
+        <div className="row mb-3 justify-content-center align-items-center">
+          <div className="col-4 text-left">Surname:</div>
+          <div className="col-6 text-left">{getCapitalize(user?.surname || "N/A")}</div>
+        </div>
+        {user?.middleName && (
+          <div className="row mb-3 justify-content-center align-items-center">
+            <div className="col-4 text-left">Middle Name:</div>
+            <div className="col-6 text-left">
+              {getCapitalize(user?.middleName || "N/A")}
+            </div>
+          </div>
+        )}
+        <div className="row mb-3 justify-content-center align-items-center">
+          <div className="col-4 text-left">Gender:</div>
+          <div className="col-6 text-left">{getCapitalize(user?.gender || "N/A")}</div>
+        </div>
+        <div className="row mb-3 justify-content-center align-items-center">
+          <div className="col-4 text-left">Email:</div>
+          <div className="col-6 text-left">{user?.email || "N/A"}</div>
+        </div>
       </div>
-      {user?.middleName && (
-        <div className="row  mb-3">
-          <div className="col-4">Middle Name </div>
-          <div className="col-6">
-            {getCapitalize(user?.middleName || "N/A")}{" "}
+
+      <div className="col-4">
+        <div className="row mb-3 justify-content-center align-items-center">
+          <div className="col-6 text-left">Date of Birth:</div>
+          <div className="col-6 text-left">
+            {user?.dateOfBirth
+              ? moment(user?.dateOfBirth).format("D MMMM YYYY")
+              : "N/A"}
           </div>
         </div>
-      )}
-      <div className="row  mb-3">
-        <div className="col-4">Gender: </div>
-        <div className="col-6">{user?.gender || "N/A"}</div>
-      </div>
-      <div className="row  mb-3">
-        <div className="col-4">Email: </div>
-        <div className="col-6">{user?.email || "N/A"}</div>
-      </div>
-      <div className="row  mb-3">
-        <div className="col-4">Date of Birth: </div>
-        <div className="col-6">
-          {user?.dateOfBirth
-            ? moment(user?.dateOfBirth).format("D MMMM YYYY")
-            : "N/A"}{" "}
+
+        <div className="row mb-3 justify-content-center align-items-center">
+          <div className="col-6 text-left">Caste:</div>
+          <div className="col-6 text-left">{user?.religion || "N/A"}</div>
         </div>
-      </div>
-      <div className="row  mb-3">
-        <div className="col-4">Place of birth </div>
-        <div className="col-6">{user?.placeOfBirth || "N/A"} </div>
-      </div>
-      <div className="row  mb-3">
-        <div className="col-4">Religion: </div>
-        <div className="col-6">{user?.religion || "N/A"}</div>
-      </div>
-      <div className="row  mb-3">
-        <div className="col-4">Nationality: </div>
-        <div className="col-6">{user?.nationality || "N/A"} </div>
-      </div>
-      <div className="row  mb-3">
-        <div className="col-4">Healthy Condition: </div>
-        <div className="col-6">{user?.health || "N/A"} </div>
-      </div>
-      <div className="row  mb-3">
-        <div className="col-4">Disease: </div>
-        <div className="col-6">{user?.disease || "N/A"} </div>
-      </div>
-      <div className="row  mb-3">
-        <div className="col-4">Alleges: </div>
-        <div className="col-6">{user?.allege || "N/A"} </div>
+        <div className="row mb-3 justify-content-center align-items-center">
+          <div className="col-6 text-left">Category:</div>
+          <div className="col-6 text-left">{user?.nationality || "N/A"}</div>
+        </div>
+        <div className="row mb-3 justify-content-center align-items-center">
+          <div className="col-6 text-left">Date of Admission:</div>
+          <div className="col-6 text-left">{user?.disease || "N/A"}</div>
+        </div>
       </div>
     </div>
   );

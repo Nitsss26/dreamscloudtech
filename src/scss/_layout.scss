@@ -161,9 +161,9 @@ input:focus {
 .orange__btn {
   background-color: $orange !important;
   color: $white !important;
-  &:hover {
-    background-color: $darkBlue !important;
-  }
+  // &:hover {
+  //   background-color: $darkBlue !important;
+  // }
 }
 
 .blue__btn {

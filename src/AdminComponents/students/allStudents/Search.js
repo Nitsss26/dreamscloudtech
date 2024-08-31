@@ -81,7 +81,6 @@ import { selectClasses } from "../../../store/slices/schoolSlice";
 import { useSelector } from "react-redux";
 import { pdf } from "../../../components/tables/pdf";
 import { Link } from "react-router-dom";
-import AddIcon from "@material-ui/icons/Add";
 
 function Search(props) {
   const {
@@ -121,35 +120,43 @@ function Search(props) {
     const headers = [
       { key: "userID", label: "UserID" },
       { key: "name", label: "Name" },
-      // { key: "middleName", label: "Middle Name" },
       { key: "surname", label: "SurName" },
       { key: "classID", label: "Class" },
       { key: "gender", label: "Gender" },
       { key: "status", label: "Bus Route" },
-
     ];
 
     pdf({ data: students, headers, filename: "Allstudents" });
   };
 
   return (
-    <form className="mb-0 content__container" style={{ backgroundColor: "#fffff5" }}>
+    <form
+      className="content__container mb-0"
+      style={{ backgroundColor: "#fffff5" }}
+    >
       <h3 className="mb-3">{title || ""}</h3>
-      <div className="d-flex justify-content-between mb-3">
-        <div className="d-flex align-items-center">
+      <div className="d-flex flex-wrap justify-content-between align-items-center mb-3">
+        <div className="d-flex align-items-center gap-2">
           <Link
-            className="btn btn-danger text-white me-3"
+            className="btn text-white"
             to="/students/new"
-            style={{ backgroundColor: '#fa6767', border: 'none' }} // Red background
+            style={{ backgroundColor: "#fa6767", border: "none" }}
           >
-            + Add Student
+            +Add Students
+          </Link>
+          <Link
+            className="btn text-white"
+            to="/students/new"
+            style={{ backgroundColor: "#42d29d", border: "none" }}
+          >
+            Import
           </Link>
         </div>
 
-        <div className="row g-3 mb-3 ">
+        <div className="d-flex flex-wrap align-items-center gap-2">
           {inputFields &&
             inputFields.map((input) => (
-              <div key={input?.name} className="col-xs-12 col-sm-3 mb-2">
+              <div key={input?.name} className="flex-grow-1 mb-4">
                 <label htmlFor={input?.name} className="form-label">
                   {input.label}
                 </label>
@@ -208,15 +215,13 @@ function Search(props) {
             <button
               onClick={generatePDF}
               className="btn"
-              style={{ backgroundColor: '#42d29d', color: '#fff' }} // Green background
+              style={{ backgroundColor: "#2ad76c", color: "#fff" }}
             >
               ↓ Download
             </button>
           </div>
         )}
-
       </div>
-
     </form>
   );
 }

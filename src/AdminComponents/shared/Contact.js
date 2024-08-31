@@ -23,6 +23,7 @@ function Contact(props) {
         <div className="col-xs-12 col-sm-6 ">
           <label className="form-label">Mobile Number</label>
           <input
+            style={{ backgroundColor: " #fffff9" }}
             name="mobile"
             type="tel"
             value={mobilenumber}
@@ -38,8 +39,9 @@ function Contact(props) {
           )}
         </div>
         <div className="col-xs-12 col-sm-6">
-          <label className="form-label">Phone Number</label>
+          <label className="form-label">SMS Number</label>
           <input
+            style={{ backgroundColor: " #fffff9" }}
             value={telephone}
             onChange={(e) => settelephone(e.target.value)}
             name="phone"
@@ -59,6 +61,7 @@ function Contact(props) {
         <div className="col-xs-12 col-sm-6">
           <label className="form-label">Area of Residence</label>
           <textarea
+            style={{ backgroundColor: " #fffff9" }}
             value={residence}
             ref={register({ required: true })}
             onChange={(e) => setresidence(e.target.value)}
@@ -77,6 +80,7 @@ function Contact(props) {
         <div className="col-xs-12 col-sm-6">
           <label className="form-label">Postal Address</label>
           <textarea
+            style={{ backgroundColor: " #fffff9" }}
             rows={3}
             value={postalAddress}
             onChange={(e) => setpostalAddress(e.target.value)}

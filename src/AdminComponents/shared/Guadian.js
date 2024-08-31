@@ -11,7 +11,7 @@ function Guadian({ setguadian, guadian }) {
   const [address, setaddress] = useState("");
   const [errors, seterrors] = useState({
     name: false,
-    lastname: false,
+    // lastname: false,
     mobile: false,
     relationship: false,
   });
@@ -31,9 +31,9 @@ function Guadian({ setguadian, guadian }) {
     if (name === "") {
       seterrors({ ...errors, name: true });
     }
-    if (lastname === "") {
-      seterrors({ ...errors, lastname: true });
-    }
+    // if (lastname === "") {
+    //   seterrors({ ...errors, lastname: true });
+    // }
     if (telephone === "") {
       seterrors({ ...errors, mobile: true });
     }
@@ -41,10 +41,10 @@ function Guadian({ setguadian, guadian }) {
       seterrors({ ...errors, relationship: true });
     }
 
-    if (name !== "" && relationship !== "" && lastname !== "") {
+    if (name !== "" && relationship !== "") {
       seterrors({
         name: false,
-        lastname: false,
+        // lastname: false,
         mobile: false,
         relationship: false,
       });
@@ -73,11 +73,12 @@ function Guadian({ setguadian, guadian }) {
 
   return (
     <div>
-      <h3>Guadian Information</h3>
+      <h3>Guardian Information</h3>
       <div className="row mb-3">
         <div className="col-xs-12 col-sm-6 ">
           <label className="form-label">Name</label>
           <input
+            style={{ backgroundColor: " #fffff9" }}
             value={name}
             onChange={(e) => setname(e.target.value)}
             name="name"
@@ -93,23 +94,25 @@ function Guadian({ setguadian, guadian }) {
         <div className="col-xs-12 col-sm-6 ">
           <label className="form-label">Last name</label>
           <input
+            style={{ backgroundColor: " #fffff9" }}
             value={lastname}
             onChange={(e) => setlastname(e.target.value)}
             name="lastname"
             type="text"
             className="form-control"
           />
-          {errors.lastname && (
+          {/* {errors.lastname && (
             <span className=" form-error text-danger mb-2">
               Lastname is required
             </span>
-          )}
+          )} */}
         </div>
         <div className="col-xs-12 col-sm-6 ">
           <label name="mobile" className="form-label">
             Mobile Number
           </label>
           <input
+            style={{ backgroundColor: " #fffff9" }}
             type="tel"
             value={telephone}
             onChange={(e) => settelephone(e.target.value)}
@@ -124,6 +127,7 @@ function Guadian({ setguadian, guadian }) {
         <div className="col-xs-12 col-sm-6 ">
           <label className="form-label">Email</label>
           <input
+            style={{ backgroundColor: " #fffff9" }}
             value={email}
             onChange={(e) => setemail(e.target.value)}
             type="email"
@@ -141,6 +145,7 @@ function Guadian({ setguadian, guadian }) {
         <div className="col-xs-12 col-sm-6 ">
           <label className="form-label">Relationship</label>
           <input
+            style={{ backgroundColor: " #fffff9" }}
             name="relationship"
             value={relationship}
             onChange={(e) => setrelationship(e.target.value)}
@@ -156,6 +161,7 @@ function Guadian({ setguadian, guadian }) {
         <div className="col-xs-12 col-sm-6 ">
           <label className="form-label">Occupations</label>
           <input
+            style={{ backgroundColor: " #fffff9" }}
             value={occupation}
             onChange={(e) => setoccupation(e.target.value)}
             type="text"
@@ -171,6 +177,7 @@ function Guadian({ setguadian, guadian }) {
         <div className="col-xs-12 col-sm-12 ">
           <label className="form-label">Address</label>
           <textarea
+            style={{ backgroundColor: " #fffff9" }}
             rows={3}
             value={address}
             onChange={(e) => setaddress(e.target.value)}
@@ -181,7 +188,7 @@ function Guadian({ setguadian, guadian }) {
         </div>
       </div>
       <div onClick={handleAddGuadian} className="mb-3">
-        <button className="btn orange__btn">Add Guadian</button>
+        <button className="btn orange__btn">Add Guardian</button>
       </div>
     </div>
   );

@@ -191,7 +191,7 @@ function NewStudent() {
             />
           </div>
 
-          <br className="my-5" />
+          <br className="my-0" />
           <PersonalInfo
             register={register}
             errors={errors}

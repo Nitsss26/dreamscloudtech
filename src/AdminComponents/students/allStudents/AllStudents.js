@@ -229,7 +229,6 @@
 
 // export default AllStudents;
 
-
 import React, { useState, useEffect, Suspense } from "react";
 import Search from "./Search";
 import axios from "../../../store/axios";
@@ -242,18 +241,15 @@ import AddIcon from "@material-ui/icons/Add";
 import { Link } from "react-router-dom";
 import { studentStatus } from "../../../data";
 
-
-
 const StudentsTable = React.lazy(() => import("../../shared/TableListUsers"));
 
 const headCells = [
-  { id: "photoUrl", numeric: false, disablePadding: false, label: "Photo" },
   { id: "userID", numeric: false, disablePadding: false, label: "StudentID" },
-  { id: "class", disablePadding: false, label: "Class" },
-  { id: "name", numeric: false, disablePadding: true, label: "Name" },
-  { id: "surname", disablePadding: true, label: "Last Name" },
+  { id: "photoUrl", numeric: false, disablePadding: false, label: "Photo" },
+  { id: "name", numeric: false, disablePadding: false, label: "Name" },
+  { id: "surname", disablePadding: false, label: " Parents" },
   { id: "status", disablePadding: false, label: "Bus Route" },
-
+  { id: "class", disablePadding: false, label: "Class" },
   { id: "Gender", disablePadding: false, label: "Gender" },
 ];
 
@@ -286,6 +282,7 @@ function AllStudents() {
       setloading(false);
       const capitalizedData = res.data.map(student => ({
         ...student,
+
         classID: student.classID.toUpperCase(), // Capitalize classID
         gender: capitalizeFirstLetter(student.gender), // Capitalize first letter of gender
         status: capitalizeFirstLetter(student.status) // Capitalize first letter of status
@@ -314,6 +311,7 @@ function AllStudents() {
     setname("");
     setid("");
     setclass("");
+    setstatus("")
     setstudents(storeData);
   };
 
@@ -343,45 +341,91 @@ function AllStudents() {
     {
       type: "select",
       options: studentStatus,
-      label: "Search by Transport",
+      label: "Search by Status",
       value: status,
       name: "status",
       onChange: setstatus,
     },
   ];
 
+  // const handleSearch = (e) => {
+  //   e.preventDefault();
+  //   let newStudents = [];
+  //   if (classID) {
+  //     newStudents = storeData.filter((i) =>
+  //       i.classID.toLowerCase().includes(classID.toLowerCase())
+  //     );
+  //   }
+  //   if (name) {
+  //     newStudents = newStudents.filter(
+  //       (i) =>
+  //         i.name.toLowerCase().includes(name.toLowerCase()) ||
+  //         i.surname.toLowerCase().includes(name.toLowerCase())
+  //     );
+  //   }
+  //   if (id) {
+  //     newStudents = newStudents.filter((i) =>
+  //       i.userID.toLowerCase().includes(id.toLowerCase())
+  //     );
+  //   }
+  //   if (status) {
+  //     newStudents = newStudents.filter((i) =>
+  //       i.status.toLowerCase().includes(status.toLowerCase())
+  //     );
+  //   }
+  //   if (gender) {
+  //     newStudents = newStudents.filter((i) =>
+  //       i.gender.toLowerCase().includes(gender.toLowerCase())
+  //     );
+  //   }
+  //   setstudents(newStudents);
+  // };
+
   const handleSearch = (e) => {
     e.preventDefault();
-    let newStudents = storeData;
+    let newStudents = [...storeData]; // Start with the complete dataset
+
     if (classID) {
       newStudents = newStudents.filter((i) =>
         i.classID.toLowerCase().includes(classID.toLowerCase())
       );
     }
+
     if (name) {
-      newStudents = newStudents.filter(
-        (i) =>
-          i.name.toLowerCase().includes(name.toLowerCase()) ||
-          i.surname.toLowerCase().includes(name.toLowerCase())
-      );
+      const searchName = name.toLowerCase();
+      newStudents = newStudents.filter((i) => {
+        const fullName = `${i.name.toLowerCase()} ${i.surname.toLowerCase()}`;
+        return (
+          i.name.toLowerCase().includes(searchName) ||
+          i.surname.toLowerCase().includes(searchName) ||
+          fullName.includes(searchName)
+        );
+      });
     }
+
+
     if (id) {
       newStudents = newStudents.filter((i) =>
         i.userID.toLowerCase().includes(id.toLowerCase())
       );
     }
+
     if (status) {
       newStudents = newStudents.filter((i) =>
         i.status.toLowerCase().includes(status.toLowerCase())
       );
     }
+
     if (gender) {
       newStudents = newStudents.filter((i) =>
         i.gender.toLowerCase().includes(gender.toLowerCase())
       );
     }
+
     setstudents(newStudents);
   };
+
+
 
   const handleDelete = (i) => {
     let ans = window.confirm(`Are sure you want to delete user ${i}`);
@@ -399,8 +443,10 @@ function AllStudents() {
     let ans = window.confirm(
       `Are you sure you want to withdraw this student ${i}`
     );
+    console.log(ans);
     if (ans) {
       axios.put(`/students/update/${i}`, { withdraw: true }).then((res) => {
+        console.log(res.data);
         if (res.data.error) {
           errorAlert(res.data.error);
         }
@@ -410,7 +456,7 @@ function AllStudents() {
   };
 
   return (
-    <div>
+    <div >
       {/* {loading && <Loading />} */}
       <Search
         title=""
@@ -424,7 +470,7 @@ function AllStudents() {
           handleWithdraw={handleWithdraw}
           handleDelete={handleDelete}
           students={students}
-          noData="No students in the database yet"
+          noData="No sudents in the database yet"
           headCells={headCells}
         />
       </Suspense>
@@ -432,4 +478,4 @@ function AllStudents() {
   );
 }
 
-export default React.memo(AllStudents);
+export default AllStudents;
