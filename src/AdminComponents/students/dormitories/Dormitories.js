@@ -126,7 +126,7 @@ function Dormitories() {
     <div className="dormitories__page">
       <h3>Transport Service</h3>
       <div className="row">
-        <div className="col-sm-12 mb-5">
+        <div className="col-sm-12 mb-0">
           <AddDormitories
             name={name}
             setname={setname}

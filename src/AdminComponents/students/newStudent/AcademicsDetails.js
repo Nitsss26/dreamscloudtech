@@ -193,7 +193,7 @@ function AcademicsDetails(props) {
             </span>
           )}
         </div>
-        {(status === "border" || status === "freshBorder") && (
+        {/* {(status === "border" || status === "freshBorder") && (
           <div className="col-xs-12 col-sm-6 col-md-4">
             <label className="form-label">Dormitory</label>
             <select
@@ -218,7 +218,36 @@ function AcademicsDetails(props) {
               )}
             </select>
           </div>
+        )} */}
+        {(status === "border" || status === "freshBorder") ? (
+          <div className="col-xs-12 col-sm-6 col-md-4">
+            <label className="form-label">Bus/Van</label>
+            <select
+              style={{ backgroundColor: " #fffff9" }}
+              value={dormitory || ""}
+              onChange={(e) => setdormitory(e.target.value)}
+              name="dormitory"
+              className="form-select"
+              aria-label="Default select example"
+            >
+              <option defaultValue hidden>
+                Select
+              </option>
+              {dormitories.length > 0 ? (
+                dormitories.map((e) => (
+                  <option key={e._id} value={e._id}>
+                    {e.name}
+                  </option>
+                ))
+              ) : (
+                <option disabled>No data yet</option>
+              )}
+            </select>
+          </div>
+        ) : (
+          setdormitory("") // Reset dormitory if the condition is false
         )}
+
       </div>
       <div className="row mb-3">
         <div className="col-xs-12 col-sm-6  col-md-4">
@@ -298,7 +327,7 @@ function AcademicsDetails(props) {
           </select>
         </div>
       </div>
-      <div className="row mb-3">
+      {/* <div className="row mb-3">
         <div className="col-xs-12 col-sm-6 col-md-6">
           <label className="form-label">Last School Attended</label>
           <input
@@ -323,7 +352,7 @@ function AcademicsDetails(props) {
             className="form-control"
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

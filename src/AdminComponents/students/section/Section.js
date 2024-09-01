@@ -123,7 +123,7 @@ function Sections() {
     <div >
       <h3>Sections</h3>
       <div className="row">
-        <div className="col-sm-12 mb-5">
+        <div className="col-sm-12 mb-0">
           <AddSection
             loading={createLoading}
             name={name}

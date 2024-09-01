@@ -4,10 +4,12 @@ import GuadianCard from '../../AdminComponents/shared/GuadianCard1'
 function GuadanceTab({ user }) {
     console.log(user, "guadance tab")
     return (
-        <div>
+        <div className="row" >
             {user?.length > 0 ? user.map(e => {
                 return (
-                    <GuadianCard guadian={e} key={e._id} noEdit={true} />
+                    <div className="col-6">
+                        <GuadianCard guadian={e} key={e._id} noEdit={true} />
+                    </div>
                 )
             }) : <div>No guadian info</div>}
         </div>

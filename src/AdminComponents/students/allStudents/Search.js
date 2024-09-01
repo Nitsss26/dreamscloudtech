@@ -92,20 +92,10 @@ function Search(props) {
     noActions,
   } = props;
 
-  const [name, setname] = useState("");
-  const [id, setid] = useState("");
-  const [classID, setclass] = useState("");
-  const [status, setstatus] = useState("");
   const [students, setstudents] = useState([]);
-  const [gender, setgender] = useState("");
   const classes = useSelector(selectClasses);
   const [storeData, setstoreData] = useState([]);
   const [loading, setloading] = useState(false);
-
-  const classesOptions = classes.map((e) => ({
-    name: e.name,
-    id: e.classCode,
-  }));
 
   useEffect(() => {
     setloading(true);
@@ -135,8 +125,8 @@ function Search(props) {
       style={{ backgroundColor: "#fffff5" }}
     >
       <h3 className="mb-3">{title || ""}</h3>
-      <div className="d-flex flex-wrap justify-content-between align-items-center mb-3">
-        <div className="d-flex align-items-center gap-2">
+      <div className="d-flex flex-nowrap align-items-center mb-4 " style={{ overflowX: 'auto' }} >
+        <div className="d-flex align-items-center gap-2 me-3 mt-4">
           <Link
             className="btn text-white"
             to="/students/new"
@@ -153,19 +143,26 @@ function Search(props) {
           </Link>
         </div>
 
-        <div className="d-flex flex-wrap align-items-center gap-2">
+        <div className="d-flex flex-nowrap align-items-center gap-2 me-2">
           {inputFields &&
             inputFields.map((input) => (
-              <div key={input?.name} className="flex-grow-1 mb-4">
+              <div
+
+                key={input?.name}
+                className="d-flex flex-column me-2"
+                style={{ flex: "1 1 auto", maxWidth: "130px", backgroundColor: "#fffff5" }} // Adjust maxWidth as needed
+              >
                 <label htmlFor={input?.name} className="form-label">
                   {input.label}
                 </label>
                 {input.type === "select" ? (
                   <select
+
                     value={input?.value}
                     name={input?.name}
                     onChange={(e) => input?.onChange(e.target.value)}
                     className="form-select form-select-sm py-2"
+                    style={{ width: "100%" }}
                   >
                     <option hidden defaultValue>
                       Select
@@ -188,6 +185,7 @@ function Search(props) {
                     className="form-control py-3"
                     placeholder={`Search by ${input.name}`}
                     onChange={(e) => input?.onChange(e.target.value)}
+                    style={{ width: "100%", }}
                   />
                 )}
               </div>
@@ -195,7 +193,7 @@ function Search(props) {
         </div>
 
         {!noActions && (
-          <div className="d-flex align-items-center gap-2">
+          <div className="d-flex align-items-center gap-2 mt-4">
             <button
               className="btn orange__btn"
               type="button"

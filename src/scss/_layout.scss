@@ -175,6 +175,15 @@ input:focus {
   }
 }
 
+.red__btn {
+  // background-color: $darkBlue !important;
+  background-color: #fa6767 !important;
+  color: $white !important;
+  &:hover {
+    background-color: $orange !important;
+  }
+}
+
 .link,
 a {
   text-decoration: none;

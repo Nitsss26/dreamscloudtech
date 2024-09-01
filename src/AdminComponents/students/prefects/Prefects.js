@@ -10,7 +10,7 @@ const tableHeader = [
   { id: "name", name: "name" },
   { id: "position", name: "Position" },
   { id: "startYear", name: "From" },
-  { id: "endYear", name: "To" },
+  { id: "endYear", name: "Till" },
 ];
 
 const min = new Date().getFullYear();

@@ -57,8 +57,8 @@ function PromotingStudent({ classes }) {
   };
 
   return (
-    <div>
-      <form className="content__container mb-3">
+    <div style={{ backgroundColor: "#fffff7" }}>
+      <form className="content__container mb-3" style={{ backgroundColor: "#fffff7" }}>
         <div className="row mb-3 aligh-items-center">
           <div className="col-12 ">
             <h3 className="mb-4">Promoting Student to another Class</h3>
@@ -67,6 +67,7 @@ function PromotingStudent({ classes }) {
             <div className="mb-2">
               <label>Select Class</label>
               <select
+                style={{ backgroundColor: "#fffffa" }}
                 name="class"
                 value={oldClass}
                 onChange={handleSelectClassStudents}
@@ -100,6 +101,7 @@ function PromotingStudent({ classes }) {
                 <div className="mb-2">
                   <label>Select Student</label>
                   <select
+                    style={{ backgroundColor: "#fffffa" }}
                     name="class"
                     value={student}
                     onChange={(e) => setstudent(e.target.value)}
@@ -123,7 +125,9 @@ function PromotingStudent({ classes }) {
                 </div>
                 <div className="mb-2">
                   <label>Select Move to</label>
+
                   <select
+                    style={{ backgroundColor: "#fffffa" }}
                     name="class"
                     value={newClass}
                     onChange={(e) => setnewClass(e.target.value)}
@@ -147,15 +151,16 @@ function PromotingStudent({ classes }) {
                 </div>
               </>
             )}
-            <div className="col-xs-12 col-sm-6   mb-2 mt-4">
+            <div className="col-xs-12 col-sm-12 d-flex justify-content-center  mb-2 mt-4">
               <button
                 disabled={loading.classes}
                 className="btn blue__btn mr-3"
+                style={{ width: "105px" }}
                 onClick={handleChangeStudentClass}
               >
                 Save Changes
               </button>
-              <button className="btn btn-danger" onClick={handleCancelClass}>
+              <button className="btn btn-danger" style={{ width: "105px" }} onClick={handleCancelClass}>
                 Cancel
               </button>
             </div>

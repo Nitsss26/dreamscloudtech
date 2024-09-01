@@ -9,7 +9,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import InfoTab from "./InfoTab";
 import AcademicTab from "./AcademicTab";
-import GuadanceTab from "./GuadanceTab";
+import GuadanceTab from "./GuadanceTab1";
 import ContactInfo from "./ContactInfo";
 
 function TabPanel(props) {
@@ -47,8 +47,15 @@ function a11yProps(index) {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: theme.palette.background.paper,
+    // backgroundColor: theme.palette.background.paper,
+    backgroundColor: "#fffff9",
     width: "100%",
+  },
+  tabs: {
+    justifyContent: "center", // Center-align the tabs
+  },
+  tab: {
+    minWidth: "auto", // Ensures the tab width is just enough to fit the content
   },
 }));
 
@@ -76,11 +83,12 @@ export default function FullWidthTabs({ user }) {
           variant="scrollable"
           scrollButtons="auto"
           aria-label="full width tabs example"
+          classes={{ flexContainer: classes.tabs }} // Applying the center alignment
         >
-          <Tab label="Student's Information" {...a11yProps(0)} />
-          <Tab label="Academics's Information" {...a11yProps(1)} />
-          <Tab label="Guardian's Information" {...a11yProps(2)} />
-          <Tab label="Contact Details" {...a11yProps(3)} />
+          <Tab label="Student's Information" {...a11yProps(0)} className={classes.tab} />
+          <Tab label="Academics's Information" {...a11yProps(1)} className={classes.tab} />
+          <Tab label="Guardian's Information" {...a11yProps(2)} className={classes.tab} />
+          <Tab label="Contact Details" {...a11yProps(3)} className={classes.tab} />
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -104,5 +112,3 @@ export default function FullWidthTabs({ user }) {
     </div>
   );
 }
-
-

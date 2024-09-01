@@ -1,0 +1,20 @@
+.student__info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.student__avatar {
+    flex-shrink: 0;
+    margin-right: 20px; /* Space between image and text */
+}
+
+.avatar {
+    width: 80px; /* Adjust size as needed */
+    height: 80px;
+}
+
+.student__details {
+    text-align: center;
+    flex-grow: 1;
+}

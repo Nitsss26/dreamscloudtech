@@ -12,12 +12,14 @@ const styles = (theme) => ({
   root: {
     margin: 0,
     padding: theme.spacing(2),
+    backgroundColor: "#fffff5",
   },
   closeButton: {
     position: "absolute",
     right: theme.spacing(1),
     top: theme.spacing(1),
     color: theme.palette.grey[500],
+
   },
 });
 
@@ -55,16 +57,18 @@ function EditCampuses({ open, setopen, name, setname, onSubmit, loading }) {
       onClose={() => setopen(false)}
       aria-labelledby="customized-dialog-title"
       open={open}
+
     >
       <DialogTitle id="customized-dialog-title" onClose={() => setopen(false)}>
         Edit Section
       </DialogTitle>
-      <DialogContent dividers>
-        <form action="">
+      <DialogContent dividers style={{ backgroundColor: "#fffff5" }}>
+        <form action="" style={{ backgroundColor: "#fffff5" }}>
           <div className="row mb-3">
             <label className="col-sm-2 col-form-label">Name</label>
             <div className="col-sm-10">
               <input
+                style={{ backgroundColor: "#fffff9" }}
                 value={name}
                 ref={register({ required: true })}
                 onChange={(e) => setname(e.target.value)}
@@ -84,7 +88,7 @@ function EditCampuses({ open, setopen, name, setname, onSubmit, loading }) {
               <button
                 onClick={handleSubmit(onSubmit)}
                 disabled={loading}
-                className="btn blue__btn"
+                className="btn red__btn"
               >
                 {loading && (
                   <span

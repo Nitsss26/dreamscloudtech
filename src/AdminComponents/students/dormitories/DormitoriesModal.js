@@ -55,16 +55,18 @@ function EditCampuses({ open, setopen, name, setname, onSubmit, loading }) {
       onClose={() => setopen(false)}
       aria-labelledby="customized-dialog-title"
       open={open}
+
     >
-      <DialogTitle id="customized-dialog-title" onClose={() => setopen(false)}>
-        Edit Dormitories
+      <DialogTitle id="customized-dialog-title" onClose={() => setopen(false)} style={{ backgroundColor: "#fffff5" }}>
+        Edit Bus Name
       </DialogTitle>
-      <DialogContent dividers>
-        <form action="">
+      <DialogContent dividers style={{ backgroundColor: "#fffff5" }}>
+        <form action="" style={{ backgroundColor: "#fffff5" }}>
           <div className="row mb-3">
             <label className="col-sm-2 col-form-label">Name</label>
             <div className="col-sm-10">
               <input
+                style={{ backgroundColor: "#fffff9" }}
                 value={name}
                 ref={register({ required: true })}
                 onChange={(e) => setname(e.target.value)}
@@ -79,11 +81,11 @@ function EditCampuses({ open, setopen, name, setname, onSubmit, loading }) {
               )}
             </div>
           </div>
-          <div className="row mb-3">
-            <button
+          <div className="row mb-3 ">
+            <div className="offset-sm-2 col-xs-8 col-sm-3"> <button
               onClick={handleSubmit(onSubmit)}
               disabled={loading}
-              className="btn blue__btn offset-sm-2 col-xs-8 col-sm-3"
+              className="btn red__btn "
             >
               {loading && (
                 <span
@@ -94,6 +96,7 @@ function EditCampuses({ open, setopen, name, setname, onSubmit, loading }) {
               )}
               Save Changes
             </button>
+            </div>
           </div>
         </form>
       </DialogContent>

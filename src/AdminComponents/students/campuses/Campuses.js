@@ -129,7 +129,7 @@ function Campuses() {
     <div>
       <h3>Campuses</h3>
       <div className="row">
-        <div className="col-sm-12 mb-3">
+        <div className="col-sm-12 col-md-4 mb-3">
           <AddCampus
             loading={createLoading}
             name={name}
@@ -139,7 +139,7 @@ function Campuses() {
             onSubmit={handleAddCampus}
           />
         </div>
-        <div className="col-sm-12">
+        <div className="col-sm-12 col-md-8 ">
           <ListCampus
             handleEdit={handleEdit}
             handleDelete={handleDelete}

@@ -50,8 +50,8 @@ function PromotingClass({ classes }) {
   };
 
   return (
-    <div>
-      <form className="content__container mb-3">
+    <div style={{ backgroundColor: "#fffff7" }}>
+      <form className="content__container mb-3" style={{ backgroundColor: "#fffff7" }}>
         <div className="row mb-3 aligh-items-center">
           <div className="col-12 ">
             <h3 className="mb-4">Promoting Students to the next Class</h3>
@@ -59,6 +59,7 @@ function PromotingClass({ classes }) {
           <div className="col-xs-12 col-sm-6   mb-2">
             <label>Current Class</label>
             <select
+              style={{ backgroundColor: "#fffffa" }}
               name="class"
               value={currentclass}
               onChange={(e) => setcurrentclass(e.target.value)}
@@ -83,6 +84,7 @@ function PromotingClass({ classes }) {
           <div className="col-xs-12 col-sm-6   mb-2">
             <label>Promote Class</label>
             <select
+              style={{ backgroundColor: "#fffffa" }}
               name="class"
               value={nextclass}
               onChange={(e) => setnextclass(e.target.value)}
@@ -107,15 +109,16 @@ function PromotingClass({ classes }) {
           {errors.classes && (
             <div className="text-danger"> Please select all field </div>
           )}
-          <div className="col-xs-12 col-sm-6   mb-2 mt-4">
+          <div className="col-xs-12 col-sm-12 d-flex justify-content-center mr-5 mb-2 mt-4">
             <button
               disabled={loading.classes}
+              style={{ width: "105px" }}
               className="btn blue__btn mr-3"
               onClick={handleChangeClasses}
             >
               Save Changes
             </button>
-            <button className="btn btn-danger" onClick={handleCancelClass}>
+            <button className="btn btn-danger" style={{ width: "105px" }} onClick={handleCancelClass}>
               Cancel
             </button>
           </div>

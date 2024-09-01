@@ -54,14 +54,15 @@ function PromotingDormitories({ dormitories }) {
   };
 
   return (
-    <form action="" className="content__container mb-5">
-      <div className="row mb-5 aligh-items-center">
+    <form action="" className="content__container mb-3" style={{ backgroundColor: "#fffff7" }}>
+      <div className="row mb-3 aligh-items-center">
         <div className="col-12 ">
-          <h3 className="mb-4">Promoting Students to another Dormitories</h3>
+          <h3 className="mb-4">Promoting Students to another Bus</h3>
         </div>
         <div className="col-xs-12 col-sm-6 ">
-          <label>Current Dormitory</label>
+          <label>Current Bus</label>
           <select
+            style={{ backgroundColor: "#fffffa" }}
             name="dormitories"
             value={currentdormitories}
             onChange={(e) => setcurrentdormitories(e.target.value)}
@@ -83,8 +84,9 @@ function PromotingDormitories({ dormitories }) {
           </select>
         </div>
         <div className="col-xs-12 col-sm-6 ">
-          <label>Promote Dormitory</label>
+          <label>Promote Bus</label>
           <select
+            style={{ backgroundColor: "#fffffa" }}
             name="nextdormitory"
             value={nextdormitories}
             onChange={(e) => setnextdormitories(e.target.value)}
@@ -108,15 +110,16 @@ function PromotingDormitories({ dormitories }) {
         {errors.dormitories && (
           <div className="text-danger"> Please select all field </div>
         )}
-        <div className="col-xs-12 col-sm-6   mb-2 mt-4">
+        <div className="col-xs-12 col-sm-12 d-flex justify-content-center mb-2 mt-4">
           <button
             disabled={loading.dormitories}
             className="btn blue__btn mr-3"
+            style={{ width: "105px" }}
             onClick={handleChangeDormitories}
           >
             Save Changes
           </button>
-          <button className="btn btn-danger" onClick={handleCancelDormitories}>
+          <button className="btn btn-danger" style={{ width: "105px" }} onClick={handleCancelDormitories}>
             Cancel
           </button>
         </div>
