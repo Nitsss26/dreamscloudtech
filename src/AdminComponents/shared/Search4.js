@@ -157,14 +157,14 @@ function Search(props) {
         {!noActions && (
           <>
             <button
-              className="btn orange__btn"
+              className="btn green__btn"
               onClick={handleSearch}
               style={{ marginRight: "10px", marginTop: "30px" }}
             >
               Search
             </button>
             {!isReset && (
-              <button className="btn blue__btn" onClick={handleReset} style={{ marginTop: "30px" }}>
+              <button className="btn red__btn" onClick={handleReset} style={{ marginTop: "30px" }}>
                 Reset
               </button>
             )}

@@ -11,11 +11,13 @@ import ListTable from "./PaymentTable";
 import axios from "../../../store/axios";
 import { useHistory } from "react-router-dom";
 import { errorAlert, successAlert, currentCurrency } from "../../../utils";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
     position: "relative",
-    background: "#051f3e",
+    // background: "#051f3e",
+    background: "#01a6ca",
     color: "#fff",
   },
   title: {
@@ -50,9 +52,10 @@ export default function ViewStudentPayment({
   const handleClose = () => {
     setOpen(false);
   };
-
+  const i = ""
   const handleDelete = (id) => {
     axios.delete(`/transactions/delete/${id}`).then((res) => {
+      i = id
       if (res.data.error) {
         errorAlert(res.data.error);
         return 0;
@@ -60,7 +63,7 @@ export default function ViewStudentPayment({
       successAlert("Transaction successfully cancelled");
     });
   };
-
+  console.log(i)
   const handleEdit = (id) => {
     history.push(`/finance/transactions/receipt/${id}`);
   };
@@ -74,11 +77,22 @@ export default function ViewStudentPayment({
     >
       <AppBar color="default" className={classes.appBar}>
         <Toolbar className="py-4">
-          <Typography variant="body1" className={classes.title}>
+          {/* <Typography variant="body1" className={classes.title} style={{ textAlign: "center" }}>
+            <strong>Name: {name} </strong> <br />
+            <strong>Total Bill: {totalBill} Rs</strong> <br />
+            <strong>Total Amount Paid: {totalPaid} Rs</strong> <br />
+            <strong>Fees Due: {balance} Rs</strong>
+          </Typography> */}
+          <Typography
+            variant="body1"
+            className={classes.title}
+            style={{ textAlign: 'center', lineHeight: '2' }} // Center alignment and increased line height for spacing
+          >
             <strong>Name: {name}</strong> <br />
-            <strong>Total Bill: {totalBill}</strong> <br />
-            <strong>Total Amount Paid: {totalPaid}</strong> <br />
-            <strong>Fees Due: {balance}</strong>
+            <strong>Total Bill: {totalBill} Rs</strong> <br />
+            <strong>Total Amount Paid: {totalPaid} Rs</strong> <br />
+            <strong>Fees Due: {balance} Rs</strong>
+
           </Typography>
           <Button autoFocus color="inherit" onClick={handleClose}>
             <CloseIcon />

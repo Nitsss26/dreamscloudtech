@@ -22,12 +22,13 @@ function SearchStudent({
   const years = useSelector(selectYearGroup);
 
   return (
-    <div className="content__container mb-3">
-      <h3>Search Student</h3>
+    <div className="content__container mb-3" style={{ backgroundColor: "#fffff7" }}>
+      <h4>Search Student</h4>
       <form action="">
         <div className="mb-3">
           <label className="form-label">Year</label>
           <select
+            style={{ backgroundColor: "#fffffa" }}
             value={year}
             onChange={(e) => setyear(e.target.value)}
             name="year"
@@ -50,6 +51,7 @@ function SearchStudent({
         <div className="mb-3">
           <label className="form-label">Term</label>
           <select
+            style={{ backgroundColor: "#fffffa" }}
             value={term}
             onChange={(e) => setterm(e.target.value)}
             name="year"
@@ -66,6 +68,7 @@ function SearchStudent({
         <div className="mb-3">
           <label className="form-label">Class</label>
           <select
+            style={{ backgroundColor: "#fffffa" }}
             value={classID}
             onChange={(e) => setclassID(e.target.value)}
             name="year"
@@ -97,6 +100,7 @@ function SearchStudent({
           <div className="mb-3">
             <label className="form-label">Student</label>
             <select
+              style={{ backgroundColor: "#fffffa" }}
               value={studentID}
               onChange={(e) => setstudentID(e.target.value)}
               name="students"
@@ -120,7 +124,7 @@ function SearchStudent({
         <div>
           <button
             onClick={handleSearch}
-            className="btn blue__btn"
+            className="btn red__btn"
             disabled={loading}
           >
             {loading && <div className="spinner-border" role="status"></div>}

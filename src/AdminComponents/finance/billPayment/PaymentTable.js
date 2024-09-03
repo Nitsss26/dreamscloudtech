@@ -560,7 +560,7 @@ export default function CustomPaginationActionsTable({
                       >
                         {isDate(row[cell.id])
                           ? moment(row[cell.id]).format("D MMMM YYYY")
-                          : row[cell.id] || "-"}
+                          : row[cell.id] || "NULL"}
                       </TableCell>
                     ))}
                   <TableCell align="center" className={classes.tableCell}>

@@ -162,8 +162,8 @@ function BillPayment() {
 
   return (
     <div>
-      {loading && <Loading />}
-      <h3>Student Bill Payment</h3>
+      {/* {loading && <Loading />} */}
+      <h3 className="ml-3">Student Fee Payment</h3>
       <div className="row">
         <div className="col-sm-6">
           <SearchStudent
@@ -181,9 +181,9 @@ function BillPayment() {
           />
 
           {show && (
-            <div className="content__container">
+            <div className="content__container" style={{ backgroundColor: "#fffff7" }}>
               {scholarship && (
-                <div>
+                <div style={{ backgroundColor: "#fffff7" }}>
                   <strong>
                     {" "}
                     Students granted {scholarship?.name} which covers{" "}

@@ -29,7 +29,9 @@ function ViewStudent({
   return (
     <div className="content__container">
       <div
-        style={{ background: "#ffa201" }}
+        // style={{ background: "#ffa201" }}
+        style={{ background: "#2ad76c" }}
+
         className="d-flex flex-column align-items-center p-3 text-light mb-4"
       >
         <Avatar
@@ -38,10 +40,16 @@ function ViewStudent({
         />
         <h3>{name} </h3>
         <h5>{id}</h5>
-        <h6>
+        {/* <h6>
           {getCapitalize(user?.status)} - {getCapitalize(user?.fees)}
+        </h6> */}
+        <h6>
+          {user?.status === 'day'
+            ? `No Bus Service - ${user?.fees ? user.fees.toUpperCase() : 'Fees Not Set'}`
+            : `Bus Service - ${user?.fees ? user.fees.toUpperCase() : 'Fees Not Set'}`}
         </h6>
-        <button onClick={() => setOpen(true)} className="btn blue__btn">
+
+        <button onClick={() => setOpen(true)} className="btn red__btn">
           View Transactions
         </button>
       </div>

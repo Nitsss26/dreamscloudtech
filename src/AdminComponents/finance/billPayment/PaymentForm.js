@@ -409,7 +409,7 @@ function PaymentForm({
 
   const [showCheck, setshowCheck] = useState(false);
   return (
-    <div className="content__container">
+    <div className="content__container" style={{ backgroundColor: "#fffff7" }}>
       <form action="">
         <div className="row mb-3">
           <label className="col-sm-3 col-form-label">Fees Due</label>
@@ -417,6 +417,7 @@ function PaymentForm({
             <div className="input-group">
               <div className="input-group-text">{currentCurrency()}</div>
               <input
+                style={{ backgroundColor: "#fffffa" }}
                 type="number"
                 value={balance}
                 readOnly
@@ -427,9 +428,10 @@ function PaymentForm({
           </div>
           <div className="col-md-3">
             <button
+
               type="button"
               onClick={() => setamount(balance)}
-              className="btn blue__btn"
+              className="btn greenn__btn"
             >
               Pay All
             </button>
@@ -442,12 +444,13 @@ function PaymentForm({
               <div className="input-group-text">{currentCurrency()}</div>
               <input
                 type="number"
+                style={{ backgroundColor: "#fffffa" }}
                 ref={register({ required: true, max: balance + 1 })}
                 value={amount}
                 onChange={(e) => setamount(e.target.value)}
                 className="form-control"
                 name="amount"
-                placeholder="Enter amount in $"
+                placeholder="Enter amount in Rs"
               />
             </div>
 
@@ -462,6 +465,7 @@ function PaymentForm({
           <label className="col-sm-3 col-form-label">Date Paid</label>
           <div className="col-sm-9">
             <input
+              style={{ backgroundColor: "#fffffa" }}
               type="date"
               value={date}
               ref={register({ required: true })}
@@ -481,16 +485,18 @@ function PaymentForm({
           <div className="col-sm-9">
             <div className="selectBox">
               <select
+                style={{ backgroundColor: "#fffffa" }}
                 onClick={() => setshowCheck(!showCheck)}
                 className="form-select"
               >
                 <option hidden>Select options</option>
               </select>
               {showCheck && (
-                <div className="showcheckboxes px-3">
+                <div className="showcheckboxes1 px-3 py-4">
                   <>
                     <div className="form-check">
                       <input
+                        style={{ backgroundColor: "#fffffa" }}
                         className="form-check-input"
                         type="checkbox"
                         onChange={handleSelectall}
@@ -504,6 +510,7 @@ function PaymentForm({
                     <hr />
                     <div className="form-check">
                       <input
+                        style={{ backgroundColor: "#fffffa" }}
                         className="form-check-input"
                         type="checkbox"
                         name="exampleRadios"
@@ -517,6 +524,7 @@ function PaymentForm({
                     </div>
                     <div className="form-check">
                       <input
+                        style={{ backgroundColor: "#fffffa" }}
                         className="form-check-input"
                         type="checkbox"
                         value="option1"
@@ -535,6 +543,7 @@ function PaymentForm({
                     </div>
                     <div className="form-check">
                       <input
+                        style={{ backgroundColor: "#fffffa" }}
                         className="form-check-input"
                         type="checkbox"
                         name="exampleRadios"
@@ -553,6 +562,7 @@ function PaymentForm({
                     </div>
                     <div className="form-check">
                       <input
+                        style={{ backgroundColor: "#fffffa" }}
                         className="form-check-input"
                         type="checkbox"
                         name="exampleRadios"
@@ -577,6 +587,7 @@ function PaymentForm({
           <label className="col-sm-3 col-form-label">Payment Type</label>
           <div className="col-sm-9">
             <select
+              style={{ backgroundColor: "#fffffa" }}
               value={paymentType}
               ref={register({ required: true })}
               onChange={(e) => setpaymentType(e.target.value)}
@@ -598,6 +609,7 @@ function PaymentForm({
             <label className=" col-form-label">Bank</label>
             <div className="">
               <select
+                style={{ backgroundColor: "#fffffa" }}
                 value={bank}
                 ref={register({ required: true })}
                 onChange={(e) => setbank(e.target.value)}
@@ -623,6 +635,7 @@ function PaymentForm({
               <label className=" col-form-label">Bank</label>
               <div className="">
                 <select
+                  style={{ backgroundColor: "#fffffa" }}
                   value={bank}
                   ref={register({ required: true })}
                   onChange={(e) => setbank(e.target.value)}
@@ -645,6 +658,7 @@ function PaymentForm({
               <label className=" col-form-label">Cheque Number</label>
               <div className="">
                 <input
+                  style={{ backgroundColor: "#fffffa" }}
                   type="text"
                   className="form-control"
                   value={chequeNo}
@@ -659,6 +673,7 @@ function PaymentForm({
           <label className="col-sm-3 col-form-label">Remarks</label>
           <div className="col-sm-9">
             <textarea
+              style={{ backgroundColor: "#fffffa" }}
               rows={5}
               className="form-control"
               value={remarks}
@@ -672,7 +687,7 @@ function PaymentForm({
             <button
               disabled={loading}
               onClick={handleSubmit(handlePayement)}
-              className="btn blue__btn"
+              className="btn red__btn"
             >
               {loading && (
                 <span
