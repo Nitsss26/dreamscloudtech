@@ -252,14 +252,28 @@ const _nav = [
             },
             {
                 _tag: "CSidebarNavItem",
-                name: "Staff Payrow",
-                to: "/finance/staff/payrow",
+                name: "Salary Payment",
+                to: "/finance/staff/payrow/pay",
                 icon: (
                     <CIcon
                         name="cil-circle"
                         customClasses="c-sidebar-nav-icon "
 
                         style={{ color: "#9c27b0" }}
+                    />
+                ),
+                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
+            },
+            {
+                _tag: "CSidebarNavItem",
+                name: "Staff Payroll",
+                to: "/finance/staff/payrow",
+                icon: (
+                    <CIcon
+                        name="cil-circle"
+                        customClasses="c-sidebar-nav-icon "
+
+                        style={{ color: "#ff5722" }}
                     />
                 ),
                 style: { backgroundColor: "#fffff5", marginLeft: '20px' },
@@ -276,33 +290,33 @@ const _nav = [
             //     ),
             //     style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             // },
-            {
-                _tag: "CSidebarNavItem",
-                name: "Pay Calculator",
-                to: "/finance/payrow/calculator",
-                icon: (
-                    <CIcon
-                        name="cil-circle"
-                        customClasses="c-sidebar-nav-icon "
-                        style={{ color: "#ff5722" }}
+            // {
+            //     _tag: "CSidebarNavItem",
+            //     name: "Pay Calculator",
+            //     to: "/finance/payrow/calculator",
+            //     icon: (
+            //         <CIcon
+            //             name="cil-circle"
+            //             customClasses="c-sidebar-nav-icon "
+            //             style={{ color: "#ff5722" }}
 
-                    />
-                ),
-                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
-            },
-            {
-                _tag: "CSidebarNavItem",
-                name: "Bank Advice",
-                to: "/finance/bankadvice",
-                icon: (
-                    <CIcon
-                        name="cil-circle"
-                        customClasses="c-sidebar-nav-icon"
-                        style={{ color: "#4caf50" }}
-                    />
-                ),
-                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
-            },
+            //         />
+            //     ),
+            //     style: { backgroundColor: "#fffff5", marginLeft: '20px' },
+            // },
+            // {
+            //     _tag: "CSidebarNavItem",
+            //     name: "Bank Advice",
+            //     to: "/finance/bankadvice",
+            //     icon: (
+            //         <CIcon
+            //             name="cil-circle"
+            //             customClasses="c-sidebar-nav-icon"
+            //             style={{ color: "#4caf50" }}
+            //         />
+            //     ),
+            //     style: { backgroundColor: "#fffff5", marginLeft: '20px' },
+            // },
         ],
     },
     {
@@ -403,36 +417,36 @@ const _nav = [
                 ),
                 style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
-            {
-                _tag: "CSidebarNavItem",
-                name: "Notes",
-                to: "/academics/notes",
-                icon: (
-                    <CIcon
-                        name="cil-circle"
-                        customClasses="c-sidebar-nav-icon"
-                        style={{ color: "#8bc34a" }}
+            // {
+            //     _tag: "CSidebarNavItem",
+            //     name: "Notes",
+            //     to: "/academics/notes",
+            //     icon: (
+            //         <CIcon
+            //             name="cil-circle"
+            //             customClasses="c-sidebar-nav-icon"
+            //             style={{ color: "#8bc34a" }}
 
-                    />
-                ),
-                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
-            },
+            //         />
+            //     ),
+            //     style: { backgroundColor: "#fffff5", marginLeft: '20px' },
+            // },
+            // {
+            //     _tag: "CSidebarNavItem",
+            //     name: "Past Classes",
+            //     to: "/academics/classes/past",
+            //     icon: (
+            //         <CIcon
+            //             name="cil-circle"
+            //             customClasses="c-sidebar-nav-icon "
+            //             style={{ color: "#ffc107" }}
+            //         />
+            //     ),
+            //     style: { backgroundColor: "#fffff5", marginLeft: '20px' },
+            // },
             {
                 _tag: "CSidebarNavItem",
-                name: "Past Classes",
-                to: "/academics/classes/past",
-                icon: (
-                    <CIcon
-                        name="cil-circle"
-                        customClasses="c-sidebar-nav-icon "
-                        style={{ color: "#ffc107" }}
-                    />
-                ),
-                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
-            },
-            {
-                _tag: "CSidebarNavItem",
-                name: "SBA",
+                name: "Make Report",
                 to: "/academics/sba",
                 icon: (
                     <CIcon
@@ -446,7 +460,7 @@ const _nav = [
             },
             {
                 _tag: "CSidebarNavItem",
-                name: "Progress Reports",
+                name: "Report Cards",
                 to: "/academics/progressreports",
                 icon: (
                     <CIcon
@@ -472,19 +486,19 @@ const _nav = [
                 ),
                 style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
-            {
-                _tag: "CSidebarNavItem",
-                name: "Correspondances",
-                to: "/academics/correspondance",
-                icon: (
-                    <CIcon
-                        name="cil-circle"
-                        customClasses="c-sidebar-nav-icon"
-                        style={{ color: "#9c27b0" }}
-                    />
-                ),
-                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
-            },
+            // {
+            //     _tag: "CSidebarNavItem",
+            //     name: "Correspondances",
+            //     to: "/academics/correspondance",
+            //     icon: (
+            //         <CIcon
+            //             name="cil-circle"
+            //             customClasses="c-sidebar-nav-icon"
+            //             style={{ color: "#9c27b0" }}
+            //         />
+            //     ),
+            //     style: { backgroundColor: "#fffff5", marginLeft: '20px' },
+            // },
         ],
     },
     {
@@ -633,9 +647,15 @@ const _nav = [
                 name: " Debtors List",
                 to: "/finance/debtors",
                 icon: (
+                    // <CIcon
+                    //     name="cil-speedometer"
+                    //     customClasses="c-sidebar-nav-icon sidebarIcon"
+                    // />
                     <CIcon
-                        name="cil-speedometer"
-                        customClasses="c-sidebar-nav-icon sidebarIcon"
+                        name="cil-circle"
+                        customClasses="c-sidebar-nav-icon "
+                        style={{ color: "#fbc02d" }}
+
                     />
                 ),
                 style: { backgroundColor: "#fffff5", marginLeft: '20px' },
@@ -660,9 +680,15 @@ const _nav = [
                 name: "Bill Reminder",
                 to: "/finance/billreminder",
                 icon: (
+                    // <CIcon
+                    //     name="cil-speedometer"
+                    //     customClasses="c-sidebar-nav-icon sidebarIcon"
+                    // />
                     <CIcon
-                        name="cil-speedometer"
-                        customClasses="c-sidebar-nav-icon sidebarIcon"
+                        name="cil-circle"
+                        customClasses="c-sidebar-nav-icon "
+                        style={{ color: "#ff5722" }}
+
                     />
                 ),
                 style: { backgroundColor: "#fffff5", marginLeft: '20px' },
@@ -675,8 +701,8 @@ const _nav = [
                 icon: (
                     <CIcon
                         name="cil-circle"
-                        customClasses="c-sidebar-nav-icon sidebarIcon"
-                        style={{ color: "#ffc107" }}
+                        customClasses="c-sidebar-nav-icon "
+                        style={{ color: "#2196f3" }}
 
                     />
                 ),
@@ -704,6 +730,7 @@ const _nav = [
         route: "/store",
         icon: (
             <CIcon name="cilCart" customClasses="c-sidebar-nav-icon " style={{ color: "#ff5722" }} />
+            // <CIcon name="cilCart" customClasses="c-sidebar-nav-icon " style={{ color: "#fbc02d" }} />
         ),
         style: { backgroundColor: "#fffff5", marginRight: '20px', marginLeft: '20px' },
         _children: [
@@ -736,86 +763,86 @@ const _nav = [
             },
         ],
     },
-    {
-        _tag: "CSidebarNavDropdown",
-        name: "Canteen",
-        route: "/canteen/payments",
-        icon: (
-            <CIcon name="cil-fastfood" customClasses="c-sidebar-nav-icon  " style={{ color: "#fbc02d" }} />
-        ),
-        style: { backgroundColor: "#fffff5", marginRight: '20px', marginLeft: '20px' },
-        _children: [
-            {
-                _tag: "CSidebarNavItem",
-                name: "All Payments",
-                to: "/canteen/payments",
-                icon: (
-                    <CIcon
-                        name="cil-circle"
-                        customClasses="c-sidebar-nav-icon"
-                        style={{ color: "#ff5722" }}
+    // {
+    //     _tag: "CSidebarNavDropdown",
+    //     name: "Canteen",
+    //     route: "/canteen/payments",
+    //     icon: (
+    //         <CIcon name="cil-fastfood" customClasses="c-sidebar-nav-icon  " style={{ color: "#fbc02d" }} />
+    //     ),
+    //     style: { backgroundColor: "#fffff5", marginRight: '20px', marginLeft: '20px' },
+    //     _children: [
+    //         {
+    //             _tag: "CSidebarNavItem",
+    //             name: "All Payments",
+    //             to: "/canteen/payments",
+    //             icon: (
+    //                 <CIcon
+    //                     name="cil-circle"
+    //                     customClasses="c-sidebar-nav-icon"
+    //                     style={{ color: "#ff5722" }}
 
-                    />
-                ),
-                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
-            },
-            {
-                _tag: "CSidebarNavItem",
-                name: "All Members",
-                to: "/canteen/members",
-                icon: (
-                    <CIcon
-                        name="cil-circle"
-                        customClasses="c-sidebar-nav-icon"
-                        style={{ color: "#4caf50" }}
+    //                 />
+    //             ),
+    //             style: { backgroundColor: "#fffff5", marginLeft: '20px' },
+    //         },
+    //         {
+    //             _tag: "CSidebarNavItem",
+    //             name: "All Members",
+    //             to: "/canteen/members",
+    //             icon: (
+    //                 <CIcon
+    //                     name="cil-circle"
+    //                     customClasses="c-sidebar-nav-icon"
+    //                     style={{ color: "#4caf50" }}
 
-                    />
-                ),
-                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
-            },
-            {
-                _tag: "CSidebarNavItem",
-                name: "Add New Member",
-                to: "/canteen/members/register",
-                icon: (
-                    <CIcon
-                        name="cil-circle"
-                        customClasses="c-sidebar-nav-icon "
-                        style={{ color: "#2196f3" }}
+    //                 />
+    //             ),
+    //             style: { backgroundColor: "#fffff5", marginLeft: '20px' },
+    //         },
+    //         {
+    //             _tag: "CSidebarNavItem",
+    //             name: "Add New Member",
+    //             to: "/canteen/members/register",
+    //             icon: (
+    //                 <CIcon
+    //                     name="cil-circle"
+    //                     customClasses="c-sidebar-nav-icon "
+    //                     style={{ color: "#2196f3" }}
 
-                    />
-                ),
-                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
-            },
-            {
-                _tag: "CSidebarNavItem",
-                name: "Make Payment",
-                to: "/canteen/payments/add",
-                icon: (
-                    <CIcon
-                        name="cil-circle"
-                        customClasses="c-sidebar-nav-icon"
-                        style={{ color: "#00bcd4" }}
+    //                 />
+    //             ),
+    //             style: { backgroundColor: "#fffff5", marginLeft: '20px' },
+    //         },
+    //         {
+    //             _tag: "CSidebarNavItem",
+    //             name: "Make Payment",
+    //             to: "/canteen/payments/add",
+    //             icon: (
+    //                 <CIcon
+    //                     name="cil-circle"
+    //                     customClasses="c-sidebar-nav-icon"
+    //                     style={{ color: "#00bcd4" }}
 
-                    />
-                ),
-                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
-            },
-            {
-                _tag: "CSidebarNavItem",
-                name: " Payment Plans",
-                to: "/canteen/payments/plan",
-                icon: (
-                    <CIcon
-                        name="cil-circle"
-                        customClasses="c-sidebar-nav-icon"
-                        style={{ color: "#8bc34a" }}
-                    />
-                ),
-                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
-            },
-        ],
-    },
+    //                 />
+    //             ),
+    //             style: { backgroundColor: "#fffff5", marginLeft: '20px' },
+    //         },
+    //         {
+    //             _tag: "CSidebarNavItem",
+    //             name: " Payment Plans",
+    //             to: "/canteen/payments/plan",
+    //             icon: (
+    //                 <CIcon
+    //                     name="cil-circle"
+    //                     customClasses="c-sidebar-nav-icon"
+    //                     style={{ color: "#8bc34a" }}
+    //                 />
+    //             ),
+    //             style: { backgroundColor: "#fffff5", marginLeft: '20px' },
+    //         },
+    //     ],
+    // },
     {
         _tag: "CSidebarNavDropdown",
         name: "Message",

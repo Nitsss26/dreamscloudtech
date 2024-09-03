@@ -141,7 +141,12 @@ function Deductions() {
           return errorAlert(res.data.error);
         }
         successAlert("Successfully added");
-        setdata([res.data.doc, ...data]);
+        let newDoc = {
+          ...res.data.doc,
+          number: res.data.doc.staff?.length,
+        };
+        // setdata([res.data.doc, ...data]);
+        setdata([newDoc, ...data]);
         setname("");
         setamount("");
         setstaff([]);
@@ -156,8 +161,8 @@ function Deductions() {
     <div>
       <h3 className="mb-3">Salary Deductions</h3>
       <div className="row">
-        <div className="col-sm-5">
-          <div className="content__container">
+        <div className="col-sm-6">
+          <div className="content__container" style={{ backgroundColor: "#fffff7" }}>
             <h5>Add Deduction </h5>
             <Form
               handleSetStaff={handleSetStaff}
@@ -173,7 +178,7 @@ function Deductions() {
             />
           </div>
         </div>
-        <div className="col-sm-7">
+        <div className="col-sm-6">
           <div className="">
             <Table
               handleDelete={handleDelete}

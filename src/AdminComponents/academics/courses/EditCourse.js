@@ -83,7 +83,7 @@ function EditCourse() {
   return (
     <>
       {/* <GoBack link="/academics/courses" name="Go back to Courses List" /> */}
-      <div className="content__container">
+      <div className="content__container" style={{ backgroundColor: "#fffff7" }}>
         <h3 className="mb-4">Edit Course</h3>
         <EditForm
           type={type}

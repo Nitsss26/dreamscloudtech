@@ -126,14 +126,14 @@ function SBA() {
     let newData = students.map((i) =>
       i.userID === selectedUser.userID
         ? {
-            classWork,
-            exam,
-            classWorkPercentage: getClassWorkPercentage(classWork),
-            examPercentage: getexamPercentage(exam),
-            total: getTotal(exam, classWork),
-            userID: selectedUser?.userID,
-            name: selectedUser?.name,
-          }
+          classWork,
+          exam,
+          classWorkPercentage: getClassWorkPercentage(classWork),
+          examPercentage: getexamPercentage(exam),
+          total: getTotal(exam, classWork),
+          userID: selectedUser?.userID,
+          name: selectedUser?.name,
+        }
         : i
     );
 
@@ -196,22 +196,7 @@ function SBA() {
   };
 
   return (
-    <div>
-      <h3>S.B.A</h3>
-      <div className="mb-3">
-        <Search
-          academicYear={year}
-          setacademicYear={setyear}
-          setterm={setterm}
-          term={term}
-          course={course}
-          setcourse={setcourse}
-          classID={classID}
-          setclass={setclassID}
-          loading={loadingClass}
-          handleSearch={handleSearch}
-        />
-      </div>
+    <div >
       {isSet && (
         <SBATable
           setclassWork={setclassWork}
@@ -226,6 +211,23 @@ function SBA() {
           handleOpenPercentage={handleOpenPercentage}
         />
       )}
+
+      {/* <h3>S.B.A</h3> */}
+      <h3 className="text-center" style={{ marginBottom: "40px" }}>School Based Report</h3>
+      <div className="mb-3">
+        <Search
+          academicYear={year}
+          setacademicYear={setyear}
+          setterm={setterm}
+          term={term}
+          course={course}
+          setcourse={setcourse}
+          classID={classID}
+          setclass={setclassID}
+          loading={loadingClass}
+          handleSearch={handleSearch}
+        />
+      </div>
 
       <Edit
         name={selectedUser?.name}

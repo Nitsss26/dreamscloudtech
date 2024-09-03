@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Info from "../../components/userInfoTabs/UserInfo";
+import Info from "../../components/userInfoTabs/UserInfo2";
 import StaffTabs from "../../components/userInfoTabs/StaffTabs";
 import axios from "../../store/axios";
 import { errorAlert } from "../../utils";

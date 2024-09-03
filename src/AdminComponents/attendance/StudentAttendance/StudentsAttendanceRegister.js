@@ -53,11 +53,12 @@ function RegisterAttendance() {
 
   return (
     <div>
-      <div className="content__container mb-5">
+      <div className="content__container mb-0" style={{ backgroundColor: "#fffff7" }}>
         <h3>Register Today's Attendance</h3>
         <div>
           <label>Search Students in Class</label>
           <select
+            style={{ backgroundColor: "#fffffa" }}
             value={classID}
             name="class"
             onChange={handleChange}
@@ -79,7 +80,7 @@ function RegisterAttendance() {
         </div>
       </div>
       {classID && (
-        <div className="content__container">
+        <div className="content__container" style={{ backgroundColor: "#fffff7" }}>
           <div className="d-flex justify-content-between">
             <h2> Class {classID}</h2>
             <div>

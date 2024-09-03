@@ -7,7 +7,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import InfoTab from './InfoTab';
+import InfoTab from './InfoTab2';
 import EmploymentTab from './EmploymentTab';
 import GuadanceTab from './NextofKinTab';
 import ContactTab from './ContactInfo'
@@ -47,12 +47,13 @@ function a11yProps(index) {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: theme.palette.background.paper,
+    // backgroundColor: theme.palette.background.paper,
+    backgroundColor: "#fffff9",
     width: "100%",
   },
 }));
 
-export default function FullWidthTabs({user}) {
+export default function FullWidthTabs({ user }) {
   const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
@@ -73,6 +74,7 @@ export default function FullWidthTabs({user}) {
           onChange={handleChange}
           indicatorColor="primary"
           textColor="primary"
+          scrollButtons="auto"
           variant="fullWidth"
           aria-label="full width tabs example"
         >
@@ -88,16 +90,16 @@ export default function FullWidthTabs({user}) {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-           <InfoTab user={user} isStaff="true"/>
+          <InfoTab user={user} isStaff="true" />
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          <EmploymentTab  user={user}/>
+          <EmploymentTab user={user} />
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          <ContactTab  user={user}/>
+          <ContactTab user={user} />
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}>
-          <GuadanceTab  user={user?.nextofKin}/>
+          <GuadanceTab user={user?.nextofKin} />
         </TabPanel>
       </SwipeableViews>
     </div>

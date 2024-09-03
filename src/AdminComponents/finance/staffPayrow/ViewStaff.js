@@ -25,10 +25,20 @@ function ViewStudent({
     getIntial(user?.middlename || " ") +
     getCapitalize(user?.surname);
 
+  function getCapitalize1(text) {
+    if (!text) return '';
+    return text
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+      .join(' ');
+  }
+
+
   return (
-    <div className="content__container">
+    <div className="content__container" style={{ backgroundColor: "#fffff7" }}>
       <div
-        style={{ background: "#ffa201" }}
+        // style={{ background: "#ffa201" }}
+        style={{ background: "#2ad76c " }}
         className="d-flex flex-column align-items-center p-3 text-light mb-4"
       >
         <Avatar
@@ -37,8 +47,8 @@ function ViewStudent({
         />
         <h3>{name} </h3>
         <h5>{id}</h5>
-        <h6>{getCapitalize(user?.position)}</h6>
-        <button onClick={() => setOpen(true)} className="btn blue__btn">
+        <h6>{getCapitalize1(user?.position)}</h6>
+        <button onClick={() => setOpen(true)} className="btn red__btn">
           View Transactions
         </button>
       </div>

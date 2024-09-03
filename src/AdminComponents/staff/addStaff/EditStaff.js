@@ -83,12 +83,12 @@ function EditStaff() {
       setgender(data?.gender);
       setsecondName(data?.middleName);
       setdateofBirth(
-        data?.dateofBirth ? moment(data?.dateOfBirth).format("YYYY-MM-D") : ""
+        data?.dateofBirth ? moment(data?.dateofBirth).format("YYYY-MM-D") : ""
       );
       setprofileimg(data?.profileUrl);
       setemail(data?.email);
       setnationality(data?.nationality);
-      setplaceofBirth(data?.placeOfBirth);
+      setplaceofBirth(data?.placeofBirth);
       setreligion(data?.religion);
       settitle(data?.title);
       sethealth(data?.health);
@@ -170,12 +170,12 @@ function EditStaff() {
         middleName: secondName,
         surname: lastname,
         gender,
-        dateOfBirth: dateofBirth,
+        dateofBirth,
         title,
         email,
         nationality,
         religion,
-        placeOfBirth: placeofBirth,
+        placeofBirth: placeofBirth,
         health,
         disease,
         campusID: campus,
@@ -244,10 +244,10 @@ function EditStaff() {
   };
 
   return (
-    <div>
+    <div >
       <h2>Edit Staff Member</h2>
-      <div>
-        <form action="" className="content__container">
+      <div >
+        <form action="" className="content__container" style={{ backgroundColor: "#fffff5" }}>
           <div className="profile-picture-container" style={{
             display: 'flex',
             justifyContent: 'center',

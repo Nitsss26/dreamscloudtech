@@ -27,6 +27,7 @@ function NextofKin(props) {
         <div className="col-xs-12 col-sm-6 ">
           <label className="form-label">Name</label>
           <input
+            style={{ backgroundColor: "#fffff9" }}
             value={name}
             onChange={(e) => setname(e.target.value)}
             name="nextname"
@@ -43,6 +44,7 @@ function NextofKin(props) {
         <div className="col-xs-12 col-sm-6 ">
           <label className="form-label">Last name</label>
           <input
+            style={{ backgroundColor: "#fffff9" }}
             value={lastname}
             onChange={(e) => setlastname(e.target.value)}
             ref={register({ required: true })}
@@ -61,6 +63,7 @@ function NextofKin(props) {
             Mobile Number
           </label>
           <input
+            style={{ backgroundColor: "#fffff9" }}
             type="tel"
             value={telephone}
             ref={register({ required: true })}
@@ -77,6 +80,7 @@ function NextofKin(props) {
         <div className="col-xs-12 col-sm-6 ">
           <label className="form-label">Email</label>
           <input
+            style={{ backgroundColor: "#fffff9" }}
             value={email}
             onChange={(e) => setemail(e.target.value)}
             type="email"
@@ -89,6 +93,7 @@ function NextofKin(props) {
         <div className="col-xs-12 col-sm-6 ">
           <label className="form-label">Relationship</label>
           <input
+            style={{ backgroundColor: "#fffff9" }}
             name="relationship"
             value={relationship}
             ref={register({ required: true })}
@@ -105,6 +110,7 @@ function NextofKin(props) {
         <div className="col-xs-12 col-sm-6 ">
           <label className="form-label">Occupations</label>
           <input
+            style={{ backgroundColor: "#fffff9" }}
             value={occupation}
             onChange={(e) => setoccupation(e.target.value)}
             type="text"
@@ -120,6 +126,7 @@ function NextofKin(props) {
         <div className="col-xs-12 col-sm-12 ">
           <label className="form-label">Address</label>
           <textarea
+            style={{ backgroundColor: "#fffff9" }}
             rows={3}
             value={address}
             onChange={(e) => setaddress(e.target.value)}

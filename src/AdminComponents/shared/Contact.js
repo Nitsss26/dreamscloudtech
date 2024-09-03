@@ -21,7 +21,7 @@ function Contact(props) {
       <h3>Contact Details</h3>
       <div className="row mb-3">
         <div className="col-xs-12 col-sm-6 ">
-          <label className="form-label">Mobile Number</label>
+          <label className="form-label">SMS Number</label>
           <input
             style={{ backgroundColor: " #fffff9" }}
             name="mobile"
@@ -39,7 +39,7 @@ function Contact(props) {
           )}
         </div>
         <div className="col-xs-12 col-sm-6">
-          <label className="form-label">SMS Number</label>
+          <label className="form-label">Mobile Number</label>
           <input
             style={{ backgroundColor: " #fffff9" }}
             value={telephone}

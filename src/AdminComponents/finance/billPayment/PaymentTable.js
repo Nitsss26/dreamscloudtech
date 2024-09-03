@@ -517,9 +517,9 @@ export default function CustomPaginationActionsTable({
 
   return (
     <TableContainer component={Paper} className={classes.tableContainer} styles={{ backgroundColor: "#fffff5" }}>
-      <Table className={classes.table} aria-label="custom pagination table">
-        <TableHead className={classes.stickyHeader}>
-          <TableRow>
+      <Table className={classes.table} aria-label="custom pagination table" style={{ backgroundColor: "#fffff7" }}>
+        <TableHead className={classes.stickyHeader} style={{ backgroundColor: "#fffff7" }}>
+          <TableRow style={{ backgroundColor: "#fffff7" }}>
             {tableHeader &&
               tableHeader.map((head) => (
                 <TableCell key={head.id} className={`${classes.tableCell} ${classes.tableHeadCell}`}>

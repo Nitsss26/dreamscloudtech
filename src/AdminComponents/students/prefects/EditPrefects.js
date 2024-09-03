@@ -12,6 +12,7 @@ const styles = (theme) => ({
   root: {
     margin: 0,
     padding: theme.spacing(2),
+    backgroundColor: "#fffff5"
   },
   closeButton: {
     position: "absolute",
@@ -73,12 +74,19 @@ function EditPrefects({
       <DialogTitle id="customized-dialog-title" onClose={() => setopen(false)}>
         Edit Prefect Details
       </DialogTitle>
-      <DialogContent dividers>
-        <form action="">
+      <DialogContent dividers style={{
+        backgroundColor: "#fffff5"
+      }}>
+        <form action="" style={{
+          backgroundColor: "#fffff5"
+        }}>
           <div className="row mb-3">
             <label className="col-sm-3 col-form-label">Name</label>
             <div className="col-sm-9">
               <input
+                style={{
+                  backgroundColor: "#fffffd"
+                }}
                 type="text"
                 value={name}
                 ref={register({ required: true })}
@@ -97,6 +105,9 @@ function EditPrefects({
             <label className="col-sm-3 col-form-label">Student ID</label>
             <div className="col-sm-9">
               <input
+                style={{
+                  backgroundColor: "#fffffd"
+                }}
                 type="text"
                 ref={register({ required: true })}
                 className="form-control"
@@ -115,6 +126,9 @@ function EditPrefects({
             <label className="col-sm-3 col-form-label">Position</label>
             <div className="col-sm-9">
               <select
+                style={{
+                  backgroundColor: "#fffffc"
+                }}
                 ref={register({ required: true })}
                 name="position"
                 value={position}
@@ -143,6 +157,9 @@ function EditPrefects({
             <label className="col-sm-3 col-form-label">To Year</label>
             <div className="col-sm-9">
               <select
+                style={{
+                  backgroundColor: "#fffffc"
+                }}
                 name="end_year"
                 value={endYear}
                 onChange={(e) => setendYear(e.target.value)}

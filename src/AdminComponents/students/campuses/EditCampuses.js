@@ -11,64 +11,65 @@ import MuiDialogContent from '@material-ui/core/DialogContent';
 
 
 const styles = (theme) => ({
-    root: {
-      margin: 0,
-      padding: theme.spacing(2),
-    },
-    closeButton: {
-      position: 'absolute',
-      right: theme.spacing(1),
-      top: theme.spacing(1),
-      color: theme.palette.grey[500],
-    },
-  });
+  root: {
+    margin: 0,
+    padding: theme.spacing(2),
+  },
+  closeButton: {
+    position: 'absolute',
+    right: theme.spacing(1),
+    top: theme.spacing(1),
+    color: theme.palette.grey[500],
+  },
+});
 
 const DialogTitle = withStyles(styles)((props) => {
-    const { children, classes, onClose, ...other } = props;
-    return (
-      <MuiDialogTitle disableTypography className={classes.root} {...other}>
-        <Typography variant="h6">{children}</Typography>
-        {onClose ? (
-          <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
-            <CloseIcon />
-          </IconButton>
-        ) : null}
-      </MuiDialogTitle>
-    );
-  });
+  const { children, classes, onClose, ...other } = props;
+  return (
+    <MuiDialogTitle disableTypography className={classes.root} {...other}>
+      <Typography variant="h6">{children}</Typography>
+      {onClose ? (
+        <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
+          <CloseIcon />
+        </IconButton>
+      ) : null}
+    </MuiDialogTitle>
+  );
+});
 
-  const DialogContent = withStyles((theme) => ({
-    root: {
-      padding: theme.spacing(2),
-    },
-  }))(MuiDialogContent);
-  
+const DialogContent = withStyles((theme) => ({
+  root: {
+    padding: theme.spacing(2),
+  },
+}))(MuiDialogContent);
 
-function EditCampuses({open, setopen, name, location , setname, setlocation, onSubmit, loading}) {
 
-    return (
-             <Dialog 
-             fullWidth={true}
-             maxWidth="sm"
-             onClose={() => setopen(false)} 
-             aria-labelledby="customized-dialog-title" 
-             open={open}>
-                    <DialogTitle id="customized-dialog-title" onClose={() => setopen(false)}>
-                    Edit Campus
-                    </DialogTitle>
-                    <DialogContent dividers>
-                        <CampusForm 
-                        name={name} 
-                        isEdit={true}
-                        location={location} 
-                        setname={setname} 
-                        setlocation={setlocation} 
-                        onSubmit={onSubmit} 
-                        loading={loading}/>
-                    </DialogContent>
+function EditCampuses({ open, setopen, name, location, setname, setlocation, onSubmit, loading }) {
 
-                </Dialog>
-    )
+  return (
+    <Dialog
+      fullWidth={true}
+      maxWidth="sm"
+      onClose={() => setopen(false)}
+      aria-labelledby="customized-dialog-title"
+      open={open}>
+      <DialogTitle id="customized-dialog-title" onClose={() => setopen(false)} style={{ backgroundColor: "#fffff5" }}>
+        Edit Campus
+      </DialogTitle>
+      <DialogContent dividers style={{ backgroundColor: "#fffff5" }}>
+        <CampusForm
+          style={{ backgroundColor: "#fffffd" }}
+          name={name}
+          isEdit={true}
+          location={location}
+          setname={setname}
+          setlocation={setlocation}
+          onSubmit={onSubmit}
+          loading={loading} />
+      </DialogContent>
+
+    </Dialog>
+  )
 }
 
 export default EditCampuses

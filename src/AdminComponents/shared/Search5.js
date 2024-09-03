@@ -12,13 +12,20 @@ function Search(props) {
   } = props;
 
   return (
-    <form className="mb-0 content__container" onSubmit={(e) => e.preventDefault()} style={{ backgroundColor: "#fffff7" }}>
+    <form
+      className="mb-0 content__container"
+      onSubmit={(e) => e.preventDefault()}
+      style={{ backgroundColor: "#fffff7" }}
+    >
       <h3 className="mb-3">{title || ""}</h3>
 
-      <div className="row g-3 mb-3 align-items-end">
+      <div
+        className="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-3"
+        style={{ rowGap: "1rem" }} // Ensure rows have equal spacing
+      >
         {/* Register Attendance Button */}
         <div className="col-xs-12 col-sm-6 col-md-2">
-          <Link to="/attendance/students/register" className="btn green__btn w-90">
+          <Link to="/attendance/staff/register" className="btn green__btn w-90 mt-4">
             Register Attendance
           </Link>
         </div>
@@ -74,7 +81,7 @@ function Search(props) {
 
         {/* Actions: Search and Reset Buttons */}
         {!noActions && (
-          <div className="col-xs-12 col-sm-6 col-md-2 d-flex gap-2">
+          <div className="col-xs-12 col-sm-6 col-md-2 d-flex gap-2  mt-4">
             <button className="btn blue__btn w-100" onClick={handleSearch}>
               Search
             </button>

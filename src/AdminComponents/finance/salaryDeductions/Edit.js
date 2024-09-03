@@ -13,6 +13,7 @@ const styles = (theme) => ({
   root: {
     margin: 0,
     padding: theme.spacing(2),
+
   },
   closeButton: {
     position: "absolute",
@@ -25,6 +26,7 @@ const styles = (theme) => ({
 const DialogContent = withStyles((theme) => ({
   root: {
     padding: theme.spacing(2),
+    backgroundColor: "#fffff7"
   },
 }))(MuiDialogContent);
 
@@ -72,7 +74,8 @@ export default function CustomizedDialogs({
       maxWidth="sm"
       fullWidth={true}
     >
-      <DialogTitle id="customized-dialog-title" onClose={handleClose}>
+
+      <DialogTitle id="customized-dialog-title" onClose={handleClose} style={{ backgroundColor: "#fffff7" }}>
         Edit Deduction
       </DialogTitle>
       <DialogContent>

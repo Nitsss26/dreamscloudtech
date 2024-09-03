@@ -58,13 +58,14 @@ function AddScholarship(props) {
   };
 
   return (
-    <div className="content__container">
+    <div className="content__container" style={{ backgroundColor: "#fffff7" }}>
       <h5 className="mb-4">Add Scholarship</h5>
       <form action="">
         <div className="row mb-3">
           <label className="col-sm-3 col-form-label">Name</label>
           <div className="col-sm-9">
             <input
+              style={{ backgroundColor: "#fffffd" }}
               value={name}
               onChange={(e) => setname(e.target.value)}
               type="text"
@@ -83,6 +84,7 @@ function AddScholarship(props) {
           <label className="col-sm-3 col-form-label">Percentage</label>
           <div className="col-sm-9">
             <input
+              style={{ backgroundColor: "#fffffd" }}
               value={percentage}
               onChange={(e) => setpercentage(e.target.value)}
               ref={register({ required: true, max: 100 })}
@@ -102,6 +104,7 @@ function AddScholarship(props) {
           <div className="col-sm-9">
             <div className="form-check">
               <input
+                style={{ backgroundColor: "#fffffd" }}
                 className="form-check-input"
                 type="checkbox"
                 name="exampleRadios"
@@ -117,6 +120,7 @@ function AddScholarship(props) {
             <hr />
             <div className="form-check">
               <input
+                style={{ backgroundColor: "#fffffd" }}
                 className="form-check-input"
                 type="checkbox"
                 name="exampleRadios"
@@ -131,6 +135,7 @@ function AddScholarship(props) {
             </div>
             <div className="form-check">
               <input
+                style={{ backgroundColor: "#fffffd" }}
                 className="form-check-input"
                 type="checkbox"
                 name="exampleRadios"
@@ -147,6 +152,7 @@ function AddScholarship(props) {
             </div>
             <div className="form-check">
               <input
+                style={{ backgroundColor: "#fffffd" }}
                 className="form-check-input"
                 type="checkbox"
                 name="exampleRadios"
@@ -163,6 +169,7 @@ function AddScholarship(props) {
             </div>
             <div className="form-check">
               <input
+                style={{ backgroundColor: "#fffffd" }}
                 className="form-check-input"
                 type="checkbox"
                 name="exampleRadios"
@@ -179,6 +186,7 @@ function AddScholarship(props) {
             </div>
             <div className="form-check">
               <input
+                style={{ backgroundColor: "#fffffd" }}
                 className="form-check-input"
                 type="checkbox"
                 name="exampleRadios"

@@ -30,7 +30,8 @@ function CombinedReports() {
 
   return (
     <div>
-      <h3>Combined Reports</h3>
+      {show && <Table rows={data} classID={classID} />}
+      <h3 className="text-center" style={{ marginBottom: "40px", marginTop: "30px" }}>Combined Reports</h3>
       <div className="mb-3">
         <Search
           term={term}
@@ -43,7 +44,7 @@ function CombinedReports() {
           handleSearch={handleSearch}
         />
       </div>
-      {show && <Table rows={data} classID={classID} />}
+
     </div>
   );
 }

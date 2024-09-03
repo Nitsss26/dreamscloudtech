@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CourseTable from "../../shared/ListTable";
-import Search from "../../shared/Search";
+import Search from "../../shared/Search9";
 import { Link, useHistory } from "react-router-dom";
 import axios from "../../../store/axios";
 import { errorAlert } from "../../../utils";
@@ -109,8 +109,8 @@ function Courses() {
         handleReset={handleReset}
         inputFields={inputFields}
       />
-      <div className="content__container">
-        <div className="d-flex justify-content-between mb-2">
+      <div >
+        {/* <div className="d-flex justify-content-between mb-2">
           <h3>Courses List</h3>
           <Link
             to={`/academics/courses/add`}
@@ -118,7 +118,7 @@ function Courses() {
           >
             Add New Course
           </Link>
-        </div>
+        </div> */}
         <CourseTable
           handleEdit={handleEdit}
           handleDelete={handleDelete}

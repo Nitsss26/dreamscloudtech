@@ -82,6 +82,7 @@ function BillPayment() {
 
     if (scholarshipData.data.doc) {
       setscholarship(scholarshipData.data.doc);
+
       paid = paid + (Number(scholarshipData.data.doc.percentage) / 100) * bill;
     }
 

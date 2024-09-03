@@ -83,21 +83,22 @@ export const expenditureCat = [
 ];
 
 export const bankOptions = [
-  "Axis Bank Of India",
-  "Agricultural Developement Bank ",
-  "IDFC Bank",
-  "RBL Bank",
-  "Union Bank",
-  "Federel Bank ",
-  "Intercontinental Bank",
+  "State Bank of India (SBI)",
   "HDFC Bank",
-  "Standard Chartered Bank",
-  "National City Bank",
-  "Northern City Bank",
-  "Trust Bank",
-  "UT Bank",
-  "Zero Bank",
+  "ICICI Bank",
+  "Axis Bank",
+  "Kotak Mahindra Bank",
+  "Punjab National Bank (PNB)",
+  "Bank of Baroda",
+  "Union Bank of India",
+  "Canara Bank",
+  "IndusInd Bank",
+  "IDFC First Bank",
+  "Yes Bank",
+  "Bank of India",
+  "Indian Bank",
 ];
+
 
 export const staffPosition = [
   "Teacher",

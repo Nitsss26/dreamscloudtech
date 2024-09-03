@@ -471,7 +471,7 @@ export default function CustomPaginationActionsTable({
   };
 
   return (
-    <TableContainer component={Paper} className={classes.tableContainer}>
+    <TableContainer component={Paper} className={classes.tableContainer} style={{ backgroundColor: "#fffff7" }}>
       <Table className={classes.table} aria-label="custom pagination table">
         <TableHead>
           <TableRow>

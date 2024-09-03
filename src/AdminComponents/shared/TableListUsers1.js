@@ -1373,6 +1373,10 @@ const useStyles = makeStyles((theme) => ({
     width: '0px',
 
   },
+  positionColumn: {
+    width: '0px',
+
+  },
   guardianColumn: {
     width: '00px',
 
@@ -1566,7 +1570,10 @@ export default function EnhancedTable({
                         <TableCell className={`${classes.tableCell} ${classes.nameColumn}`} align="left">
                           {row?.name} {row?.surname || ""}
                         </TableCell>
-                        <TableCell className={`${classes.tableCell} ${classes.guardianColumn}`} align="left">
+                        <TableCell className={`${classes.tableCell} ${classes.positionColumn}`} align="left">
+                          {row?.position || ""}
+                        </TableCell>
+                        {/* <TableCell className={`${classes.tableCell} ${classes.guardianColumn}`} align="left">
                           {row?.guadian?.length > 0 ? (
                             row.guadian.map((g, index) => (
                               <div key={index}>
@@ -1576,15 +1583,15 @@ export default function EnhancedTable({
                           ) : (
                             "No Parents"
                           )}
-                        </TableCell>
-                        <TableCell className={`${classes.tableCell} ${classes.dormitoryColumn}`} align="left">
+                        </TableCell> */}
+                        {/* <TableCell className={`${classes.tableCell} ${classes.dormitoryColumn}`} align="left">
                           {dormitories[row?.dormitoryID] || "Loading..."}
-                        </TableCell>
-                        <TableCell className={`${classes.tableCell} ${classes.classColumn}`} align="left">
+                        </TableCell> */}
+                        {/* <TableCell className={`${classes.tableCell} ${classes.classColumn}`} align="left">
                           {row?.classID || "-"}
-                        </TableCell>
+                        </TableCell> */}
                         <TableCell className={`${classes.tableCell} ${classes.genderColumn}`} align="left">
-                          {row?.gender || "-"}
+                          {row?.gender || ""}
                         </TableCell>
                         {!noActions && (
                           <TableCell className={`${classes.tableCell} ${classes.actionsColumn}`} align="left">

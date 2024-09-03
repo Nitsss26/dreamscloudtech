@@ -58,13 +58,14 @@ function ClassForm(props) {
     }, []);
 
     return (
-        <form onSubmit={handleSubmit(handleAddClass)} action="">
-            <div className="row mb-3">
+        <form onSubmit={handleSubmit(handleAddClass)} action="" style={{ backgroundColor: "#fffff7" }}>
+            <div className="row mb-3" >
                 <label htmlFor="name" className="col-sm-2 col-form-label">
                     Academic Year
                 </label>
                 <div className="col-sm-10">
                     <select
+                        style={{ backgroundColor: "#fffffa" }}
                         name="academic-calendar"
                         className="form-select"
                         value={academic}
@@ -91,6 +92,7 @@ function ClassForm(props) {
                 </label>
                 <div className="col-sm-10">
                     <input
+                        style={{ backgroundColor: "#fffffa" }}
                         value={name}
                         onChange={(e) => setname(e.target.value)}
                         type="text"
@@ -112,6 +114,7 @@ function ClassForm(props) {
                     </label>
                     <div className="col-sm-10">
                         <input
+                            style={{ backgroundColor: "#fffffa" }}
                             ref={register({ required: true })}
                             value={code}
                             onChange={(e) => setcode(e.target.value)}
@@ -133,6 +136,7 @@ function ClassForm(props) {
                 </label>
                 <div className="col-sm-10">
                     <select
+                        style={{ backgroundColor: "#fffffa" }}
                         id="campus"
                         className="form-select"
                         value={campus}
@@ -160,6 +164,7 @@ function ClassForm(props) {
                 <div className="col-sm-10">
                     <select
                         id="campus"
+                        style={{ backgroundColor: "#fffffa" }}
                         className="form-select"
                         value={group}
                         onChange={(e) => setgroup(e.target.value)}
@@ -185,6 +190,7 @@ function ClassForm(props) {
                 </label>
                 <div className="col-sm-10">
                     <select
+                        style={{ backgroundColor: "#fffffa" }}
                         id="campus"
                         className="form-select"
                         value={division}
@@ -211,6 +217,7 @@ function ClassForm(props) {
                 </label>
                 <div className="col-sm-10">
                     <select
+                        style={{ backgroundColor: "#fffffa" }}
                         value={teacher}
                         onChange={(e) => setteacher(e.target.value)}
                         id="teacher"
@@ -237,6 +244,7 @@ function ClassForm(props) {
                 </label>
                 <div className="col-sm-10">
                     <select
+                        style={{ backgroundColor: "#fffffa" }}
                         id="campus"
                         className="form-select"
                         value={prefect}
@@ -263,6 +271,7 @@ function ClassForm(props) {
                 </label>
                 <div className="col-sm-10">
                     <Checkbox
+                        style={{ backgroundColor: "#fffffa" }}
                         checked={sba}
                         color="primary"
                         onChange={() => setsba(!sba)}
@@ -277,6 +286,7 @@ function ClassForm(props) {
                 <div className="col-sm-10">
                     <select
                         id="campus"
+                        style={{ backgroundColor: "#fffffa" }}
                         className="form-select"
                         value={sbaStaff}
                         onChange={(e) => setsbaStaff(e.target.value)}

@@ -13,11 +13,12 @@ export default function AddClassGroup({
   const { register, handleSubmit, errors } = useForm();
   const yearOptions = getYearsList(10);
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="content__container">
+    <form onSubmit={handleSubmit(onSubmit)} className="content__container" style={{ backgroundColor: "#fffff7" }}>
       <h3>Add Year Group</h3>
       <div className="mb-3">
         <label className="form-label"> Name</label>
         <input
+          style={{ backgroundColor: "#fffff9" }}
           type="text"
           value={name}
           ref={register({ required: true })}
@@ -35,6 +36,7 @@ export default function AddClassGroup({
       <div className="mb-3">
         <label>Year</label>
         <select
+          style={{ backgroundColor: "#fffff9" }}
           value={year}
           onChange={(e) => setyear(e.target.value)}
           className="form-select"

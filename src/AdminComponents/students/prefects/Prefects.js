@@ -147,11 +147,12 @@ function Prefects() {
   };
 
   return (
-    <div className="dormotories__page">
+    <div className="dormotories__page" style={{ marginTop: "-15px" }}>
       <h3>Prefects</h3>
       <div className="row">
         <div className="col-sm-12 col-md-5">
           <AddPrefect
+
             name={name}
             setname={setname}
             userID={userID}

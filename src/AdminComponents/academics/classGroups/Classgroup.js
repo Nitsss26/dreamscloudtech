@@ -93,8 +93,8 @@ function Classgroup() {
 
   return (
     <div className="row">
-      {loading && <Loading />}
-      <div className="col-sm-6">
+      {/* {loading && <Loading />} */}
+      <div className="col-sm-5" style={{ backgroundColor: "#fffff7" }}>
         <AddClassgroup
           name={name}
           setname={setname}
@@ -102,12 +102,13 @@ function Classgroup() {
           onSubmit={handleAdd}
         />
       </div>
-      <div className="col-sm-6">
-        <div className="content__container">
-          <div className="d-flex justify-content-between">
+      <div className="col-sm-7">
+        <div className="content__container" style={{ backgroundColor: "#fffff7" }}>
+          <div className="d-flex justify-content-between" style={{ backgroundColor: "#fffff7" }}>
             <h3>Class Groups</h3>
             <form onSubmit={handleReset} className="d-flex">
               <input
+                style={{ backgroundColor: "#fffffa" }}
                 placeholder="Search..."
                 value={searchQuery}
                 onChange={(e) => setsearchQuery(e.target.value)}

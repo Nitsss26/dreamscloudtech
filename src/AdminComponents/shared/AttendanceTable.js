@@ -186,18 +186,23 @@ import { Link } from "react-router-dom";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
-    backgroundColor: "#051f3e",
+    // backgroundColor: "#051f3e",
+    backgroundColor: "#01a6ca",
     color: theme.palette.common.white,
   },
   body: {
     fontSize: 14,
+    fontWeight: 500, // Bold text for body
   },
 }))(TableCell);
 
 const StyledTableRow = withStyles((theme) => ({
   root: {
     "&:nth-of-type(odd)": {
-      backgroundColor: theme.palette.action.hover,
+      backgroundColor: "#f0f8ff", // Alternate row color for odd rows
+    },
+    "&:nth-of-type(even)": {
+      backgroundColor: "#fffff9", // Alternate row color for even rows
     },
   },
 }))(TableRow);
@@ -239,7 +244,7 @@ export default function CustomizedTables({ attendanceData, isStaff, isClass }) {
               {isStaff ? "Staff ID" : "Student ID"}
             </StyledTableCell>
             <StyledTableCell align="center">Name</StyledTableCell>
-            <StyledTableCell align="center">Last Name</StyledTableCell>
+            {/* <StyledTableCell align="left">Last Name</StyledTableCell> */}
             <StyledTableCell align="center">Present/Absent</StyledTableCell>
             <StyledTableCell align="left">Total Count</StyledTableCell>
             <StyledTableCell align="left">Action</StyledTableCell>
@@ -273,12 +278,12 @@ export default function CustomizedTables({ attendanceData, isStaff, isClass }) {
                     <ul>
                       {row.users?.map((user) => (
                         <li className={classes.list} key={user.userID}>
-                          {user.name}
+                          &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {user.name}&nbsp;  {user.surname}
                         </li>
                       ))}
                     </ul>
                   </StyledTableCell>
-                  <StyledTableCell>
+                  {/* <StyledTableCell>
                     <ul>
                       {row.users?.map((user) => (
                         <li className={classes.list} key={user.userID}>
@@ -286,7 +291,7 @@ export default function CustomizedTables({ attendanceData, isStaff, isClass }) {
                         </li>
                       ))}
                     </ul>
-                  </StyledTableCell>
+                  </StyledTableCell> */}
                   <StyledTableCell>
                     <ul>
                       {row.users?.map((user) => (

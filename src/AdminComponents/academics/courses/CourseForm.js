@@ -76,6 +76,7 @@ function CourseForm(props) {
         <input
           type="text"
           value={name}
+          style={{ backgroundColor: "#fffffa" }}
           ref={register({ required: true })}
           onChange={(e) => setname(e.target.value)}
           className="form-control"
@@ -92,6 +93,7 @@ function CourseForm(props) {
           <label className="form-label">Course Code</label>
           <input
             type="text"
+            style={{ backgroundColor: "#fffffa" }}
             value={code}
             ref={register({ required: true })}
             onChange={(e) => setcode(e.target.value)}
@@ -113,6 +115,7 @@ function CourseForm(props) {
           onChange={(e) => settype(e.target.value)}
           id="inputState"
           className="form-select"
+          style={{ backgroundColor: "#fffffa" }}
         >
           <option defaultValue hidden>
             Choose...
@@ -139,6 +142,7 @@ function CourseForm(props) {
               <div className=" row" key={e._id}>
                 <div className="col-sm-5 mb-3">
                   <select
+                    style={{ backgroundColor: "#fffffa" }}
                     name="type"
                     value={e.class || ""}
                     onChange={(v) => handleSetClassClass(v.target.value, e._id)}
@@ -163,6 +167,7 @@ function CourseForm(props) {
                 </div>
                 <div className="col-sm-5">
                   <select
+                    style={{ backgroundColor: "#fffffa" }}
                     name="type"
                     value={e.teacher || ""}
                     onChange={(v) =>
@@ -204,6 +209,7 @@ function CourseForm(props) {
       <div className="mb-5">
         <label className="form-label">Head Teacher</label>
         <select
+          style={{ backgroundColor: "#fffffa" }}
           name="type"
           value={teacher || ""}
           onChange={(e) => setteacher(e.target.value)}

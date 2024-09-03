@@ -78,7 +78,7 @@ function AddCourses() {
   return (
     <>
       <GoBack link="/academics/courses" name="Go back to Courses List" />
-      <div className="content__container">
+      <div className="content__container" style={{ backgroundColor: "#fffff7" }}>
         <h3>Add New Course</h3>
         <AddForm
           onSubmit={handleAddCourse}

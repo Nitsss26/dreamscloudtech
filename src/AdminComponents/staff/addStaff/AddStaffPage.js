@@ -129,7 +129,7 @@ function NewStaff() {
         surname: lastname,
         gender,
         title,
-        dateofBirth,
+        dateofBirth: dateofBirth,
         email,
         nationality,
         religion,
@@ -205,10 +205,10 @@ function NewStaff() {
   };
 
   return (
-    <div>
+    <div >
       <h2>Add New Staff Member</h2>
-      <div>
-        <form action="" className="content__container">
+      <div >
+        <form action="" className="content__container" style={{ backgroundColor: "#fffff5" }}>
           <div className="profile-picture-container" style={{
             display: 'flex',
             justifyContent: 'center',

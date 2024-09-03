@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ListTable from "../billPayment/PaymentTable";
-import Search from "../../shared/Search";
+import Search from "../../shared/Search7";
 import { useSelector } from "react-redux";
 import { selectStaff } from "../../../store/slices/schoolSlice";
 import axios from "../../../store/axios";
@@ -93,11 +93,11 @@ function PayrowAll() {
   return (
     <div>
       <div className="float-right mb-5">
-        <Link className="btn blue__btn" to="/finance/staff/payrow/pay">
+        <Link className="btn green__btn" to="/finance/staff/payrow/pay">
           Staff Salary Payment
         </Link>
       </div>
-      <h3 className=" mb-5">Staff Salary Transactions</h3>
+      <h3 className=" mb-3">Staff Salary Transactions</h3>
       <Search
         title="Filter Staff"
         handleSearch={handleSearch}
@@ -105,6 +105,7 @@ function PayrowAll() {
         inputFields={inputFields}
       />
       <ListTable
+        style={{ backgroundColor: "#fffff7" }}
         data={data}
         handleEdit={handleEdit}
         handleDelete={handleDelete}

@@ -84,7 +84,7 @@ function EditClass() {
 
   return (
     <>
-      <div className="content__container">
+      <div className="content__container" style={{ backgroundColor: "#fffff7" }}>
         <h3>Edit Class</h3>
         <ClassForm
           name={name}

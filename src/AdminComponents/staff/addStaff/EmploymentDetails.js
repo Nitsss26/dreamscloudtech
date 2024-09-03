@@ -61,6 +61,7 @@ function EmploymentDetails(props) {
           </div>
 
           <select
+            style={{ backgroundColor: "#fffff9" }}
             ref={register({ required: true })}
             value={role}
             onChange={(e) => setRole(e.target.value)}
@@ -93,6 +94,7 @@ function EmploymentDetails(props) {
         <div className="col-xs-12 col-sm-6 mb-3">
           <label className="form-label">Departments</label>
           <select
+            style={{ backgroundColor: "#fffff9" }}
             value={department}
             onChange={(e) => setDepartment(e.target.value)}
             name="department"
@@ -116,6 +118,7 @@ function EmploymentDetails(props) {
         <div className="col-xs-12 col-sm-6 mb-3">
           <label className="form-label">Campus</label>
           <select
+            style={{ backgroundColor: "#fffff9" }}
             name="campus"
             value={campus}
             onChange={(e) => setCampus(e.target.value)}
@@ -140,6 +143,7 @@ function EmploymentDetails(props) {
         <div className="col-xs-12 col-sm-6  mb-3">
           <label className="form-label">Employment Date</label>
           <input
+            style={{ backgroundColor: "#fffff9" }}
             name="employmentdate"
             value={employmentDate}
             onChange={(e) => setemploymentDate(e.target.value)}
@@ -151,6 +155,7 @@ function EmploymentDetails(props) {
           <label className="form-label">Bank</label>
           <select
             name="campus"
+            style={{ backgroundColor: "#fffff9" }}
             value={bank}
             onChange={(e) => setbank(e.target.value)}
             className="form-select"
@@ -173,6 +178,7 @@ function EmploymentDetails(props) {
         <div className="col-xs-12 col-sm-6  mb-3">
           <label className="form-label"> Account Number</label>
           <input
+            style={{ backgroundColor: "#fffff9" }}
             name="accountNumber"
             value={accountNumber}
             onChange={(e) => setaccountNumber(e.target.value)}
@@ -199,6 +205,7 @@ function EmploymentDetails(props) {
           <div className="col-xs-12 col-sm-6 mb-3">
             <label className="form-label">Tax Identification Number</label>
             <input
+              style={{ backgroundColor: "#fffff9" }}
               name="lastschool"
               value={taxNumber}
               onChange={(e) => settaxNumber(e.target.value)}
@@ -210,6 +217,7 @@ function EmploymentDetails(props) {
         <div className="col-xs-12 col-sm-6 mb-3">
           <label className="form-label">Qualification</label>
           <input
+            style={{ backgroundColor: "#fffff9" }}
             name="lastschool"
             value={qualification}
             onChange={(e) => setqualification(e.target.value)}
@@ -220,6 +228,7 @@ function EmploymentDetails(props) {
         <div className="col-xs-12 col-sm-6  mb-3">
           <label className="form-label">Basic Salary</label>
           <input
+            style={{ backgroundColor: "#fffff9" }}
             name="years"
             value={salary}
             onChange={(e) => setsalary(e.target.value)}
@@ -230,6 +239,7 @@ function EmploymentDetails(props) {
         <div className="col-xs-12 col-sm-6  mb-3">
           <label className="form-label">Allowance</label>
           <input
+            style={{ backgroundColor: "#fffff9" }}
             name="years"
             value={allowance}
             onChange={(e) => setallowance(e.target.value)}
@@ -237,9 +247,10 @@ function EmploymentDetails(props) {
             className="form-control"
           />
         </div>
-        <div className="col-xs-12 col-sm-12  mb-3">
+        <div className="col-xs-12 col-sm-6  mb-3">
           <label className="form-label">Years with School/Past Experience</label>
           <input
+            style={{ backgroundColor: "#fffff9" }}
             name="years"
             value={years}
             onChange={(e) => setyears(e.target.value)}

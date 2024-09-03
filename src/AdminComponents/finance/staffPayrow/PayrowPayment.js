@@ -122,7 +122,7 @@ function BillPayment() {
 
   return (
     <div>
-      <h3>Salary Payment</h3>
+      <h3 className="ml-3">Salary Payment</h3>
       <div className="row">
         <div className="col-sm-6">
           <StaffSearch
@@ -155,7 +155,7 @@ function BillPayment() {
                 />
               ) : (
                 <div className="content__container text-center">
-                  <h5 className="text-info">Pay All Staff</h5>
+                  <h5 className="text-info">Salary Paid</h5>
                 </div>
               )}
             </>

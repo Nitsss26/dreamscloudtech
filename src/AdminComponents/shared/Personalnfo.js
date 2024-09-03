@@ -165,6 +165,21 @@ function Personalnfo(props) {
 
       </div>
       <div className="row mb-3">
+        {/* {!isTeacher && (<div className="col-xs-12 col-sm-6 col-md-4">
+          <label className="form-label">Date of Birth</label>
+          <input
+            style={{ backgroundColor: " #fffff9" }}
+            value={dateofBirth}
+            name="dateofBirth"
+            ref={register({ required: true })}
+            onChange={(e) => {
+              setdateofBirth(e.target.value);
+            }}
+            type="date"
+            className="form-control"
+          />
+        </div>)} */}
+
         <div className="col-xs-12 col-sm-6 col-md-4">
           <label className="form-label">Date of Birth</label>
           <input
@@ -204,7 +219,7 @@ function Personalnfo(props) {
           )}
         </div>
 
-        <div className="col-xs-12 col-sm-6 col-md-4">
+        {!isTeacher && (<div className="col-xs-12 col-sm-6 col-md-4">
           <label className="form-label">Date of Admission</label>
           <input
             style={{ backgroundColor: " #fffff9" }}
@@ -217,7 +232,7 @@ function Personalnfo(props) {
             type="date"
             className="form-control"
           />
-        </div>
+        </div>)}
 
         {/* <div className="col-xs-12 col-sm-6 col-md-4">
           <label className="form-label">Place of Birth</label>

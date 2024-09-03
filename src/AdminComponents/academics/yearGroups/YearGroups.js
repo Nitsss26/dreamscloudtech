@@ -89,8 +89,9 @@ function Yeargroup() {
   return (
     <div className="row">
       {loading && <Loading />}
-      <div className="col-sm-6">
+      <div className="col-sm-6" >
         <AddYearGroup
+          style={{ backgroundColor: "#fffff7" }}
           name={name}
           setname={setname}
           year={year}
@@ -100,11 +101,12 @@ function Yeargroup() {
         />
       </div>
       <div className="col-sm-6">
-        <div className="content__container">
+        <div className="content__container" style={{ backgroundColor: "#fffff7" }}>
           <div className="d-flex justify-content-between">
             <h3>Class Groups</h3>
             <form onSubmit={handleReset} className="d-flex">
               <input
+                style={{ backgroundColor: "#fffffa" }}
                 placeholder="Search..."
                 value={searchQuery}
                 onChange={(e) => setsearchQuery(e.target.value)}

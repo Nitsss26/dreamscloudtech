@@ -71,27 +71,28 @@ function Calender() {
         <div className="col">
           <form onSubmit={handleSearch} className="d-flex align-items-stretch">
             <input
+              style={{ backgroundColor: "#fffffa" }}
               value={query}
               onChange={(e) => setquery(e.target.value)}
               type="text"
               className="form-control"
               placeholder="Search by name"
             />
-            <button className="btn blue__btn">Search</button>
+            <button className="btn greenn__btn">Search</button>
           </form>
         </div>
         <div className="col">
           {user?.role === "admin" && (
             <Link
               to="/academics/calender/add"
-              className="btn btn__lg blue__btn"
+              className="btn btn__lg red__btn"
             >
               Add New Event
             </Link>
           )}
           <Link
             to="/academics/calender/view"
-            className="btn btn__lg blue__btn ml-2"
+            className="btn btn__lg orange__btn ml-2"
           >
             View Calendar
           </Link>

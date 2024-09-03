@@ -29,7 +29,8 @@ function ProgressReports() {
 
   return (
     <div>
-      <h3>Progress Reports</h3>
+      {data.length > 0 && <Table rows={data} term={term} year={academicYear} />}
+      <h3 className="text-center" style={{ marginBottom: "40px" }}>Progress Reports</h3>
       <div className="mb-3">
         <Search
           classID={classID}
@@ -42,7 +43,7 @@ function ProgressReports() {
           handleSearch={handleSearch}
         />
       </div>
-      {data.length > 0 && <Table rows={data} term={term} year={academicYear} />}
+
     </div>
   );
 }

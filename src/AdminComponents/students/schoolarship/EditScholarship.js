@@ -88,15 +88,16 @@ function EditPrefects({ open, setopen,
       onClose={() => setopen(false)}
       aria-labelledby="customized-dialog-title"
       open={open}>
-      <DialogTitle id="customized-dialog-title" onClose={() => setopen(false)}>
+      <DialogTitle id="customized-dialog-title" onClose={() => setopen(false)} style={{ backgroundColor: "#fffff5" }}>
         Edit Prefect Details
       </DialogTitle>
-      <DialogContent dividers>
-        <form action="">
+      <DialogContent dividers style={{ backgroundColor: "#fffff5" }}>
+        <form action="" style={{ backgroundColor: "#fffff5" }}>
           <div className="row mb-3">
             <label className="col-sm-3 col-form-label">Name</label>
             <div className="col-sm-9">
               <input
+                style={{ backgroundColor: "#fffff9" }}
                 value={name}
                 onChange={e => setname(e.target.value)}
                 type="text"
@@ -110,6 +111,7 @@ function EditPrefects({ open, setopen,
             <label className="col-sm-3 col-form-label">Percentage</label>
             <div className="col-sm-9">
               <input
+                style={{ backgroundColor: "#fffff9" }}
                 value={percentage}
                 onChange={e => setpercentage(e.target.value)}
                 ref={register({ required: true })}

@@ -19,7 +19,7 @@ function PaymentForm({
   const { register, handleSubmit, errors } = useForm();
 
   return (
-    <div className="content__container">
+    <div className="content__container" style={{ backgroundColor: "#fffff7" }}>
       <form action="">
         <div className="row mb-4">
           <label className="col-sm-3 col-form-label">Amount</label>
@@ -28,6 +28,7 @@ function PaymentForm({
               <strong className="text-info ">
                 Salary Due &nbsp;
                 <NumberFormat
+                  style={{ backgroundColor: "#fffffa" }}
                   value={balance}
                   displayType={"text"}
                   thousandSeparator={true}
@@ -37,7 +38,7 @@ function PaymentForm({
               <button
                 type="button"
                 onClick={() => setamount(balance)}
-                className="btn blue__btn"
+                className="btn greenn__btn"
               >
                 Pay All
               </button>
@@ -45,6 +46,7 @@ function PaymentForm({
 
             <input
               type="number"
+              style={{ backgroundColor: "#fffffa" }}
               ref={register({ required: true, max: balance + 1 })}
               value={amount}
               onChange={(e) => setamount(e.target.value)}
@@ -62,6 +64,7 @@ function PaymentForm({
           <label className="col-sm-3 col-form-label">Date Paid</label>
           <div className="col-sm-9">
             <input
+              style={{ backgroundColor: "#fffffa" }}
               type="date"
               value={date}
               ref={register({ required: true })}
@@ -78,6 +81,7 @@ function PaymentForm({
           <label className="col-sm-3 form-label">Month</label>
           <div className="col-sm-9">
             <input
+              style={{ backgroundColor: "#fffffa" }}
               type="text"
               value={monthYear[month].name}
               readOnly
@@ -91,6 +95,7 @@ function PaymentForm({
           <div className="col-sm-9">
             <textarea
               rows={5}
+              style={{ backgroundColor: "#fffffa" }}
               className="form-control"
               value={remarks}
               onChange={(e) => setremarks(e.target.value)}
@@ -103,7 +108,7 @@ function PaymentForm({
             <button
               disabled={loading}
               onClick={handleSubmit(handlePayement)}
-              className="btn blue__btn"
+              className="btn red__btn"
             >
               {loading && (
                 <span

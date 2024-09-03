@@ -70,7 +70,7 @@ function AddClass() {
   return (
     <>
       {/* <GoBack link="/academics/classes" name="Back  to Classes List" /> */}
-      <div className="content__container">
+      <div className="content__container" style={{ backgroundColor: "#fffff7" }}>
         <h3>Add Class</h3>
         <ClassForm
           name={name}

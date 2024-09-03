@@ -80,7 +80,7 @@ export default function FullWidthTabs({ user }) {
           onChange={handleChange}
           indicatorColor="primary"
           textColor="primary"
-          variant="scrollable"
+          variant="fullWidth"
           scrollButtons="auto"
           aria-label="full width tabs example"
           classes={{ flexContainer: classes.tabs }} // Applying the center alignment

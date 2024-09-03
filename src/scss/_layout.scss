@@ -180,7 +180,33 @@ input:focus {
   background-color: #fa6767 !important;
   color: $white !important;
   &:hover {
-    background-color: $orange !important;
+    background-color: #fa6767 !important;
+  }
+}
+
+.green__btn {
+  // background-color: $darkBlue !important;
+  background-color: #42d29d !important;
+  color: $white !important;
+  &:hover {
+    background-color: #42d29d !important;
+  }
+}
+
+.yellow__btn {
+  // background-color: $darkBlue !important;
+  background-color: rgb(225, 99, 120) !important;
+  color: $white !important;
+  &:hover {
+    background-color: rgb(225, 99, 120) !important;
+  }
+}
+.greenn__btn {
+  // background-color: $darkBlue !important;
+  background-color: #2ad76c !important;
+  color: $white !important;
+  &:hover {
+    background-color: #2ad76c !important;
   }
 }
 

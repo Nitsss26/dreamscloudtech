@@ -72,13 +72,14 @@
 
 
 import React, { useState, useEffect } from "react";
-import Search from "../../shared/Search3";
+import Search from "../../shared/Search5";
 import Table from "../../shared/AttendanceTable";
 import { Link } from "react-router-dom";
 import axios from "../../../store/axios";
 
 function Attendance() {
   const [date, setDate] = useState("");
+  const [month, setMonth] = useState("");
   const [attendanceData, setAttendanceData] = useState([]);
   const [storeData, setStoreData] = useState([]);
 
@@ -90,9 +91,11 @@ function Attendance() {
   }, []);
 
   const handleSearch = () => {
+    let filteredData = [...storeData];
+
     if (date) {
       const selectedDate = new Date(date);
-      const filteredData = storeData.filter((record) => {
+      filteredData = filteredData.filter((record) => {
         const createdAt = new Date(record.createdAt);
         // Match the date
         return (
@@ -101,12 +104,25 @@ function Attendance() {
           createdAt.getDate() === selectedDate.getDate()
         );
       });
-      setAttendanceData(filteredData);
     }
+
+    if (month) {
+      const [year, monthIndex] = month.split("-");
+      filteredData = filteredData.filter((record) => {
+        const createdAt = new Date(record.createdAt);
+        return (
+          createdAt.getFullYear() === parseInt(year) &&
+          createdAt.getMonth() + 1 === parseInt(monthIndex) // Months are zero-indexed
+        );
+      });
+    }
+
+    setAttendanceData(filteredData);
   };
 
   const handleReset = () => {
     setDate("");
+    setMonth("");
     setAttendanceData(storeData);
   };
 
@@ -118,6 +134,13 @@ function Attendance() {
       name: "date",
       onChange: (value) => setDate(value),
     },
+    {
+      type: "text",
+      label: "Search by (YYYY-MM)",
+      value: month,
+      name: "month",
+      onChange: (value) => setMonth(value),
+    },
   ];
 
   return (
@@ -128,13 +151,7 @@ function Attendance() {
         title="Staff's Attendance"
         inputFields={inputFields}
       />
-      <div className="content__container">
-        <div className="d-flex justify-content-between mb-3">
-          <h3>Attendance Record</h3>
-          <Link to="/attendance/staff/register" className="btn blue__btn">
-            Register Attendance
-          </Link>
-        </div>
+      <div className="">
         <Table isStaff={true} attendanceData={attendanceData} />
       </div>
     </div>

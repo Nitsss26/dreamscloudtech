@@ -80,15 +80,17 @@ function CourseForm(props) {
       fullWidth={true}
       aria-labelledby="customized-dialog-title"
       open={open}
+
     >
-      <DialogTitle id="customized-dialog-title" onClose={handleClose}>
+      <DialogTitle id="customized-dialog-title" onClose={handleClose} style={{ backgroundColor: "#fffff7" }}>
         {isEdit ? "Edit Division" : "Add New Division"}
       </DialogTitle>
-      <DialogContent>
-        <form action="" onSubmit={handleSubmit(onSubmit)}>
+      <DialogContent style={{ backgroundColor: "#fffff7" }}>
+        <form action="" onSubmit={handleSubmit(onSubmit)} style={{ backgroundColor: "#fffff7" }}>
           <div className="mb-3">
             <label className="form-label"> Name</label>
             <input
+              style={{ backgroundColor: "#fffffa" }}
               type="text"
               value={name}
               ref={register({ required: true })}
@@ -105,6 +107,7 @@ function CourseForm(props) {
           <div className="mb-3">
             <label className="form-label">Description</label>
             <textarea
+              style={{ backgroundColor: "#fffffa" }}
               type="text"
               value={description}
               ref={register({ required: true })}

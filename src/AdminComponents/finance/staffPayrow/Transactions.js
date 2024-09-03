@@ -16,7 +16,8 @@ import { currentCurrency } from "../../../utils";
 const useStyles = makeStyles((theme) => ({
   appBar: {
     position: "relative",
-    background: "#051f3e",
+    // background: "#051f3e",
+    background: "#01a6ca",
     color: "#fff",
   },
   title: {
@@ -69,45 +70,51 @@ export default function ViewStudentPayment({
     >
       <AppBar color="default" className={classes.appBar}>
         <Toolbar className="py-4">
-          <Typography variant="body1" className={classes.title}>
-            <strong>Name: {name}</strong> <br />
-            <strong>
-              Total Salary:{" "}
-              <NumberFormat
-                value={totalBill}
-                displayType={"text"}
-                thousandSeparator={true}
-                prefix={currentCurrency()}
-              />
-            </strong>{" "}
-            <br />
-            <strong>
-              Total Amount Paid:{" "}
-              <NumberFormat
-                value={totalPaid}
-                displayType={"text"}
-                thousandSeparator={true}
-                prefix={currentCurrency()}
-              />
-            </strong>{" "}
-            <br />
-            <strong>
-              Fees Due:{" "}
-              <NumberFormat
-                value={balance}
-                displayType={"text"}
-                thousandSeparator={true}
-                prefix={currentCurrency()}
-              />
-            </strong>
-            <br />
-            <Link
-              to={`/finance/staff/payrow/payslip/${id}`}
-              className="btn orange__btn"
-            >
-              {" "}
-              PaySlip{" "}
-            </Link>
+          <Typography variant="body1" className={classes.title} style={{ textAlign: "center", marginLeft: "80px" }}>
+            <div className="mb-2">
+              <strong className="mb-4 " >Name: &nbsp;&nbsp;{name}</strong> </div>
+            <div className="mb-2">
+              <strong className="mb-2">
+                Total Salary:{" "}&nbsp;&nbsp;
+                <NumberFormat
+                  value={totalBill}
+                  displayType={"text"}
+                  thousandSeparator={true}
+                  suffix={" " + currentCurrency()}
+                />
+              </strong>{" "}
+            </div>
+            <div className="mb-2">
+              <strong className="mb-2">
+                Total Amount Paid:{" "}&nbsp;&nbsp;
+                <NumberFormat
+                  value={totalPaid}
+                  displayType={"text"}
+                  thousandSeparator={true}
+                  suffix={" " + currentCurrency()}
+                />
+              </strong>{" "}
+            </div>
+            <div className="mb-2">
+              <strong className="mb-2 text-left">
+                Amount Due:{" "}&nbsp;&nbsp;
+                <NumberFormat
+                  value={balance}
+                  displayType={"text"}
+                  thousandSeparator={true}
+                  suffix={" " + currentCurrency()}
+                />
+              </strong>
+            </div>
+            <div>
+              <Link
+                to={`/finance/staff/payrow/payslip/${id}`}
+                className="btn red__btn "
+              >
+                {" "}
+                PaySlip{" "}
+              </Link>
+            </div>
           </Typography>
           <Button autoFocus color="inherit" onClick={handleClose}>
             <CloseIcon />

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ClassTable from "../../shared/ListTable";
-import Search from "../../shared/Search";
+import Search from "../../shared/Search8";
 import { Link } from "react-router-dom";
 import axios from "../../../store/axios";
 import { useHistory } from "react-router-dom";
@@ -145,13 +145,13 @@ function Classes() {
         handleSearch={handleSearch}
         handleReset={handleReset}
       />
-      <div className="content__container">
-        <div className="d-flex justify-content-between mb-2">
+      <div >
+        {/* <div className="d-flex justify-content-between mb-2">
           <h3>Classes List</h3>
-          <Link to="/academics/classes/add" className="btn orange__btn btn__lg">
+          <Link to="/academics/classes/add" className="btn greenn__btn btn__lg mb-2">
             Add New Class
           </Link>
-        </div>
+        </div> */}
         <ClassTable
           handleEdit={handleEditClass}
           loading={loading}

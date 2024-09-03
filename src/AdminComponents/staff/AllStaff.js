@@ -177,8 +177,8 @@
 
 
 import React, { useState, useEffect } from "react";
-import Search from "../shared/Search2";
-import StaffTable from "../shared/TableListUsers";
+import Search from "../shared/Search6";
+import StaffTable from "../shared/TableListUsers1";
 import axios from "../../store/axios";
 import { errorAlert } from "../../utils";
 import Loading from "../../Loading";
@@ -189,7 +189,7 @@ const headCells = [
   { id: "userID", numeric: false, disablePadding: false, label: "Teacher ID" },
   { id: "photoUrl", numeric: false, disablePadding: false, label: "Photo" },
   { id: "name", numeric: false, disablePadding: true, label: "Name" },
-  { id: "surname", disablePadding: true, label: "Last Name" },
+  // { id: "surname", disablePadding: true, label: "Last Name" },
   { id: "position", disablePadding: false, label: "Position" },
   { id: "gender", disablePadding: false, label: "Gender" },
 ];
@@ -209,7 +209,8 @@ function AllStaff() {
         setloading(false);
         const capitalizedData = res.data.map(student => ({
           ...student,
-          gender: capitalizeFirstLetter(student.gender), // Capitalize first letter of gender
+          gender: capitalizeFirstLetter(student.gender),
+          position: capitalizeFirstLetter(student.position)// Capitalize first letter of gender
         }));
         setstaff(capitalizedData);
         setstoreData(capitalizedData);
@@ -219,16 +220,25 @@ function AllStaff() {
       });
   }, []);
 
+  // const capitalizeFirstLetter = (str) => {
+  //   if (!str) return '';
+  //   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+  // };
+
   const capitalizeFirstLetter = (str) => {
     if (!str) return '';
-    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+
+    return str
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+      .join(' ');
   };
 
   const generatePDF = () => {
     const headers = [
       { key: "userID", label: "UserID" },
       { key: "name", label: "Name" },
-      { key: "middleName", label: "Middle Name" },
+      // { key: "middleName", label: "Middle Name" },
       { key: "surname", label: "SurName" },
       { key: "gender", label: "Gender" },
       { key: "classID", label: "Class" },
@@ -237,14 +247,16 @@ function AllStaff() {
     pdf({ data: staff, headers, filename: "AllStaff" });
   };
 
-  const handleDelete = (id) => {
-    let ans = window.confirm(`Are sure you want to delete user ${id}`);
+  const handleDelete = (i) => {
+    let ans = window.confirm(`Are sure you want to delete user ${i}`);
     if (ans) {
-      axios.delete(`/user/delete/${id}`).then((res) => {
+      axios.delete(`/teachers/delete/${i}`).then((res) => {
         if (res.data.error) {
+
           errorAlert(res.data.error);
         }
-        setstaff(staff.filter((i) => i.userID !== id));
+
+        setstaff(staff.filter((e) => e.userID !== i));
       });
     }
   };
@@ -293,7 +305,7 @@ function AllStaff() {
     {
       type: "text",
       label: "Search by Name",
-      name: "name",
+      name: "Name",
       value: name,
       onChange: setname,
     },
@@ -308,7 +320,7 @@ function AllStaff() {
 
   return (
     <>
-      {loading && <Loading />}
+      {/* {loading && <Loading />} */}
       <Search
         inputFields={inputFields}
         handleSearch={handleSearch}

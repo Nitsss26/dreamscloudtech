@@ -5,11 +5,12 @@ export default function AddClassGroup({ name, setname, onSubmit, loading }) {
   const { register, handleSubmit, errors } = useForm();
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="content__container">
+    <form onSubmit={handleSubmit(onSubmit)} className="content__container" style={{ backgroundColor: "#fffff7" }}>
       <h3>Add New Class Group</h3>
       <div className="mb-3">
         <label className="form-label"> Name</label>
         <input
+          style={{ backgroundColor: "#fffffa" }}
           type="text"
           value={name}
           ref={register({ required: true })}

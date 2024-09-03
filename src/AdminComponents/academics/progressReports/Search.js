@@ -19,98 +19,111 @@ function Search({
   const yearGroup = useSelector(selectYearGroup);
 
   return (
-    <form className="content__container col-8 mb-5">
-      <h6>Search Class</h6>
-      <div className="mb-3">
-        <label htmlFor="name" className="col-form-label">
-          Class
-        </label>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+
+        // minHeight: "100vh", // Full height to center vertically
+      }}
+    >
+      <form className="content__container col-8 mb-5" style={{ backgroundColor: "#fffff7" }}>
+        <h6>Search Class</h6>
+        <div className="mb-3">
+          <label htmlFor="name" className="col-form-label">
+            Class
+          </label>
+          <div className="">
+            <select
+              style={{ backgroundColor: "#fffffa" }}
+              name="academic-calendar"
+              className="form-select"
+              value={classID}
+              onChange={(e) => setclass(e.target.value)}
+            >
+              <option defaultValue hidden>
+                Choose...
+              </option>
+              {classes.length > 0 ? (
+                classes.map((e) => (
+                  <option key={e._id} value={e.classCode}>
+                    {e.name}
+                  </option>
+                ))
+              ) : (
+                <option disabled>No classes yet</option>
+              )}
+            </select>
+          </div>
+        </div>
+        <div className="mb-3">
+          <label htmlFor="name" className="col-form-label">
+            Academic Year
+          </label>
+          <div className="">
+            <select
+              style={{ backgroundColor: "#fffffa" }}
+              name="academic-calendar"
+              className="form-select"
+              value={academicYear}
+              onChange={(e) => setacademicYear(e.target.value)}
+            >
+              <option defaultValue hidden>
+                Choose...
+              </option>
+              {yearGroup.length > 0 ? (
+                yearGroup.map((e) => (
+                  <option key={e._id} value={e.year}>
+                    {e.year}
+                  </option>
+                ))
+              ) : (
+                <option disabled>No data</option>
+              )}
+            </select>
+          </div>
+        </div>
+        <div className="mb-3">
+          <label htmlFor="name" className="col-form-label">
+            Term
+          </label>
+          <div className="">
+            <select
+              style={{ backgroundColor: "#fffffa" }}
+              name="academic-calendar"
+              className="form-select"
+              value={term}
+              onChange={(e) => setterm(e.target.value)}
+            >
+              <option defaultValue hidden>
+                Choose...
+              </option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+        </div>
         <div className="">
-          <select
-            name="academic-calendar"
-            className="form-select"
-            value={classID}
-            onChange={(e) => setclass(e.target.value)}
+          <button
+            onClick={handleSearch}
+            disabled={loading}
+            type="submit"
+            className="btn blue__btn"
           >
-            <option defaultValue hidden>
-              Choose...
-            </option>
-            {classes.length > 0 ? (
-              classes.map((e) => (
-                <option key={e._id} value={e.classCode}>
-                  {e.name}
-                </option>
-              ))
-            ) : (
-              <option disabled>No classes yet</option>
+            {loading && (
+              <span
+                className="spinner-border spinner-border-sm"
+                role="status"
+                aria-hidden="true"
+              ></span>
             )}
-          </select>
+            {"Search"}
+          </button>
         </div>
-      </div>
-      <div className="mb-3">
-        <label htmlFor="name" className="col-form-label">
-          Academic Year
-        </label>
-        <div className="">
-          <select
-            name="academic-calendar"
-            className="form-select"
-            value={academicYear}
-            onChange={(e) => setacademicYear(e.target.value)}
-          >
-            <option defaultValue hidden>
-              Choose...
-            </option>
-            {yearGroup.length > 0 ? (
-              yearGroup.map((e) => (
-                <option key={e._id} value={e.year}>
-                  {e.year}
-                </option>
-              ))
-            ) : (
-              <option disabled>No data</option>
-            )}
-          </select>
-        </div>
-      </div>
-      <div className="mb-3">
-        <label htmlFor="name" className="col-form-label">
-          Term
-        </label>
-        <div className="">
-          <select
-            name="academic-calendar"
-            className="form-select"
-            value={term}
-            onChange={(e) => setterm(e.target.value)}
-          >
-            <option defaultValue hidden>
-              Choose...
-            </option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-          </select>
-        </div>
-      </div>
-      <div className="">
-        <button
-          onClick={handleSearch}
-          disabled={loading}
-          type="submit"
-          className="btn blue__btn"
-        >
-          {loading && (
-            <span
-              className="spinner-border spinner-border-sm"
-              role="status"
-              aria-hidden="true"
-            ></span>
-          )}
-          {"Search"}
-        </button>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 }
 
