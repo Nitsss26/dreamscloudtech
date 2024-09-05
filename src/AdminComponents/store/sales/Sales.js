@@ -53,14 +53,14 @@ function Sales() {
         console.log(obj);
         return obj.id === i
           ? {
-              discount: Number(e),
-              name: obj.name,
-              rate: obj.rate,
-              qty: obj.qty,
-              amount: calculateAmount(obj.rate, e, obj.qty),
-              id: i,
-              itemID: obj.itemID,
-            }
+            discount: Number(e),
+            name: obj.name,
+            rate: obj.rate,
+            qty: obj.qty,
+            amount: calculateAmount(obj.rate, e, obj.qty),
+            id: i,
+            itemID: obj.itemID,
+          }
           : obj;
       })
     );
@@ -72,14 +72,14 @@ function Sales() {
       buyitems.map((obj) =>
         obj.id === i
           ? {
-              qty: Number(e),
-              amount: calculateAmount(obj.rate, obj.discount, e),
-              name: obj.name,
-              rate: obj.rate,
-              discount: obj.discount,
-              itemID: obj.itemID,
-              id: i,
-            }
+            qty: Number(e),
+            amount: calculateAmount(obj.rate, obj.discount, e),
+            name: obj.name,
+            rate: obj.rate,
+            discount: obj.discount,
+            itemID: obj.itemID,
+            id: i,
+          }
           : obj
       )
     );
@@ -91,14 +91,14 @@ function Sales() {
       buyitems.map((obj) => {
         return obj.id === index
           ? {
-              name: item.name,
-              rate: item.price,
-              itemID: item._id,
-              amount: item.price,
-              discount: 0.0,
-              id: index,
-              qty: 1,
-            }
+            name: item.name,
+            rate: item.price,
+            itemID: item._id,
+            amount: item.price,
+            discount: 0.0,
+            id: index,
+            qty: 1,
+          }
           : obj;
       })
     );
@@ -157,7 +157,7 @@ function Sales() {
   console.log(buyitems);
   return (
     <div>
-      <div className="mb-5 d-flex justify-content-between content__container ">
+      <div className="mb-5 d-flex justify-content-between content__container " style={{ backgroundColor: "#fffff7" }}>
         <div>
           <button onClick={() => setopen(true)} className="btn blue__btn">
             New Sale
@@ -168,6 +168,7 @@ function Sales() {
             placeholder="Search...."
             className="form-control"
             type="text"
+            style={{ backgroundColor: "#fffff9" }}
           />
         </form>
       </div>

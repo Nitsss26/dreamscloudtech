@@ -3,9 +3,9 @@ import Card from "@material-ui/core/Card";
 
 function SummaryCard({ name, percentage, value }) {
   return (
-    <div className="col-xs-12 col-sm-4 mb-3">
-      <Card className=" ">
-        <div className="d-flex justify-content-between align-items-center heading blue__btn p-2 text-light">
+    <div className="col-xs-12 col-sm-4 mb-3" style={{ backgroundColor: "#fffff7" }}>
+      <Card className=" " style={{ backgroundColor: "#fffff7" }}>
+        <div className="d-flex justify-content-between align-items-center heading green__btn p-2 text-light">
           <div>
             <h5>{name}</h5>
           </div>

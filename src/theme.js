@@ -2,10 +2,10 @@ import { createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
     palette: {
-        type: 'dark',
+        // type: 'dark',
         background: {
-            default: '#000000',
-            paper: '#121212',
+            // default: '#000000',
+            // paper: '#121212',
         },
     },
 });

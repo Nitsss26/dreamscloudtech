@@ -30,7 +30,7 @@ function ViewStudent({
     <div className="content__container">
       <div
         // style={{ background: "#ffa201" }}
-        style={{ background: "#2ad76c" }}
+        style={{ background: "#1dcc60" }}
 
         className="d-flex flex-column align-items-center p-3 text-light mb-4"
       >

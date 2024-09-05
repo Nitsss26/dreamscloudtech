@@ -20,7 +20,9 @@ import { timeStamp } from "../../../utils";
 const useStyles2 = makeStyles({
   table: {
     width: "100%",
+
   },
+
 });
 
 export default function CustomPaginationActionsTable({
@@ -88,9 +90,9 @@ export default function CustomPaginationActionsTable({
               <>
                 {(rowsPerPage > 0
                   ? data?.slice(
-                      page * rowsPerPage,
-                      page * rowsPerPage + rowsPerPage
-                    )
+                    page * rowsPerPage,
+                    page * rowsPerPage + rowsPerPage
+                  )
                   : data
                 )?.map((row) => (
                   <TableRow key={row._id}>

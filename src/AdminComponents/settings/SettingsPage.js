@@ -104,8 +104,8 @@ function SettingsPage() {
   };
 
   return (
-    <div>
-      <div className="content__container d-flex flex-column align-items-center mb-5">
+    <div >
+      <div className="content__container d-flex flex-column align-items-center mb-0" style={{ backgroundColor: "#fffff7" }}>
         <Profile id={user?.userID} profile={user?.photoUrl} />
         <h2>
           {editfullname}{" "}
@@ -122,6 +122,7 @@ function SettingsPage() {
                 ref={register({ required: true })}
                 value={name}
                 type="text"
+                style={{ backgroundColor: "#fffffa" }}
                 className="form-control"
                 name="name"
               />
@@ -136,6 +137,7 @@ function SettingsPage() {
             <label className=" col-form-label">Motto</label>
             <div className="">
               <input
+                style={{ backgroundColor: "#fffffa" }}
                 onChange={(e) => setmotto(e.target.value)}
                 ref={register({ required: true })}
                 value={motto}
@@ -154,6 +156,7 @@ function SettingsPage() {
             <label className=" col-form-label">Email</label>
             <div className="">
               <input
+                style={{ backgroundColor: "#fffffa" }}
                 onChange={(e) => setemail(e.target.value)}
                 ref={register({ required: true })}
                 value={email}
@@ -172,6 +175,7 @@ function SettingsPage() {
             <label className=" col-form-label">Telephone</label>
             <div className="">
               <input
+                style={{ backgroundColor: "#fffffa" }}
                 onChange={(e) => settelephone(e.target.value)}
                 ref={register({ required: true })}
                 value={telephone}
@@ -190,6 +194,7 @@ function SettingsPage() {
             <label className=" col-form-label">Address</label>
             <div className="">
               <textarea
+                style={{ backgroundColor: "#fffffa" }}
                 rows={5}
                 onChange={(e) => setaddress(e.target.value)}
                 ref={register({ required: true })}
@@ -234,7 +239,7 @@ function SettingsPage() {
         handleEdit={handleEditname}
       />
 
-      <div id="changepassword">
+      <div id="changepassword" style={{ backgroundColor: "#fffff7" }}>
         <ChangePassword id={user?.id} />
       </div>
 

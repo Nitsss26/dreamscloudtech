@@ -23,13 +23,14 @@ function SearchStudent({
   const { register, handleSubmit, errors } = useForm();
 
   return (
-    <div className="content__container mb-3">
+    <div className="content__container mb-3" style={{ backgroundColor: "#fffff7" }}>
       <h3>Search Student</h3>
       <form action="" className="row">
         <div className="col-sm-6">
           <div className="mb-3">
             <label className="form-label">Class</label>
             <select
+              style={{ backgroundColor: "#fffff9" }}
               value={classID}
               onChange={(e) => setclassID(e.target.value)}
               name="year"
@@ -60,6 +61,7 @@ function SearchStudent({
             <div className="mb-3">
               <label className="form-label">Student</label>
               <select
+                style={{ backgroundColor: "#fffff9" }}
                 value={studentID}
                 onChange={(e) => setstudentID(e.target.value)}
                 name="students"
@@ -87,6 +89,7 @@ function SearchStudent({
               <label className=" col-form-label">Academic Year</label>
               <div className="">
                 <select
+                  style={{ backgroundColor: "#fffff9" }}
                   value={year}
                   onChange={(e) => setyear(e.target.value)}
                   name="students"
@@ -114,6 +117,7 @@ function SearchStudent({
               <label className=" col-form-label">Term</label>
               <div className="">
                 <select
+                  style={{ backgroundColor: "#fffff9" }}
                   value={term}
                   onChange={(e) => setterm(e.target.value)}
                   name="students"

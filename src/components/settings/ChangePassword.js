@@ -34,7 +34,7 @@ function ChangePassword({ id }) {
   };
 
   return (
-    <form action="" className="mb-5 content__container">
+    <form action="" className="mb-5 content__container" style={{ backgroundColor: "#fffff7" }}>
       <h4>Change Password</h4>
       <div className="row mb-3">
         <label className="col-sm-3 col-form-label">Old Password</label>
@@ -43,6 +43,7 @@ function ChangePassword({ id }) {
             onChange={(e) => setoldpassword(e.target.value)}
             ref={register({ required: true })}
             value={oldpassword}
+            style={{ backgroundColor: "#fffffa" }}
             type="password"
             className="form-control"
             name="oldpassword"
@@ -62,6 +63,7 @@ function ChangePassword({ id }) {
             ref={register({ required: true })}
             value={newpassword}
             type="password"
+            style={{ backgroundColor: "#fffffa" }}
             className="form-control"
             name="newpassword"
           />

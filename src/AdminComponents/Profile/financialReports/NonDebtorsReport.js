@@ -18,7 +18,7 @@ const tableHeader = [
   { id: "arrears", name: "Arrears" },
   { id: "total", name: "Total" },
   { id: "amountPaid", name: "Amount Paid" },
-  { id: "amountOwed", name: "Amount Owed" },
+  { id: "amountOwed", name: "AmountDue" },
 ];
 
 function NonBillPayment() {

@@ -95,11 +95,12 @@ function GuadianMessage() {
 
   return (
     <div>
-      <div className="mb-5 content__container row">
+      <div className="mb-5 content__container row" style={{ backgroundColor: "#fffff7" }}>
         <form onSubmit={handleSearchbyName} className="mb-5 col-12 ">
           <label className="form-label">Search for Student by Name or ID</label>
           <div className="d-flex flex-row">
             <input
+              style={{ backgroundColor: "#fffff9" }}
               value={search}
               onChange={handleChange}
               className="form-control"

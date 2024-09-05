@@ -115,7 +115,7 @@ export default function FullScreenDialog({ open, setOpen, debtors }) {
                     Class: <strong>{res?.classID}</strong>
                   </div>
                   <div>
-                    Amount Owed: <strong>{res?.owe}</strong>
+                    AmountDue: <strong>{res?.owe}</strong>
                   </div>
                   <p className="my-3">{message}</p>
                   <div>{closing}</div>

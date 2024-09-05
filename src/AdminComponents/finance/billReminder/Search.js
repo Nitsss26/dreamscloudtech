@@ -25,11 +25,12 @@ function Search({
   const campuses = useSelector(selectCampuses);
 
   return (
-    <form action="" className="row">
+    <form action="" className="row" style={{ backgroundColor: "#fffff7" }}>
       <div className="col-sm-6 col-mb-4 mb-3">
         <label className="col-form-label">Academic Year</label>
         <div className="">
           <select
+            style={{ backgroundColor: "#fffff9" }}
             value={year}
             ref={register({ required: true })}
             onChange={(e) => setyear(e.target.value)}
@@ -57,6 +58,7 @@ function Search({
         <label className="col-form-label">Term</label>
         <div className="">
           <select
+            style={{ backgroundColor: "#fffff9" }}
             value={term}
             ref={register({ required: true })}
             onChange={(e) => setterm(e.target.value)}
@@ -77,6 +79,7 @@ function Search({
         <label className="col-form-label">Class</label>
         <div className="">
           <select
+            style={{ backgroundColor: "#fffff9" }}
             value={classID}
             ref={register({ required: true })}
             onChange={(e) => setclassID(e.target.value)}

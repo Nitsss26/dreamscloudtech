@@ -81,17 +81,18 @@ export default function ResponsiveDialog({ open, setOpen }) {
 
   return (
     <Dialog
+      // style={{ backgroundColor: " #fffff7" }}
       maxWidth="sm"
       fullWidth={true}
       open={open}
       onClose={setOpen}
       aria-labelledby="responsive-dialog-title"
     >
-      <DialogTitle onClose={setOpen} id="responsive-dialog-title">
+      <DialogTitle onClose={setOpen} id="responsive-dialog-title" style={{ backgroundColor: " #fffff7" }}>
         Add New Item
       </DialogTitle>
       <form action="">
-        <DialogContent>
+        <DialogContent style={{ backgroundColor: " #fffff7" }}>
           <Form
             price={price}
             loading={loading}

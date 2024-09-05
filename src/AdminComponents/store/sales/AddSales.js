@@ -56,6 +56,7 @@ export default function CustomizedDialogs({
 
   return (
     <Dialog
+
       fullScreen
       open={open}
       onClose={handleClose}
@@ -65,7 +66,7 @@ export default function CustomizedDialogs({
     >
       <AppBar color="transparent" className={classes.appBar}>
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h6" className={classes.title} >
             Create New Sale
           </Typography>
 
@@ -79,7 +80,7 @@ export default function CustomizedDialogs({
           </IconButton>
         </Toolbar>
       </AppBar>
-      <form action="" className="mt-3 px-5">
+      <form action="" className="mt-3 px-5" >
         <div className="row">
           <div className="col-sm-6   mb-3">
             <label className=" form-label">Student</label>

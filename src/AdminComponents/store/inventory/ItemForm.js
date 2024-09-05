@@ -19,7 +19,7 @@ function ItemForm({
   const { register, handleSubmit, errors } = useForm();
 
   return (
-    <form action="">
+    <form action="" style={{ backgroundColor: " #fffff7" }}>
       <div className="mb-3">
         <label className="form-label"> Name</label>
         <input

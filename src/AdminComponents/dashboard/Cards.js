@@ -409,7 +409,7 @@ function Cards({ counts }) {
                 value={course}
                 title="Library"
                 message="Registered Cources"
-                link="/library"
+                link="/academics/notes"
             />
             <Card2
                 icon={<CIcon
@@ -420,7 +420,9 @@ function Cards({ counts }) {
                 value={students}
                 title="Certificates"
                 message="Registered Students"
-                link="/certificates"
+                link="/academics/correspondance/view/66d626c2b7c7cf73f4721d3e"
+            // link=" /academics/correspondance/66d626c2b7c7cf73f4721d3e"
+
             />
             <Card2
                 icon={<CIcon

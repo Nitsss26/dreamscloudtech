@@ -21,6 +21,7 @@ function TabPanel(props) {
 
   return (
     <div
+      style={{ backgroundColor: "#fffff7" }}
       role="tabpanel"
       hidden={value !== index}
       id={`full-width-tabpanel-${index}`}
@@ -79,7 +80,7 @@ export default function FullWidthTabs({ user }) {
   };
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} style={{ backgroundColor: "#fffff7" }}>
       <AppBar position="static" color="default">
         <Tabs
           value={value}

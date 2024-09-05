@@ -38,7 +38,7 @@ export default function CustomPaginationActionsTable({ data }) {
   };
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} style={{ backgroundColor: "#fffff7" }}>
       <Table className={classes.table} aria-label="custom pagination table">
         <TableHead>
           <TableRow>
@@ -59,9 +59,9 @@ export default function CustomPaginationActionsTable({ data }) {
             <>
               {(rowsPerPage > 0
                 ? data?.slice(
-                    page * rowsPerPage,
-                    page * rowsPerPage + rowsPerPage
-                  )
+                  page * rowsPerPage,
+                  page * rowsPerPage + rowsPerPage
+                )
                 : data
               )?.map((row) => (
                 <TableRow key={row._id}>

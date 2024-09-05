@@ -35,12 +35,12 @@ function Receipt() {
 
   return (
     <>
-      <div className="d-flex justify-content-end mb-3">
+      <div className="d-flex justify-content-end mb-3" >
         <button onClick={handlePrint} className="btn blue__btn">
           Print
         </button>
       </div>
-      <div className="content__container" id="section-to-print">
+      <div className="content__container" id="section-to-print" style={{ backgroundColor: "#fffff7" }}>
         {loading && <Loading />}
         <h3>Sales Reciept</h3>
         <div className="text-center">

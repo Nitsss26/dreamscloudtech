@@ -16,7 +16,7 @@ function CreatNotice({
     }
 
     return (
-        <div className="content__container mb-5">
+        <div className="content__container mb-5" style={{ backgroundColor: " #fffff7" }}>
             <h3>Create A Notice</h3>
             <form className="row" action="">
                 <div className="col-md-6 mb-5">
@@ -45,6 +45,7 @@ function CreatNotice({
                     <label className="form-label">Description</label>
                     <textarea
                         value={description}
+                        style={{ backgroundColor: " #fffff9" }}
                         onChange={e => setdescription(e.target.value)}
                         rows={5}
                         className="form-control"
@@ -59,6 +60,7 @@ function CreatNotice({
                         type="text"
                         ref={register({ required: true })}
                         value={createdby}
+
                         onChange={e => setcreatedby(e.target.value)}
                         className="form-control  py-4"
                         name="createdby" />

@@ -24,7 +24,7 @@ const styles = (theme) => ({
 const DialogTitle = withStyles(styles)((props) => {
   const { children, classes, onClose, ...other } = props;
   return (
-    <MuiDialogTitle disableTypography className={classes.root} {...other}>
+    <MuiDialogTitle disableTypography className={classes.root} {...other} >
       <Typography variant="h6">{children}</Typography>
       {onClose ? (
         <IconButton
@@ -68,17 +68,19 @@ export default function CustomizedDialogs({
 
   return (
     <Dialog
+      // style={{ backgroundColor: " #fffff7" }}
       onClose={handleClose}
       fullWidth={true}
       maxWidth="sm"
       aria-labelledby="customized-dialog-title"
       open={open}
     >
-      <DialogTitle id="customized-dialog-title" onClose={handleClose}>
+      <DialogTitle id="customized-dialog-title" onClose={handleClose} style={{ backgroundColor: " #fffff7" }}>
         Edit Item
       </DialogTitle>
       <DialogContent>
         <Form
+          style={{ backgroundColor: " #fffff7" }}
           price={price}
           loading={loading}
           setprice={setprice}

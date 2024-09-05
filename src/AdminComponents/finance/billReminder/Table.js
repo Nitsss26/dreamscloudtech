@@ -80,7 +80,7 @@ export default function CustomPaginationActionsTable({
   const isSelected = (userID) => selected.indexOf(userID) !== -1;
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} style={{ backgroundColor: "#fffff7" }}>
       <Table className={classes.table} aria-label="custom pagination table">
         <TableHead>
           <TableRow>
@@ -123,9 +123,9 @@ export default function CustomPaginationActionsTable({
               <>
                 {(rowsPerPage > 0
                   ? data.slice(
-                      page * rowsPerPage,
-                      page * rowsPerPage + rowsPerPage
-                    )
+                    page * rowsPerPage,
+                    page * rowsPerPage + rowsPerPage
+                  )
                   : data
                 ).map((row, index) => {
                   const isItemSelected = isSelected(row?.userID);

@@ -3,7 +3,7 @@ import Card from "./SummaryCard";
 
 function SummaryTab({ count }) {
   return (
-    <div className="summary__page">
+    <div className="summary__page" style={{ backgroundColor: "#fffff7" }}>
       <div className="mb-5">
         <h3>Students</h3>
         <div className="row ">

@@ -100,14 +100,15 @@ function StudentMessage() {
   };
 
   return (
-    <div>
-      <div className="mb-5 content__container row">
+    <div >
+      <div className="mb-5 content__container row" style={{ backgroundColor: "#fffff7" }}>
         <h3>Select Student </h3>
         <form action="" onSubmit={handleSearchbyName} className="mb-5 col-md-6">
           <label className="form-label">
             Search Student by Name or Student ID
           </label>
           <input
+            style={{ backgroundColor: "#fffff9" }}
             value={search}
             onChange={(e) => setsearch(e.target.value)}
             className="form-control"
@@ -118,6 +119,7 @@ function StudentMessage() {
         <div className="col-md-5">
           <label className="form-label">OR Select Student's Class</label>
           <select
+            style={{ backgroundColor: "#fffff9" }}
             onChange={(e) => handleSearchbyClass(e.target.value)}
             id="inputState"
             className="form-select"

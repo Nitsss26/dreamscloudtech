@@ -79,7 +79,7 @@ export default function FullScreenDialog({ open, setOpen, debtors }) {
       <AppBar color="transparent" className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            Sound
+            Send
           </Typography>
 
           <IconButton
@@ -93,8 +93,8 @@ export default function FullScreenDialog({ open, setOpen, debtors }) {
         </Toolbar>
       </AppBar>
       <div className="m-5">
-        <form action="" className=" content__container form__sender">
-          <div className="header">
+        <form action="" className=" content__container form__sender" >
+          <div className="" >
             <h3>Send Message to {debtors?.length || 0} debtor(s)</h3>
           </div>
           <div className="row mb-2 px-3">
@@ -103,6 +103,7 @@ export default function FullScreenDialog({ open, setOpen, debtors }) {
             </label>
             <div className="col-sm-10">
               <input
+                style={{ backgroundColor: "#ffffff" }}
                 className="form-control"
                 value={sender?.name}
                 type="text"
@@ -114,6 +115,7 @@ export default function FullScreenDialog({ open, setOpen, debtors }) {
             <div className="col-12">
               <textarea
                 value={message}
+                // style={{ backgroundColor: "#fffff9" }}
                 onChange={(e) => setmessage(e.target.value)}
                 className="form-control"
                 name=""

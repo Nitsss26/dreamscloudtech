@@ -11,7 +11,7 @@ const tableHeader = [
   { id: "classID", name: "Class" },
   { id: "total", name: `Total Fees ${currentCurrency()}` },
   { id: "amount", name: `Amount Paid ${currentCurrency()}` },
-  { id: "owe", name: `Amount Owed ${currentCurrency()}` },
+  { id: "owe", name: `AmountDue ${currentCurrency()}` },
 ];
 
 function DebtorsList() {

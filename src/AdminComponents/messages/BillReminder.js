@@ -10,7 +10,7 @@ const tableHeader = [
   { id: "classID", name: "Class" },
   { id: "total", name: "Total Bill" },
   { id: "amount", name: "Amount Paid" },
-  { id: "owe", name: "Amount Owed" },
+  { id: "owe", name: "AmountDue" },
 ];
 
 function DebtorsList() {
@@ -45,9 +45,9 @@ function DebtorsList() {
       let fee = fees.find((z) => z?.code === u?.fees);
       return fee
         ? Object.values(fee[u.status] || {}).reduce(
-            (t, v) => Number(t) + Number(v),
-            0
-          )
+          (t, v) => Number(t) + Number(v),
+          0
+        )
         : 0;
     };
     axios.get(`/students/unpaidfees`).then((res) => {
@@ -86,9 +86,9 @@ function DebtorsList() {
   });
 
   return (
-    <div>
+    <div >
       <h3>SMS Bill Reminder</h3>
-      <div className="content__container mb-5">
+      <div className="content_containner mb-5">
         <Search
           year={year}
           setyear={setyear}

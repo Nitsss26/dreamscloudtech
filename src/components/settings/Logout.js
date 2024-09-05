@@ -11,7 +11,7 @@ function Logout({ dispatch, loggout, user }) {
   };
 
   return (
-    <div className="content__container">
+    <div className="content__container" style={{ backgroundColor: "#fffff7" }}>
       <div className="d-flex justify-content-between">
         <h6>
           You are logged-in as {user?.id}- {user?.name}{" "}

@@ -141,12 +141,12 @@ function Inventory() {
   return (
     <div>
       <h3>Store Inventory</h3>
-      <div className="mb-3 d-flex justify-content-between content__container">
+      <div className="mb-3 d-flex justify-content-between content__container" style={{ backgroundColor: "#fffff5" }}>
         <button onClick={() => setopenAdd(true)} className="btn blue__btn">
           <AddIcon /> Add Item
         </button>
         <form action="">
-          <input style={{ backgroundColor: " #fffff9" }} className="form-control" type="text" placeholder="Search..." />
+          <input style={{ backgroundColor: " #fffff7" }} className="form-control" type="text" placeholder="Search..." />
         </form>
       </div>
       <Table

@@ -414,7 +414,7 @@ const useStyles2 = makeStyles({
   },
   total: {
     fontWeight: "bold",
-    color: "#007bff",
+    color: "#42a7d2",
   },
   iconButton: {
     padding: "8px",
@@ -425,8 +425,9 @@ const useStyles2 = makeStyles({
     }
   },
   headerCell: {
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#42a7d2',
     fontWeight: 'bold',
+    color: "#ffffff"
   },
 });
 
@@ -461,7 +462,7 @@ export default function CustomPaginationActionsTable({
   let sign = currentCurrency();
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} style={{ backgroundColor: "#fffff7" }}>
       <Table className={classes.table} aria-label="custom pagination table">
         <TableHead>
           <TableRow>

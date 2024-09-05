@@ -28,7 +28,7 @@ function ViewPayment() {
     });
   }, []);
 
-  const handleEdit = (id) => {};
+  const handleEdit = (id) => { };
 
   const handleDelete = (id) => {
     axios.delete(`/transactions/delete/${id}`).then((res) => {

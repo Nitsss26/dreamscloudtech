@@ -127,7 +127,7 @@ function PaymentPlan() {
   return (
     <div>
       <h3 className="my-5">Staff Roles and Payrow Details</h3>
-      <table className="table content__container">
+      <table className="table content__container" style={{ backgroundColor: "#fffff7" }}>
         <thead>
           <tr>
             <th scope="col">

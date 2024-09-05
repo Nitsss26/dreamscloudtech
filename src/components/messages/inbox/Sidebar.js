@@ -68,7 +68,7 @@ function Sidebar() {
 
   return (
     <div className="sidebar">
-      <div className="sidebar__header p-2 mb-2">
+      <div className="sidebar__header p-2 mb-0" style={{ backgroundColor: "#fffff5" }}>
         <div className="d-flex justify-content-between align-items-center">
           <h5>
             <strong>Chats</strong>
@@ -94,6 +94,7 @@ function Sidebar() {
             })
             .map((chat) => (
               <SidebarMessage
+
                 key={chat._id}
                 chat={chat}
                 currentUser={user?.id}

@@ -13,7 +13,7 @@ function SendToForm({
   error,
 }) {
   return (
-    <form action="" className=" content__container form__sender">
+    <form action="" className=" content__container form__sender" style={{ background: "#fffff7" }}>
       <div className="header">
         <h3>Send Message to {sendto}</h3>
       </div>
@@ -23,6 +23,7 @@ function SendToForm({
         </label>
         <div className="col-sm-10">
           <select
+            style={{ background: "#fffff9" }}
             value={recipient}
             onChange={(e) => setrecipient(e.target.value)}
             id="inputState"
@@ -51,6 +52,7 @@ function SendToForm({
       <div className="mb-2 row">
         <div className="col-12">
           <textarea
+            style={{ background: "#fffff9" }}
             value={message}
             onChange={(e) => setmessage(e.target.value)}
             className="form-control"

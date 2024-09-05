@@ -46,19 +46,20 @@ function SidebarMessage({ chat, currentUser }) {
   };
 
   return (
-    <div className="sidemessage">
+    <div className="sidemessage" style={{ backgroundColor: "#fffff5" }}>
       <Link
+
         onClick={() => handleOpen(chat?._id)}
         to={`/messages/chat/${chat?._id}`}
         className="d-flex"
       >
-        <div className="mr-2">
+        <div className="mr-2" >
           <Avatar
             alt={getIntial(user?.name || "O")}
             src={getImgSrc(user?.profileUrl)}
           ></Avatar>
         </div>
-        <div>
+        <div >
           <div className="d-flex align-center justify-content-between w-100">
             <h6>
               {getCapitalize(user?.name)}{" "}

@@ -642,24 +642,24 @@ const _nav = [
                 style: { backgroundColor: "#fffff5", marginLeft: '20px' },
             },
 
-            {
-                _tag: "CSidebarNavItem",
-                name: " Debtors List",
-                to: "/finance/debtors",
-                icon: (
-                    // <CIcon
-                    //     name="cil-speedometer"
-                    //     customClasses="c-sidebar-nav-icon sidebarIcon"
-                    // />
-                    <CIcon
-                        name="cil-circle"
-                        customClasses="c-sidebar-nav-icon "
-                        style={{ color: "#fbc02d" }}
+            // {
+            //     _tag: "CSidebarNavItem",
+            //     name: " Debtors List",
+            //     to: "/finance/debtors",
+            //     icon: (
+            //         // <CIcon
+            //         //     name="cil-speedometer"
+            //         //     customClasses="c-sidebar-nav-icon sidebarIcon"
+            //         // />
+            //         <CIcon
+            //             name="cil-circle"
+            //             customClasses="c-sidebar-nav-icon "
+            //             style={{ color: "#fbc02d" }}
 
-                    />
-                ),
-                style: { backgroundColor: "#fffff5", marginLeft: '20px' },
-            },
+            //         />
+            //     ),
+            //     style: { backgroundColor: "#fffff5", marginLeft: '20px' },
+            // },
 
             {
                 _tag: "CSidebarNavItem",

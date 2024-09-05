@@ -27,12 +27,13 @@ function PaymentForm({
   const { register, handleSubmit, errors } = useForm();
 
   return (
-    <div className="content__container">
+    <div className="content__container" style={{ backgroundColor: "#fffff7" }}>
       <form action="">
         <div className="row mb-3">
           <label className="col-sm-3 col-form-label">Amount</label>
           <div className="col-sm-9">
             <input
+              style={{ backgroundColor: "#fffff9" }}
               type="number"
               ref={register({ required: true, max: balance })}
               value={amount}
@@ -52,6 +53,7 @@ function PaymentForm({
           <label className="col-sm-3 col-form-label">Date Paid</label>
           <div className="col-sm-9">
             <input
+              style={{ backgroundColor: "#fffff9" }}
               type="date"
               value={date}
               ref={register({ required: true })}
@@ -68,6 +70,7 @@ function PaymentForm({
           <label className="col-sm-3 col-form-label">Academic Year</label>
           <div className="col-sm-9">
             <input
+              style={{ backgroundColor: "#fffff9" }}
               type="text"
               value={year}
               ref={register({ required: true })}
@@ -84,6 +87,7 @@ function PaymentForm({
           <label className="col-sm-3 col-form-label">Term</label>
           <div className="col-sm-9">
             <input
+              style={{ backgroundColor: "#fffff9" }}
               type="text"
               value={term}
               ref={register({ required: true })}
@@ -100,6 +104,7 @@ function PaymentForm({
           <label className="col-sm-3 col-form-label">Payment Type</label>
           <div className="col-sm-9">
             <select
+              style={{ backgroundColor: "#fffff9" }}
               value={paymentType}
               ref={register({ required: true })}
               onChange={(e) => setpaymentType(e.target.value)}
@@ -121,6 +126,7 @@ function PaymentForm({
             <label className="col-sm-3 col-form-label">Bank</label>
             <div className="col-sm-9">
               <select
+                style={{ backgroundColor: "#fffff9" }}
                 value={bank}
                 ref={register({ required: true })}
                 onChange={(e) => setbank(e.target.value)}
@@ -146,6 +152,7 @@ function PaymentForm({
               <label className="col-sm-3 col-form-label">Bank</label>
               <div className="col-sm-9">
                 <select
+                  style={{ backgroundColor: "#fffff9" }}
                   value={bank}
                   ref={register({ required: true })}
                   onChange={(e) => setbank(e.target.value)}
@@ -168,6 +175,7 @@ function PaymentForm({
               <label className="col-sm-3 col-form-label">Cheque Number</label>
               <div className="col-sm-9">
                 <input
+                  style={{ backgroundColor: "#fffff9" }}
                   type="text"
                   className="form-control"
                   value={chequeNo}
@@ -183,6 +191,7 @@ function PaymentForm({
           <div className="col-sm-9">
             <textarea
               rows={5}
+              style={{ backgroundColor: "#fffff9" }}
               className="form-control"
               value={remarks}
               onChange={(e) => setremarks(e.target.value)}

@@ -452,13 +452,14 @@ function AttendanceTabs() {
 
   return (
     <div id="section-to-print">
-      <div className="content__container mb-3">
+      <div className="content__container mb-3" style={{ backgroundColor: "#fffff7" }}>
         <form action="" className="row">
           <div className="mb-3 col-sm-4">
             <label className="form-label">Class</label>
             <select
               name="type"
               value={classID}
+              style={{ backgroundColor: "#fffffa" }}
               onChange={(e) => setclassID(e.target.value)}
               id="inputState"
               className="form-select"
@@ -480,6 +481,7 @@ function AttendanceTabs() {
           <div className="mb-3 col-sm-4">
             <label className="form-label">Period</label>
             <select
+              style={{ backgroundColor: "#fffffa" }}
               name="type"
               value={period}
               onChange={(e) => setperiod(e.target.value)}
