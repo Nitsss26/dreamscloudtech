@@ -17,7 +17,7 @@ function RecentActivity() {
     }}>
       <h3>Recent Activities</h3>
       <div>
-        {activities.length > 0 ? (
+        {activities.length < 0 ? (
           activities.map((e) => (
             <div key={e._id}>
               <div className="d-flex justify-content-between">
